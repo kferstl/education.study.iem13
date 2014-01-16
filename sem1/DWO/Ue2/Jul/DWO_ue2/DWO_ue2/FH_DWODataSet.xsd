@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FH_DWODataSet" targetNamespace="http://tempuri.org/FH_DWODataSet.xsd" xmlns:mstns="http://tempuri.org/FH_DWODataSet.xsd" xmlns="http://tempuri.org/FH_DWODataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FH_DWOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FH_DWOConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DWO_ue2.Properties.Settings.GlobalReference.Default.FH_DWOConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Ue2SalesDataExtendedTableAdapter" GeneratorDataComponentClassName="Ue2SalesDataExtendedTableAdapter" Name="Ue2SalesDataExtended" UserDataComponentName="Ue2SalesDataExtendedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FH_DWOConnectionString (Settings)" DbObjectName="FH_DWO.dbo.Ue2SalesDataExtended" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT OrderYear, OrderMonth, OrderDay, OrderWeek, [lineNo], orderNo, customerNo, type, articleNo, quantity, amount, vat_amount, line_amount, VATpercent, orderDate, description, seasonCode, size, articleOnline FROM dbo.Ue2SalesDataExtended</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderYear" DataSetColumn="OrderYear" />
+              <Mapping SourceColumn="OrderMonth" DataSetColumn="OrderMonth" />
+              <Mapping SourceColumn="OrderDay" DataSetColumn="OrderDay" />
+              <Mapping SourceColumn="OrderWeek" DataSetColumn="OrderWeek" />
+              <Mapping SourceColumn="lineNo" DataSetColumn="lineNo" />
+              <Mapping SourceColumn="orderNo" DataSetColumn="orderNo" />
+              <Mapping SourceColumn="customerNo" DataSetColumn="customerNo" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="articleNo" DataSetColumn="articleNo" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="vat_amount" DataSetColumn="vat_amount" />
+              <Mapping SourceColumn="line_amount" DataSetColumn="line_amount" />
+              <Mapping SourceColumn="VATpercent" DataSetColumn="VATpercent" />
+              <Mapping SourceColumn="orderDate" DataSetColumn="orderDate" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="seasonCode" DataSetColumn="seasonCode" />
+              <Mapping SourceColumn="size" DataSetColumn="size" />
+              <Mapping SourceColumn="articleOnline" DataSetColumn="articleOnline" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Ue2SalesOrdersByMonthTableAdapter" GeneratorDataComponentClassName="Ue2SalesOrdersByMonthTableAdapter" Name="Ue2SalesOrdersByMonth" UserDataComponentName="Ue2SalesOrdersByMonthTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FH_DWOConnectionString (Settings)" DbObjectName="FH_DWO.dbo.Ue2SalesOrdersByMonth" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT date, Count, Sum FROM dbo.Ue2SalesOrdersByMonth</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
+              <Mapping SourceColumn="Sum" DataSetColumn="Sum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Ue2SalesOrdersByWeekTableAdapter" GeneratorDataComponentClassName="Ue2SalesOrdersByWeekTableAdapter" Name="Ue2SalesOrdersByWeek" UserDataComponentName="Ue2SalesOrdersByWeekTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FH_DWOConnectionString (Settings)" DbObjectName="FH_DWO.dbo.Ue2SalesOrdersByWeek" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT OrderFirstDayOfWeek, OrderYear, OrderWeek, Count, Sum FROM dbo.Ue2SalesOrdersByWeek</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderFirstDayOfWeek" DataSetColumn="OrderFirstDayOfWeek" />
+              <Mapping SourceColumn="OrderYear" DataSetColumn="OrderYear" />
+              <Mapping SourceColumn="OrderWeek" DataSetColumn="OrderWeek" />
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
+              <Mapping SourceColumn="Sum" DataSetColumn="Sum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FH_DWODataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FH_DWODataSet" msprop:Generator_UserDSName="FH_DWODataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ue2SalesDataExtended" msprop:Generator_TableClassName="Ue2SalesDataExtendedDataTable" msprop:Generator_TableVarName="tableUe2SalesDataExtended" msprop:Generator_TablePropName="Ue2SalesDataExtended" msprop:Generator_RowDeletingName="Ue2SalesDataExtendedRowDeleting" msprop:Generator_RowChangingName="Ue2SalesDataExtendedRowChanging" msprop:Generator_RowEvHandlerName="Ue2SalesDataExtendedRowChangeEventHandler" msprop:Generator_RowDeletedName="Ue2SalesDataExtendedRowDeleted" msprop:Generator_UserTableName="Ue2SalesDataExtended" msprop:Generator_RowChangedName="Ue2SalesDataExtendedRowChanged" msprop:Generator_RowEvArgName="Ue2SalesDataExtendedRowChangeEvent" msprop:Generator_RowClassName="Ue2SalesDataExtendedRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderYear" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrderYear" msprop:Generator_ColumnPropNameInRow="OrderYear" msprop:Generator_ColumnPropNameInTable="OrderYearColumn" msprop:Generator_UserColumnName="OrderYear" type="xs:int" minOccurs="0" />
+              <xs:element name="OrderMonth" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrderMonth" msprop:Generator_ColumnPropNameInRow="OrderMonth" msprop:Generator_ColumnPropNameInTable="OrderMonthColumn" msprop:Generator_UserColumnName="OrderMonth" type="xs:int" minOccurs="0" />
+              <xs:element name="OrderDay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrderDay" msprop:Generator_ColumnPropNameInRow="OrderDay" msprop:Generator_ColumnPropNameInTable="OrderDayColumn" msprop:Generator_UserColumnName="OrderDay" type="xs:int" minOccurs="0" />
+              <xs:element name="OrderWeek" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrderWeek" msprop:Generator_ColumnPropNameInRow="OrderWeek" msprop:Generator_ColumnPropNameInTable="OrderWeekColumn" msprop:Generator_UserColumnName="OrderWeek" type="xs:int" minOccurs="0" />
+              <xs:element name="lineNo" msprop:Generator_ColumnVarNameInTable="columnlineNo" msprop:Generator_ColumnPropNameInRow="lineNo" msprop:Generator_ColumnPropNameInTable="lineNoColumn" msprop:Generator_UserColumnName="lineNo" type="xs:int" minOccurs="0" />
+              <xs:element name="orderNo" msprop:Generator_ColumnVarNameInTable="columnorderNo" msprop:Generator_ColumnPropNameInRow="orderNo" msprop:Generator_ColumnPropNameInTable="orderNoColumn" msprop:Generator_UserColumnName="orderNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="customerNo" msprop:Generator_ColumnVarNameInTable="columncustomerNo" msprop:Generator_ColumnPropNameInRow="customerNo" msprop:Generator_ColumnPropNameInTable="customerNoColumn" msprop:Generator_UserColumnName="customerNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" type="xs:int" minOccurs="0" />
+              <xs:element name="articleNo" msprop:Generator_ColumnVarNameInTable="columnarticleNo" msprop:Generator_ColumnPropNameInRow="articleNo" msprop:Generator_ColumnPropNameInTable="articleNoColumn" msprop:Generator_UserColumnName="articleNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vat_amount" msprop:Generator_ColumnVarNameInTable="columnvat_amount" msprop:Generator_ColumnPropNameInRow="vat_amount" msprop:Generator_ColumnPropNameInTable="vat_amountColumn" msprop:Generator_UserColumnName="vat_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="line_amount" msprop:Generator_ColumnVarNameInTable="columnline_amount" msprop:Generator_ColumnPropNameInRow="line_amount" msprop:Generator_ColumnPropNameInTable="line_amountColumn" msprop:Generator_UserColumnName="line_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VATpercent" msprop:Generator_ColumnVarNameInTable="columnVATpercent" msprop:Generator_ColumnPropNameInRow="VATpercent" msprop:Generator_ColumnPropNameInTable="VATpercentColumn" msprop:Generator_UserColumnName="VATpercent" type="xs:int" minOccurs="0" />
+              <xs:element name="orderDate" msprop:Generator_ColumnVarNameInTable="columnorderDate" msprop:Generator_ColumnPropNameInRow="orderDate" msprop:Generator_ColumnPropNameInTable="orderDateColumn" msprop:Generator_UserColumnName="orderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="seasonCode" msprop:Generator_ColumnVarNameInTable="columnseasonCode" msprop:Generator_ColumnPropNameInRow="seasonCode" msprop:Generator_ColumnPropNameInTable="seasonCodeColumn" msprop:Generator_UserColumnName="seasonCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="size" msprop:Generator_ColumnVarNameInTable="columnsize" msprop:Generator_ColumnPropNameInRow="size" msprop:Generator_ColumnPropNameInTable="sizeColumn" msprop:Generator_UserColumnName="size" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="articleOnline" msprop:Generator_ColumnVarNameInTable="columnarticleOnline" msprop:Generator_ColumnPropNameInRow="articleOnline" msprop:Generator_ColumnPropNameInTable="articleOnlineColumn" msprop:Generator_UserColumnName="articleOnline" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ue2SalesOrdersByMonth" msprop:Generator_TableClassName="Ue2SalesOrdersByMonthDataTable" msprop:Generator_TableVarName="tableUe2SalesOrdersByMonth" msprop:Generator_TablePropName="Ue2SalesOrdersByMonth" msprop:Generator_RowDeletingName="Ue2SalesOrdersByMonthRowDeleting" msprop:Generator_RowChangingName="Ue2SalesOrdersByMonthRowChanging" msprop:Generator_RowEvHandlerName="Ue2SalesOrdersByMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="Ue2SalesOrdersByMonthRowDeleted" msprop:Generator_UserTableName="Ue2SalesOrdersByMonth" msprop:Generator_RowChangedName="Ue2SalesOrdersByMonthRowChanged" msprop:Generator_RowEvArgName="Ue2SalesOrdersByMonthRowChangeEvent" msprop:Generator_RowClassName="Ue2SalesOrdersByMonthRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="Sum" msprop:Generator_ColumnVarNameInTable="columnSum" msprop:Generator_ColumnPropNameInRow="Sum" msprop:Generator_ColumnPropNameInTable="SumColumn" msprop:Generator_UserColumnName="Sum" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ue2SalesOrdersByWeek" msprop:Generator_TableClassName="Ue2SalesOrdersByWeekDataTable" msprop:Generator_TableVarName="tableUe2SalesOrdersByWeek" msprop:Generator_TablePropName="Ue2SalesOrdersByWeek" msprop:Generator_RowDeletingName="Ue2SalesOrdersByWeekRowDeleting" msprop:Generator_RowChangingName="Ue2SalesOrdersByWeekRowChanging" msprop:Generator_RowEvHandlerName="Ue2SalesOrdersByWeekRowChangeEventHandler" msprop:Generator_RowDeletedName="Ue2SalesOrdersByWeekRowDeleted" msprop:Generator_UserTableName="Ue2SalesOrdersByWeek" msprop:Generator_RowChangedName="Ue2SalesOrdersByWeekRowChanged" msprop:Generator_RowEvArgName="Ue2SalesOrdersByWeekRowChangeEvent" msprop:Generator_RowClassName="Ue2SalesOrdersByWeekRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderFirstDayOfWeek" msprop:Generator_ColumnVarNameInTable="columnOrderFirstDayOfWeek" msprop:Generator_ColumnPropNameInRow="OrderFirstDayOfWeek" msprop:Generator_ColumnPropNameInTable="OrderFirstDayOfWeekColumn" msprop:Generator_UserColumnName="OrderFirstDayOfWeek" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderYear" msprop:Generator_ColumnVarNameInTable="columnOrderYear" msprop:Generator_ColumnPropNameInRow="OrderYear" msprop:Generator_ColumnPropNameInTable="OrderYearColumn" msprop:Generator_UserColumnName="OrderYear" type="xs:int" minOccurs="0" />
+              <xs:element name="OrderWeek" msprop:Generator_ColumnVarNameInTable="columnOrderWeek" msprop:Generator_ColumnPropNameInRow="OrderWeek" msprop:Generator_ColumnPropNameInTable="OrderWeekColumn" msprop:Generator_UserColumnName="OrderWeek" type="xs:int" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="Sum" msprop:Generator_ColumnVarNameInTable="columnSum" msprop:Generator_ColumnPropNameInRow="Sum" msprop:Generator_ColumnPropNameInTable="SumColumn" msprop:Generator_UserColumnName="Sum" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

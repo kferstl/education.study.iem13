@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="de-AT">
+  <Title Visible="true" Text="DWO Übung 2 |  Kjartan Ferstl" />
+  <DataConnections>
+    <DataConnection Name="localhost,21_FH_DWOConnection" ProviderKey="MSSqlServer" ConnectionString="XpoProvider=MSSqlServer;data source=localhost;user id=;password=;initial catalog=FH_DWO;Persist Security Info=true" RequirePassword="true">
+      <Parameters>
+        <Parameter Name="server" Value="localhost" />
+        <Parameter Name="database" Value="FH_DWO" />
+        <Parameter Name="useIntegratedSecurity" Value="False" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource Name="RawData">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesDataExtended">
+            <Columns>
+              <Column Name="OrderYear" />
+              <Column Name="OrderMonth" />
+              <Column Name="OrderDay" />
+              <Column Name="OrderWeek" />
+              <Column Name="OrderFirstDayOfWeek" />
+              <Column Name="lineNo" />
+              <Column Name="orderNo" />
+              <Column Name="customerNo" />
+              <Column Name="type" />
+              <Column Name="articleNo" />
+              <Column Name="quantity" />
+              <Column Name="amount" />
+              <Column Name="vat_amount" />
+              <Column Name="line_amount" />
+              <Column Name="VATpercent" />
+              <Column Name="orderDate" />
+              <Column Name="description" />
+              <Column Name="seasonCode" />
+              <Column Name="size" />
+              <Column Name="articleOnline" />
+              <Column Name="numberOfArticlesInOrder" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesCustomers">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesCustomers">
+            <Columns>
+              <Column Name="customerNo" />
+              <Column Name="numberOfOrders" />
+              <Column Name="totalAmount" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesOrdersByMonth">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesOrdersByMonth">
+            <Columns>
+              <Column Name="date" />
+              <Column Name="Count" />
+              <Column Name="Sum" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesOrdersByWeek">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesOrdersByWeek">
+            <Columns>
+              <Column Name="OrderFirstDayOfWeek" />
+              <Column Name="OrderYear" />
+              <Column Name="OrderWeek" />
+              <Column Name="Count" />
+              <Column Name="Sum" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesOrdersExtended">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesOrdersExtended">
+            <Columns>
+              <Column Name="orderNo" />
+              <Column Name="customerNo" />
+              <Column Name="orderDate" />
+              <Column Name="numberOfArticlesInOrder" />
+              <Column Name="amount" />
+              <Column Name="vat_amount" />
+              <Column Name="OrderFirstDayOfWeek" />
+              <Column Name="OrderWeek" />
+              <Column Name="OrderDay" />
+              <Column Name="OrderMonth" />
+              <Column Name="OrderYear" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesArticles">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesArticles">
+            <Columns>
+              <Column Name="articleNo" />
+              <Column Name="picesSold" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesArticlesPerMonth">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesArticlesPerMonth">
+            <Columns>
+              <Column Name="OrderYear" />
+              <Column Name="OrderMonth" />
+              <Column Name="date" />
+              <Column Name="articleNo" />
+              <Column Name="articlesSold" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesArticlesSoldByArticlesInOrder">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesArticlesSoldByArticlesInOrder">
+            <Columns>
+              <Column Name="articleNo" />
+              <Column Name="quantitySold" />
+              <Column Name="numberOfArticlesInOrder" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+    <DataSource Name="Ue2SalesTopArticleCombinations">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesTopArticleCombinations">
+            <Columns>
+              <Column Name="subArticle" />
+              <Column Name="topArticle" />
+              <Column Name="subAmount" />
+              <Column Name="numberOfArticlesInOrder" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Chart UniqueName="Chart 1" Name="Bestellungen &amp; Summe / Monat" DataSource="Ue2SalesOrdersByMonth">
+      <DataItems>
+        <Measure DataMember="Ue2SalesOrdersByMonth.Sum" UniqueName="DataItem1">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="Ue2SalesOrdersByMonth.date" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+        <Measure DataMember="Ue2SalesOrdersByMonth.Count" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+        <Pane Name="Pane 2">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX />
+    </Chart>
+    <Chart UniqueName="Chart 2" Name="Bestellungen / Monat" DataSource="Ue2SalesOrdersByWeek">
+      <DataItems>
+        <Measure DataMember="Ue2SalesOrdersByWeek.Count" UniqueName="DataItem0" />
+        <Dimension DataMember="Ue2SalesOrdersByWeek.OrderWeek" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesOrdersByWeek.OrderYear" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="orderNo (Count)" TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="Arguments" />
+    </Chart>
+    <Chart UniqueName="Chart 3" Name="Ø Bestellsumme / Monat" DataSource="Ue2SalesOrdersExtended">
+      <DataItems>
+        <Measure DataMember="Ue2SalesOrdersExtended.amount" SummaryType="Average" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesOrdersExtended.orderDate" DateTimeGroupInterval="MonthYear" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX />
+    </Chart>
+    <Chart UniqueName="Chart 4" Name="Aufträge / Wochentag" DataSource="Ue2SalesOrdersExtended">
+      <DataItems>
+        <Measure DataMember="Ue2SalesOrdersExtended.orderNo" SummaryType="Count" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesOrdersExtended.orderDate" DateTimeGroupInterval="DayOfWeek" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="orderNo (Count)" TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="orderDate (Day of Week)" />
+    </Chart>
+    <Chart UniqueName="Chart 5" Name="Relativer Anteil anzahl Positionen" DataSource="Ue2SalesOrdersExtended">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesOrdersExtended.numberOfArticlesInOrder" IsDiscreteScale="true" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesOrdersExtended.orderNo" SummaryType="Count" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="amount (Count)" TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="lineNo" />
+    </Chart>
+    <Grid UniqueName="Tabelle 1" Name="Top10 Kunden" DataSource="Ue2SalesCustomers">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesCustomers.customerNo" SortOrder="Descending" SortByMeasure="DataItem1" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesCustomers.numberOfOrders" UniqueName="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="Kunde">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Bestellungen">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Grid UniqueName="Tabelle 2" Name="Top10 Kunden" DataSource="Ue2SalesCustomers">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesCustomers.customerNo" SortOrder="Descending" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesCustomers.totalAmount" UniqueName="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="Kunde">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Umsatz">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Grid UniqueName="Tabelle 3" Name="Top10 Artikel 1 Position" DataSource="Ue2SalesArticlesSoldByArticlesInOrder" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS43LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAKERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQmluYXJ5T3BlcmF0b3IDAAAADE9wZXJhdG9yVHlwZQtMZWZ0T3BlcmFuZAxSaWdodE9wZXJhbmQEBAQsRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUCAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AgAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQIAAAACAAAABf3///8sRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUBAAAAB3ZhbHVlX18ACAIAAAAAAAAACQQAAAAJBQAAAAUEAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AQAAAAxwcm9wZXJ0eU5hbWUBAgAAAAYGAAAACURhdGFJdGVtMgUFAAAAJkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFZhbHVlAQAAAAV2YWx1ZQICAAAACAgBAAAACw==">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesArticlesSoldByArticlesInOrder.articleNo" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesArticlesSoldByArticlesInOrder.quantitySold" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesArticlesSoldByArticlesInOrder.numberOfArticlesInOrder" UniqueName="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem2" />
+      </HiddenDimensions>
+      <GridColumns>
+        <GridDimensionColumn Name="Artikel">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Anzahl">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Grid UniqueName="Tabelle 4" Name="Top10 Artikel Jänner 11" DataSource="Ue2SalesArticlesPerMonth" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS43LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAKERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQmluYXJ5T3BlcmF0b3IDAAAADE9wZXJhdG9yVHlwZQtMZWZ0T3BlcmFuZAxSaWdodE9wZXJhbmQEBAQsRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUCAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AgAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQIAAAACAAAABf3///8sRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUBAAAAB3ZhbHVlX18ACAIAAAAAAAAACQQAAAAJBQAAAAUEAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AQAAAAxwcm9wZXJ0eU5hbWUBAgAAAAYGAAAACURhdGFJdGVtMgUFAAAAJkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFZhbHVlAQAAAAV2YWx1ZQICAAAABgcAAAAHMjAxMS0wMQs=">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesArticlesPerMonth.articleNo" SortOrder="Descending" SortByMeasure="DataItem1" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesArticlesPerMonth.articlesSold" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesArticlesPerMonth.date" UniqueName="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem2" />
+      </HiddenDimensions>
+      <GridColumns>
+        <GridDimensionColumn Name="Artikel">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Anzahl">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Grid UniqueName="Tabelle 5" Name="Top10 Artikel Juni 11" DataSource="Ue2SalesArticlesPerMonth" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS43LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAKERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQmluYXJ5T3BlcmF0b3IDAAAADE9wZXJhdG9yVHlwZQtMZWZ0T3BlcmFuZAxSaWdodE9wZXJhbmQEBAQsRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUCAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AgAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQIAAAACAAAABf3///8sRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUBAAAAB3ZhbHVlX18ACAIAAAAAAAAACQQAAAAJBQAAAAUEAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AQAAAAxwcm9wZXJ0eU5hbWUBAgAAAAYGAAAACURhdGFJdGVtMgUFAAAAJkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFZhbHVlAQAAAAV2YWx1ZQICAAAABgcAAAAHMjAxMS0wNgs=">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesArticlesPerMonth.articleNo" SortOrder="Descending" SortByMeasure="DataItem1" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesArticlesPerMonth.articlesSold" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesArticlesPerMonth.date" UniqueName="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem2" />
+      </HiddenDimensions>
+      <GridColumns>
+        <GridDimensionColumn Name="Artikel">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Anzahl">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Grid UniqueName="Tabelle 6" Name="Top10 Artikel" DataSource="Ue2SalesArticles">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesArticles.articleNo" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesArticles.picesSold" UniqueName="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="Artikel">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Anzahl">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Grid UniqueName="Tabelle 7" Name="Top10 subArtikel mit Top1 / 2Pos" DataSource="Ue2SalesTopArticleCombinations" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS43LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAKERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQmluYXJ5T3BlcmF0b3IDAAAADE9wZXJhdG9yVHlwZQtMZWZ0T3BlcmFuZAxSaWdodE9wZXJhbmQEBAQsRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUCAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AgAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQIAAAACAAAABf3///8sRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5CaW5hcnlPcGVyYXRvclR5cGUBAAAAB3ZhbHVlX18ACAIAAAAAAAAACQQAAAAJBQAAAAUEAAAAKURldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFByb3BlcnR5AQAAAAxwcm9wZXJ0eU5hbWUBAgAAAAYGAAAACURhdGFJdGVtMgUFAAAAJkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuT3BlcmFuZFZhbHVlAQAAAAV2YWx1ZQICAAAACAgCAAAACw==">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesTopArticleCombinations.subArticle" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesTopArticleCombinations.subAmount" UniqueName="DataItem1" />
+        <Dimension DataMember="Ue2SalesTopArticleCombinations.numberOfArticlesInOrder" UniqueName="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem2" />
+      </HiddenDimensions>
+      <GridColumns>
+        <GridDimensionColumn Name="subArtikel">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Anzahl">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ShowHorizontalLines="true" ShowVerticalLines="true" />
+    </Grid>
+    <Gauge UniqueName="Messgeräte 1" Name="Schätzung " />
+  </Items>
+  <Layout>
+    <LayoutItem Name="Chart 1" Left="0" Top="0" Right="0.37273337810611146" Bottom="0.37264150943396224" />
+    <LayoutItem Name="Chart 2" Left="0" Top="0.37264150943396224" Right="0.374076561450638" Bottom="0.68632075471698117" />
+    <LayoutItem Name="Tabelle 1" Left="0.76628609805238412" Top="0" Right="0.88717259905977164" Bottom="0.37264150943396224" />
+    <LayoutItem Name="Tabelle 2" Left="0.88717259905977164" Top="0" Right="1" Bottom="0.37264150943396224" />
+    <LayoutItem Name="Tabelle 5" Left="0.88918737407656145" Top="0.68632075471698117" Right="1" Bottom="1" />
+    <LayoutItem Name="Chart 4" Left="0.37273337810611146" Top="0" Right="0.76628609805238412" Bottom="0.37264150943396224" />
+    <LayoutItem Name="Tabelle 3" Left="0.64942914707857624" Top="0.68514150943396224" Right="0.76830087306917394" Bottom="1" />
+    <LayoutItem Name="Chart 5" Left="0.374076561450638" Top="0.37264150943396224" Right="0.76830087306917394" Bottom="0.68514150943396224" />
+    <LayoutItem Name="Tabelle 6" Left="0.53593015446608461" Top="0.68514150943396224" Right="0.64942914707857624" Bottom="1" />
+    <LayoutItem Name="Chart 3" Left="0" Top="0.68632075471698117" Right="0.374076561450638" Bottom="1" />
+    <LayoutItem Name="Messgeräte 1" Left="0.76830087306917394" Top="0.37264150943396224" Right="1" Bottom="0.68632075471698117" />
+    <LayoutItem Name="Tabelle 4" Left="0.76830087306917394" Top="0.68632075471698117" Right="0.88918737407656145" Bottom="1" />
+    <LayoutItem Name="Tabelle 7" Left="0.374076561450638" Top="0.68514150943396224" Right="0.53593015446608461" Bottom="1" />
+  </Layout>
+</Dashboard>

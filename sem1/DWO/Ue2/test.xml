@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="de-AT">
+  <Title Visible="true" Text="DWO Übung 2" />
+  <DataConnections>
+    <DataConnection Name="localhost,21_FH_DWOConnection" ProviderKey="MSSqlServer" ConnectionString="XpoProvider=MSSqlServer;data source=localhost,21;user id=;password=;initial catalog=FH_DWO;Persist Security Info=true" RequirePassword="true">
+      <Parameters>
+        <Parameter Name="server" Value="localhost,21" />
+        <Parameter Name="database" Value="FH_DWO" />
+        <Parameter Name="useIntegratedSecurity" Value="False" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource Name="RawData">
+      <DataProvider DataConnection="localhost,21_FH_DWOConnection" SupportSql="true">
+        <Selection>
+          <Table Name="Ue2SalesOrdersExtended">
+            <Columns>
+              <Column Name="orderNo" />
+              <Column Name="customerNo" />
+              <Column Name="orderDate" />
+              <Column Name="numberOfArticlesInOrder" />
+              <Column Name="amount" />
+              <Column Name="vat_amount" />
+              <Column Name="OrderFirstDayOfWeek" />
+              <Column Name="OrderWeek" />
+              <Column Name="OrderDay" />
+              <Column Name="OrderMonth" />
+              <Column Name="OrderYear" />
+            </Columns>
+          </Table>
+          <Table Name="Ue2SalesDataExtended">
+            <References>
+              <Reference Key="orderNo" ParentKey="orderNo" ParentTable="Ue2SalesOrdersExtended" />
+            </References>
+            <Columns>
+              <Column Name="OrderYear" Alias="Ue2SalesDataExtended_OrderYear" />
+              <Column Name="OrderMonth" Alias="Ue2SalesDataExtended_OrderMonth" />
+              <Column Name="OrderDay" Alias="Ue2SalesDataExtended_OrderDay" />
+              <Column Name="OrderWeek" Alias="Ue2SalesDataExtended_OrderWeek" />
+              <Column Name="OrderFirstDayOfWeek" Alias="Ue2SalesDataExtended_OrderFirstDayOfWeek" />
+              <Column Name="lineNo" />
+              <Column Name="orderNo" Alias="Ue2SalesDataExtended_orderNo" />
+              <Column Name="customerNo" Alias="Ue2SalesDataExtended_customerNo" />
+              <Column Name="type" />
+              <Column Name="articleNo" />
+              <Column Name="quantity" />
+              <Column Name="amount" Alias="Ue2SalesDataExtended_amount" />
+              <Column Name="vat_amount" Alias="Ue2SalesDataExtended_vat_amount" />
+              <Column Name="line_amount" />
+              <Column Name="VATpercent" />
+              <Column Name="orderDate" Alias="Ue2SalesDataExtended_orderDate" />
+              <Column Name="description" />
+              <Column Name="seasonCode" />
+              <Column Name="size" />
+              <Column Name="articleOnline" />
+              <Column Name="numberOfArticlesInOrder" Alias="Ue2SalesDataExtended_numberOfArticlesInOrder" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Chart UniqueName="Chart 1" Name="Bestellungen &amp; Summe / Monat" DataSource="RawData">
+      <DataItems>
+        <Measure DataMember="Ue2SalesDataExtended.amount" UniqueName="DataItem0" />
+        <Dimension DataMember="Ue2SalesDataExtended.orderDate" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+        <Measure DataMember="Ue2SalesDataExtended.orderNo" SummaryType="Count" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+        <Pane Name="Pane 2">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX />
+    </Chart>
+    <Chart UniqueName="Chart 2" Name="Bestellungen / Monat" DataSource="RawData">
+      <DataItems>
+        <Measure DataMember="Ue2SalesDataExtended.orderNo" SummaryType="Count" UniqueName="DataItem0" />
+        <Dimension DataMember="Ue2SalesDataExtended.OrderYear" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Dimension>
+        <Dimension DataMember="Ue2SalesDataExtended.OrderWeek" UniqueName="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="orderNo (Count)" TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="Arguments" />
+    </Chart>
+    <Chart UniqueName="Chart 3" Name="Ø Bestellsumme / Monat" DataSource="RawData">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesDataExtended.orderDate" DateTimeGroupInterval="Month" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesDataExtended.amount" SummaryType="Average" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX />
+    </Chart>
+    <Chart UniqueName="Chart 4" Name="Aufträge / Wochentag" DataSource="RawData">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesDataExtended.orderDate" DateTimeGroupInterval="DayOfWeek" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesDataExtended.orderNo" SummaryType="Count" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="orderNo (Count)" TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="orderDate (Day of Week)" />
+    </Chart>
+    <Chart UniqueName="Chart 5" Name="Relativer Anteil anzahl Positionen" DataSource="RawData">
+      <DataItems>
+        <Measure DataMember="Ue2SalesDataExtended.amount" SummaryType="Count" UniqueName="DataItem0" />
+        <Dimension DataMember="Ue2SalesDataExtended.lineNo" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="amount (Count)" TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="lineNo" />
+    </Chart>
+    <RangeFilter UniqueName="Range Filter 1" DataSource="RawData">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesDataExtended.orderDate" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem0" />
+        <Measure DataMember="Ue2SalesDataExtended.amount" UniqueName="DataItem1" />
+      </DataItems>
+      <Argument UniqueName="DataItem0" />
+      <Series>
+        <Simple SeriesType="Area">
+          <Value UniqueName="DataItem1" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+    <Pivot UniqueName="Pivot 1" Name="Top 10 Artikel / 1 Position" DataSource="RawData">
+      <DataItems>
+        <Dimension DataMember="Ue2SalesDataExtended.numberOfArticlesInOrder" UniqueName="DataItem0" />
+        <Dimension DataMember="Ue2SalesDataExtended.articleNo" SortByMeasure="DataItem2" UniqueName="DataItem1" />
+        <Measure DataMember="Ue2SalesDataExtended.quantity" UniqueName="DataItem2" />
+      </DataItems>
+      <Columns>
+        <Column UniqueName="DataItem0" />
+      </Columns>
+      <Rows>
+        <Row UniqueName="DataItem1" />
+      </Rows>
+      <Values>
+        <Value UniqueName="DataItem2" />
+      </Values>
+      <AutoExpandColumnGroups>false</AutoExpandColumnGroups>
+      <AutoExpandRowGroups>false</AutoExpandRowGroups>
+      <Names>
+        <Name Value="DataItem2" Name="quantity (Sum)" />
+      </Names>
+    </Pivot>
+  </Items>
+  <Layout>
+    <LayoutItem Name="Chart 1" Left="0" Top="0" Right="0.50198150594451785" Bottom="0.34499396863691195" />
+    <LayoutItem Name="Chart 2" Left="0" Top="0.34499396863691195" Right="0.50066050198150591" Bottom="0.6357056694813028" />
+    <LayoutItem Name="Chart 3" Left="0.50198150594451785" Top="0" Right="1" Bottom="0.34499396863691195" />
+    <LayoutItem Name="Chart 4" Left="0.50066050198150591" Top="0.34499396863691195" Right="1" Bottom="0.6357056694813028" />
+    <LayoutItem Name="Chart 5" Left="0.50066050198150591" Top="0.6357056694813028" Right="1" Bottom="0.93124246079613993" />
+    <LayoutItem Name="Range Filter 1" Left="0" Top="0.93124246079613993" Right="1" Bottom="1" />
+    <LayoutItem Name="Pivot 1" Left="0" Top="0.6357056694813028" Right="0.50066050198150591" Bottom="0.93124246079613993" />
+  </Layout>
+</Dashboard>
