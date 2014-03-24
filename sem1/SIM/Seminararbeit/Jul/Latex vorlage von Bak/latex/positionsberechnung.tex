@@ -1,0 +1,82 @@
+\chapter{Berechnung einer Position mittels Laufzeit}
+\label{cha:positionsberechnung}
+
+Die Positionsbestimmung erfolgt wie bereits erwähnt, mittels Laufzeitmessung. Ultraschallwellen breiten sich in Luft, bei 20°C, mit 343 Meter pro Sekunde aus (v). Wird nun eine Signallaufzeit (t) von 2 Millisekunden gemessen, so kann der Abstand (d) zwischen Sender und Empfänger wie folgt berechnet werden: 
+
+\begin{eqnarray}
+v = 343 m/s &t = 2ms \nonumber  \\
+d 	&=& t * c \nonumber  \\
+ 	&=& 343 * 0,002 \nonumber  \\
+	&\approx& 86,6 cm
+\end{eqnarray}
+
+Damit der Empfänger die Laufzeit des Signales messen kann, muss dieser \emph{wissen}, zu welcher Zeit der Sender das Signal gesendet hat. Dazu wird wie bereits erwähnt, ein Synchronisationsimpuls benötigt. Zusätzlich müssen noch Verzögerungen des Senders und Empfängers abgezogen werden, welche während der Signalverarbeitung, zum Beispiel in Filter, entstehen. 
+
+Ist eine Position, sowie der Abstand zu dieser bekannt, liegt die eigene Position bei ebener Betrachtung auf einem Kreis, um die bekannte Position \emph{(dem Sender)}. Im 3D-Raum sogar auf einer Kugelschale. Sind zwei Positionen bekannt, so befindet sich die eigene Position entlang der Schnittpunkte der zwei Kugelschalen. Auf der Ebene entstehen zwei Punkte und im 3D Raum eine Kreislinie. 
+
+Abbildung \ref{fig:2dposition} veranschaulicht das auf einer Ebene. Die Punkte \emph{A} und \emph{B} sind mögliche Positionen, wenn nur die Positionen von \emph{P1} und \emph{P2} bekannt sind, da diese jeweils den gleichen Abstand zu \emph{P1} und \emph{P2} aufweisen und dadurch auch die gleiche Signallaufzeit haben. Erst durch miteinbeziehen von \emph{P3} ist die eigene Position \emph{B} exakt auf der Ebene bestimmt.
+
+Soll die Position im 3D Raum bestimmt werden, so müssen mindestens vier Positionen bekannt sein. Die bekannten Positionen dürfen sich nicht auf einer Ebene befinden, da sonst mehrere mögliche Lösungen entstehen. Eine über der Ebene sowie eine unter dieser.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{Position-2d.jpg}
+\caption{Veranschaulichung der Positionsbestimmung auf einer Ebene. \cite{ImgPosition}}
+\label{fig:2dposition}
+\end{figure}
+
+\section{Bestimmung der Position im 3D Raum}
+Für die Bestimmung der 3D Position, wird das TDOA \emph{( engl. time differences of arrival)} Verfahren verwendet. Diese Methode verwendet für die Berechnung den zeitlichen Unterschied, zwischen den empfangenen Signalen der einzelnen Sender. Es wird also nicht die Laufzeit zwischen Sender und Empfänger gemessen, sondern der zeitliche Unterschied zwischen den  Signalen der einzelnen Sender. Mittels dieser Methode muss der Empfänger nicht wissen, wann die Sender deren Signale aussenden. Es müssen nur die Sender synchronisiert werden, nicht aber der Empfänger.
+
+Dem Empfänger müssen die Positionen, sowie die Codes der Sender bekannt sein. Zusätzlich wird für die Bestimmung einer eindeutigen Position, ein weiterer Sender benötigt. Es werden mindestens fünf Sender für eine eindeutige Positionsbestimmung benötigt. Der weitere Sender wird als Referenz benötigt. Wird ein Impuls dieses Senders empfangen, werden die Zeitdifferenzen zu den anderen Sendern berechnet. 
+
+Der als Referenz verwendete Sender kann jederzeit verändert werden, um Ausfälle durch Abschattung zu vermeiden. So kann immer der geografisch nächste, verfügbare Sender verwendet werden. Mittels dem Gleichungssystem (\ref{cal:posSystem}) kann die Position $(x,y,z)$ bestimmt werden.
+
+\begin{eqnarray}
+	(x - x_{1})^{2} + (y - y_{1})^{2} + (z - z_{1})^{2} &=& d_{1}^{2} \nonumber  \\
+	(x - x_{2})^{2} + (y - y_{2})^{2} + (z - z_{2})^{2} &=& (d_{1} + c* \Delta T_{12})^{2} \nonumber  \\
+								... \quad ... \quad ... &=& \quad ... \nonumber  \\
+	(x - x_{N})^{2} + (y - y_{N})^{2} + (z - z_{N})^{2} &=& (d_{1} + c* \Delta T_{1N})^{2}
+	\label{cal:posSystem}
+\end{eqnarray}
+
+Dazu werden die Positionen der Sender $(x_N,y_N,z_N)$, sowie die Zeitunterschiede $\Delta T_{12}, bis \Delta T_{1N}$ verwendet. Für die Berechnung wird zusätzlich der Abstand zum ersten Sender $d_1$ , sprich dem Referenzsender, verwendet. Da genügend Gleichungen verfügbar sind, wird dieser jedoch nicht als Eingangsparameter benötigt, sondern findet sich im Ergebnisvektor wieder.
+
+Zum Lösen des Gleichungssystems, müssen im ersten Schritt die Quadrate aufgelöst werden, dann kann die erste Gleichung von den anderen Gleichungen subtrahiert werden. Nach Neuanordnung der Terme entsteht ein lineares Gleichungssystem. Dieses kann mittels Matrizen angeschrieben werden (\ref{cal:solveSysA}). Durch Umformung kann $\vec{x}$ berechnet werden.
+
+Genauere Informationen bezüglich des TDOA Algorithmus, sowie Herleitung der Gleichungen siehe \cite{TDOF}.
+
+(\ref{cal:solveSysB}).
+
+\begin{eqnarray}
+	\label{cal:solveSysA}
+	A\vec{x} &=& \vec{b} \\
+	\nonumber \\
+	\label{cal:solveSysB}
+	\vec{x} &=& (A^T A)^{-1} A^T \vec{b} \\
+	\nonumber \\
+	\vec{x} &=&
+	\begin{bmatrix} 
+	x\\
+	y\\
+	z\\
+	d_1
+	\end{bmatrix}
+	\nonumber \\
+	A &=&
+	\begin{bmatrix} 
+	1x_1-2x_2 & 2y_1-2y_2 & 2z_1-2z_2 & -2c*\Delta T_{12} \\
+	1x_1-2x_3 & 2y_1-2y_3 & 2z_1-2z_3 & -2c*\Delta T_{13} \\
+	... & ... & ... & ... \\
+	1x_1-2x_N & 2y_1-2y_N & 2z_1-2z_N & -2c*\Delta T_{1N} \\ 
+	\end{bmatrix}
+	\nonumber \\
+	\vec{b} &=&
+	\begin{bmatrix} 
+	c^2 * \Delta T_{12} + x^2_1 + y^2_1 + z^2_1 - x^2_2 - y^2_2 - z^2_2  \\
+	c^2 * \Delta T_{13} + x^2_1 + y^2_1 + z^2_3 - x^2_3 - y^2_3 - z^2_3  \\
+	...  \\
+	c^2 * \Delta T_{1N} + x^2_1 + y^2_1 + z^2_N - x^2_N - y^2_N - z^2_N  \\ 
+	\end{bmatrix}
+	\nonumber
+\end{eqnarray}

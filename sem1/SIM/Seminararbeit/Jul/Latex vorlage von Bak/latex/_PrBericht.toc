@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Kurzfassung}{ii}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Das Unternehmen}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Projekte und T\IeC {\"a}tigkeiten w\IeC {\"a}hrend des Praktikums}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Projektbeispiele}{6}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Terminplanung und Entwicklungsablauf}{6}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Umsetzung}{6}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Power Management}{7}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}digitale Eing\IeC {\"a}nge}{8}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}analoge Eing\IeC {\"a}nge}{8}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.4}digitale Ausg\IeC {\"a}nge}{9}{subsection.3.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.5}USB Host / Slave / OTG}{9}{subsection.3.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.6}Serielles debug Interface}{9}{subsection.3.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.7}Skriptsprache LUA}{10}{subsection.3.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.8}Planung der Best\IeC {\"u}ckung}{10}{subsection.3.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Erfahrungen und Zusammenfassung}{12}{chapter.4}

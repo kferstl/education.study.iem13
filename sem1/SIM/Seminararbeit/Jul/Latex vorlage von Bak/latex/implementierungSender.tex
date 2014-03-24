@@ -1,0 +1,35 @@
+\chapter{Implementierung des Senders}
+\label{cha:implementierungSender}
+
+\section{Grundsätzlicher Aufbau und Blockdarstellung}
+Abbildung \ref{fig:BlockSender} zeigt den schematischen Aufbau des Senders. Die zu übertragenden Daten, werden mittels einer Gold-Sequenz gespreizt und anschließend auf eine Trägerfrequenz von 40 kHz mittels BPSK Verfahren moduliert.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{Block-Sender.png}
+\caption{Blockschaltbild des Senders.}
+\label{fig:BlockSender}
+\end{figure}
+
+Die verwendete Gold-Sequenz hat eine Länge von 128 Chips. Für eine Positionsbestimmung reicht es, die Gold-Sequenz ohne Nutzdaten zu übertragen. Die zusätzliche Übertragung von Daten ermöglicht jedoch im Zuge der Positionsbestimmung, Daten über den Sender zu erhalten. So ist es grundsätzlich möglich, dessen Koordinaten zu übertragen. Da das Übertragungsmedium sowie der Spreizcode nicht für die Übertragung von Daten ausgewählt wurde, ist die Übertragung von Daten nur mit sehr geringer Datenrate möglich.
+
+Ein Sender muss als Master definiert werden und dieser gibt den Takt für das Starten der Übertragung vor. Der Takt wird entweder via Funk mit 2,4 GHz übertragen oder der Einfachheit halber, über ein Kabel. Die gesamte Erzeugung des zu sendenden Signales, wird mittels FPGA realisiert. Dieser erzeugt unter anderem auch die Signale zur Ansteuerung einer H-Brücke, mit der der Piezo-Transmitter betrieben wird. 
+
+Abbildung \ref{fig:transmitterSignals} zeigt die Ausgänge der einzelnen Blöcke sowie das gesendete Signal.
+
+\section{Funktionsbeschreibung der FPGA Blöcke}
+\subsection{Signal-Spreizungs-Block}
+Dieser Block ist ein einfaches Schieberegister. Im Register befindet sich die Gold-Sequenz. Nach dem Reset, sowie einem Start-Impuls, legt dieses mit einem einstellbaren Takt, fortlaufend die einzelnen Chips der Sequenz XOR verknüpft mit den Datenbit, am Ausgang an. Das Datenbit wird mit dem Start-Impuls gespeichert. Nachdem die Sequenz ausgegeben wurde, muss dieser Block mittels einem erneuten Start-Impulses erneut gestartet werden.
+
+\subsection{BPSK Modulator}
+Am Eingang werden die zu modulierenden Daten angelegt, in diesem Fall, die mittels der Gold-Sequenz gespreizten Nutzdaten. Zusätzlich muss der Träger angelegt werden, dabei handelt es sich um ein 40 kHz Rechtecksignal. Im Block wird die Phase des Trägers 180 Grad verschoben, indem das Signal invertiert wird. Die am Eingang anliegenden Daten, werden mit der Systemfrequenz von 50 MHz abgetastet. Wird eine \emph{NULL} gelesen, wird am Ausgang der 180 Grad verschobene Träger ausgegeben, ansonsten der originale Träger. Das Ausgangssignal ist normal, sowie invertiert verfügbar, um damit direkt die H-Brücke am Ausgang ansteuern zu können.
+
+\section{Funktionsbeschreibung der Hardware}
+Die Hardware des Senders ist relativ einfach. Sie besteht lediglich aus dem FPGA und einer Brückenschaltung als Leistungsstufe. Der Piezo Transmitter kann direkt an die H-Brücke angeschlossen werden. Als H-Brücke wird der \emph{L-298} von ST-Microelectronics verwendet.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{signals-transmitter.jpeg}
+\caption{Ausgänge der einzelnen FPGA Blöcke, sowie Signal an Piezo Transmitter. CH1 zeigt die Trägerfreqenz von 40 kHz, CH2 einen Ausschnitt der 128 Chips Gold Sequenz, CH3 die BPSK modulierten Daten und CH4 das Signal am Piezo Transmitter.}
+\label{fig:transmitterSignals}
+\end{figure}

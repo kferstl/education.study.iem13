@@ -1,0 +1,85 @@
+\chapter{Multiplexverfahren}
+\label{cha:Multiplex}
+\section{Allgemeines}
+Multiplexverfahren ermöglichen mittels unterschiedlichster Techniken, mehrere Signale über ein einzelnes, gemeinsames Medium zu übertragen. Dabei werden mehrere parallele Signale, zu einem Signal gebündelt. Die bündelnde Einheit wird Multiplexer, kurz MUX genannt. Dessen Gegenstück ist der Demultiplexer, kurz DEMUX. Unterschiedliche Verfahren können auch kombiniert werden, um eine noch höhere Nutzung zu ermöglichen. Im Funkbereich ermöglichen diese Techniken, das mehrere Teilnehmer, auch wenn diese räumlich verteilt sind, mit einem Empfänger kommunizieren können. Bei Punkt zu Punkt Verbindungen, werden diese Techniken auch verwendet, um mehrere Datenströme übertragen zu können. Das Auslesen eines modernen Kamerachips, welcher mehrere Millionen Bildpunkte erfasst, wird überhaupt erst mittels dieser Technologie möglich, da ansonsten einige Millionen Leitungen nötig wären. 
+
+Siehe Abbildung \ref{fig:Multiplex}, diese zeigt einen schematischen Vergleich, der hier beschriebenen Multiplexverfahren.
+
+\section{Zeitmultiplexverfahren}
+Mittels dem Zeitmultiplexverfahren, kurz TDMA\footnote{Time-division multiple access}, werden mehrere Signale nacheinander in so genannten Zeitschlitzen übertragen. Der MUX funktioniert dabei wie ein Auswahlschalter, welcher mit einer gewissen Taktrate weiter gedreht wird. Grundsätzlich funktioniert der DEMUX wie ein MUX nur gegengleich. Es entsteht jedoch ein Synchronisationsproblem. 
+
+Wann darf der DMUX weiter schalten? Er muss dazu synchronisiert werden. Ein Beispiel dafür ist DMX\footnote{Digital Multiplex}. DMX wird vorwiegend im Veranstaltungsbereich verwendet und dient zur Steuerung von Lichtanlagen. DMX überträgt mittels dieser Technik 512 digitale 8 Bit Werte. Das Synchronisationsproblem wird durch Einfügen einer Pause, vor dem ersten Wert, sowie einem Start Bit gelöst. Dadurch können sich Sender und Empfänger synchronisieren. DMX wurde 1990 entwickelt und gilt heutzutage nach wie vor als Standard.
+
+\section{Frequenzmultiplexverfahren}
+Frequenzmultiplex, kurz FDMA\footnote{Frequency-division multiple access}, überträgt mehrere Signale, indem diese in unterschiedliche Frequenzbereiche verschoben werden. Das bei TDMA auftretende Problem der Synchronisation fällt in diesem Fall weg. Der Empfänger muss lediglich wissen, welcher Sender, welche Frequenz verwendet.
+
+Da jeder Sender einen eigenen Frequenzbereich zugewiesen bekommt, wird die benötigte, gesamte Bandbreite mit zunehmender Anzahl an Sendern größer.  Um die Bandbreite möglichst klein zu halten, befinden sich die einzelnen Kanäle meistens sehr nahe aneinander, was zu Übersprechen führen kann. Um die einzelnen Nutzdaten extrahieren zu können, werden am Empfänger spezielle Filter benötigt. Diese müssen auf die Frequenzen, der einzelnen Kanäle, einstellbar sein. Eine Anwendung findet diese Technik in der analogen Übertragung vom FM-Radio.
+
+\section{Codemultiplexverfahren}
+\label{sec:CDMA}
+Beim Codemultiplex, kurz CDMA\footnote{Code-division multiple access}, erfolgt die Übertragung mehrerer Signale mittels Überlagerung von Zeit und Frequenz. Dadurch können zeitgleich, auf der selben Frequenz, mehrere Nutzdatensignale übertragen werden. Eine wichtige Eigenschaft ist, dass der gemeinsam genutzte Frequenzbereich eine höhere Bandbreite als für die einzelnen Nutzsignale benötigt, aufweist. Für diese Frequenzspreizung und um die einzelnen Signale voneinander unterscheiden zu können, werden spezielle sogenannte Spreizcodes verwendet.
+
+Grundsätzlich kann man sich CDMA so vorstellen, als würden viele Menschen in einem Raum gleichzeitig, in unterschiedlichen Sprachen sprechen. Nur diejenigen, die die Sprache, also den Code kennen, verstehen sich. Andere Sprachen werden als Störung (noise) gewertet und nicht weiter beachtet. Die Auswahl der verwendeten Spreizcodes ist sehr wichtig, sie müssen bestimmte Eigenschaften, wie Orthogonalität aufweisen und basieren in bestimmten Anwendungen auf Pseudozufall. Solche Codefolgen unterscheiden sich durch eine minimale Kreuzkorrelation voneinander. 
+
+Mehr dazu in Kapitel \ref{cha:Spreizcode} Spreizcodes.
+
+Die übertragenen Signale werden als bandgespreizte Signale bezeichnet. Um ein solches Signal zu erzeugen, werden die Nutzdaten mit dem gewählten Code XOR\footnote{exklusiv oder} verknüpft. Jeder Teilnehmer benötigt einen eindeutigen Spreizcode. Die einzelnen Teile des Codes werden als Chip bezeichnet. Siehe Abbildung \ref{fig:CDMA} für eine beispielhafte Erzeugung eines solchen Signales. 
+
+Jedes Datenbit, wird mit dem gesamten Spreizcode sozusagen \emph{aufgeblasen}. Dadurch ist die Chiprate immer höher als die Bitrate. Das Verhältnis zwischen Chiprate und Bitrate wird als Spreizfaktor bezeichnet.
+
+Je länger der verwendete Spreizcode, umso mehr Teilnehmer können voneinander unterschieden werden.
+Eine längere Codefolge bedeutet bei gleicher Chiprate, aber auch eine entsprechend geringere Datenrate. 
+
+Diese Technik wird im Mobilfunkbereich verwendet. UMTS verwendet je nach Teilnehmerzahl, unterschiedlich lange Codes, um bei geringerer Teilnehmerzahl höhere Datenraten zu ermöglichen. Die einzelnen Signale können mittels Korrelation mit der Codefolge getrennt werden. 
+
+Mehr dazu im Kapitel \ref{cha:Korrelation} Korrelation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{cmda-signal.jpg}
+\caption{Erzeugung eines CDMA-Signales.
+Signal a) zeigt die zu übertragenden Daten (Nutzdaten), b) den Spreizcode, c) das bandgespreitzte Signal.
+In diesem Beispiel ist die Chiprate 10 mal so hoch und dadurch ein Bandspreizung um ungefähr Faktor 10.}
+\label{fig:CDMA}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{tdma-fdma-cdma.jpg}
+\caption{Multiplexverfahren im schematischen Vergleich. \cite{ImgMultiplex}}
+\label{fig:Multiplex}
+\end{figure}
+
+\subsection{Spreizcodes}
+\label{cha:Spreizcode}
+Wie schon in Kapitel \ref{sec:CDMA} CDMA beschrieben, werden Spreizcodes zur Spreizung von Nutzsignalen verwendet. Jedes Bit des Nutzsignales, wird mit den einzelnen Chips des Spreizcodes multipliziert. Die Nutzbitrate ist dadurch immer kleiner als die Chiprate. Die Chiprate wird in, chips per second (cps) angegeben. Die Daten jedoch in, bit per second (bps). Die bekanntesten Codes sind der \emph{Walsh-Code}, die \emph{M-Sequenz}\footnote{Maximum Length Sequence} sowie die \emph{Gold-Sequenz}.
+
+\subsubsection{Gold-Sequenz}
+Eine Gold-Sequenz ist ein spezieller Spreizcode. Sequenzen dieser Art weisen ein sehr kleines, periodisches Kreuzkorrelationsmaximum auf. Sie stehen fast orthogonal zueinander. Dadurch lassen sich diese Codes bestens für Techniken wie \emph{CDMA} einsetzen. Ein weiterer großer Vorteil besteht in der relativ einfachen Erzeugung. Im Zuge dieser Arbeit werden solche Codes als Spreizcodes eingesetzt. Solche Sequenzen werden beispielsweise auch bei GPS, UMTS sowie WIFI eingesetzt.
+
+\subsubsection{Erzeugung von Gold-Sequenzen}
+Zur Erzeugung werden zwei linear rückgekoppelte Schieberegister, kurz LFSR\footnote{Linear Feedback Shift Register}, mit der selben Länge \emph{n}, jedoch unterschiedlichem Generatorpolynomen verwendet. Die maximale Länge der erzeugten Codes beträgt  $ L = 2^{ n } -1 $. Zum Erzeugen einer neuen Folge, wird der Anfangswert einer LFSR zyklisch verändert, während der Anfangswert der Zweiten festgehalten wird. Dadurch lassen sich $ M = 2^{ n } -1 $ neue Codes erzeugen. Für ein Beispiel siehe Abbildung \ref{fig:GoldCode}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{gold-code-gen.jpg}
+\caption{Zwei kombinierte LFSRs für die Erzeugung von Gold Codes. Dieser Gold-Sequenz Generator, wird bei GPS für die Erzeugung der C/A Codes verwendet. \cite{ImgGoldCode}}
+\label{fig:GoldCode}
+\end{figure}
+
+Da die für diese Arbeit benötigten Codes nicht zur Laufzeit erstellt werden müssen, wurden diese mittels Matlab vorweg erstellt. Dazu ist ein Simulink Block verfügbar. Mittels dieses Blockes können Gold Sequenzen beliebiger Länge einfach erzeugt werden.
+
+\subsection{Korrelation}
+\label{cha:Korrelation}
+Mittels Korrelation, wird die Ähnlichkeit zweier Signale bestimmt. Von großer Bedeutung ist die Kreuzkorrelation. Bei dieser Form, wird ein Signal kontinuierlich mit einem Anderen verglichen. 
+
+Diese Technik wird zum Beispiel zur Demodulation von CDMA Signalen verwendet. Das mit der Chiprate abgetastete eintreffende Signal, wird fortlaufend mit allen Spreizcodes verglichen. Überschreitet der Ausgang der Kreuzkorrelation einen gewissen Wert, so wurde ein Nutzbit vom Sender mit dem selben Spreizcode empfangen. Mittels einer XOR Verknüpfung mit dem Spreizcode, kann eine Aussage getroffen werden, ob es sich um eine \emph{NULL} oder eine \emph{EINS} handelt. Um mehrere Spreitscodes gleichzeitig vergleichen zu können, werden mehrere Korrelatoren parallel verwendet. Abbildung \ref{fig:Korrelator} zeigt den Ausgangswert eines Korrelators, mit gut sichtbaren Spitzen.
+
+Eine besondere Form der Korrelation, ist die Autokorrelation. Bei dieser Form wird das Signal mit sich selbst, jedoch zeitlich verschoben verglichen. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{correlation.jpg}
+\caption{Ausgang eines Korrelators mit gut sichtbaren Spitzen.}
+\label{fig:Korrelator}
+\end{figure}

@@ -1,0 +1,58 @@
+\chapter{Modulationsverfahren}
+\label{cha:Modulation}
+\section{Allgemeines}
+Grundsätzlich beschreibt die Modulation die Veränderung eines Trägersignals durch die zu übertragenden Daten. Im Frequenzbereich des Trägersignales wird eine gewissen Bandbreite benötigt, diese ist abhängig von den modulierten Nutzdaten. 
+
+Das verwendete Trägersignal, muss auf die physikalischen Eigenschaften des Übertragungskanales angepasst werden. Bei der Wahl des Trägersignales müssen die physikalischen Eigenschaften des Übertragungskanales beachtet werden. Insbesonders die verwendete Frequenz, da gewisse Frequenzen  stärker durch das Medium gedämpft werden und dadurch die Amplitude abnimmt. Zusätzlich muss der Träger die benötigte Bandbreite übertragen können. Das Trägersignal ist für die zu übertragende Nachricht ohne Bedeutung, gibt jedoch die maximale Nutzdatenrate vor. 
+
+Durch Modulation ist es möglich, niederfrequente Signale, wie Sprache oder Daten mit einer höheren Frequenz zu übertragen. Das Nutzsignal wird, durch die Modulation, in einen höheren Frequenzbereich übersetzt. Um das zu erreichen werden Frequenz, Amplitude und oder die Phase des Trägers durch das Nutzsignal verändert. Dazu gibt es so genannte Modulatoren, welche ein solches Signal erzeugen. Um die Daten wieder zu erlangen, gibt es Demodulatoren.
+ 
+Man unterscheidet zeitkontinuierliche und zeitdiskrete Verfahren. Zeitdiskrete Modulationen liefern nur zu bestimmten Zeiten am Ausgang ein definiertes Signal. Ein Beispiel dafür sind die Pulsträgerverfahren. Zeitkontinuierliche Verfahren, liefern hingegen ein kontinuierliches Signal, in der Regel eine Sinusschwingung. Zeitdiskrete Modulationsverfahren, werden oft als digitale Modulation bezeichnet. Diese Bezeichnung ist jedoch nicht ganz richtig, denn digitale Modulationen liefern in der Regel ein zeitkontinuierliches Signal, lediglich die zu übertragenen Daten sind zeitdiskret.
+
+Des Weiteren unterscheidet man lineare und nichtlineare Modulationsverfahren. Dabei wird der mathematische Zusammenhang, zwischen Nutzsignal und Sendesignal beschrieben. Handelt es sich um eine lineare Funktion, so spricht man von einer linearen Modulation. Lineare Modulationen lassen sich einfach analysieren, nichtlineare hingegen oft nur mittels Näherungsverfahren. Die analoge Amplitudenmodulation ist im Zeitbereich eine Multiplikation und daher linear. Hingegen ist die analoge Frequenzmodulation nicht linear, da es sich um eine Winkelfunktion handelt.
+
+\section{Analoge Modulationsverfahren}
+Analoge Modulationsverfahren zeichnen sich durch Kontinuität im Bild und Zeitbereich aus. Das Nutzsignal wird kontinuierlich verarbeitet und es entsteht daraus ein kontinuierliches Signal. Analoge Modulationen elektrischer Signale können in zwei wesentliche Gruppen eingeteilt werden, in die Amplitudenmodulation sowie die Winkelmodulation.
+
+\subsection{Amplitudenmodulation}
+Amplitudenmodulation, beschreibt die Modulation mittels kontinuierlicher Veränderung der Amplitude des Trägersignales. Es wird die Information des Nutzsignales in der Amplitude des Trägers abgebildet. Dieses Modulationsverfahren wird zum Beispiel beim analogen Radio auf Mittelwelle, sowie fürs analoge Fernsehen verwendet. Es gibt einige Abwandlungen dieser Modulation, wie die Einseitenbandmodulation oder die Ringmodulation.
+
+\subsection{Winkelmodulation}
+Das Nutzsignal wird im Phasenwinkel des Trägers abgebildet, dadurch kommt es zu Veränderungen der Frequenz und, oder der Phase. Zur Gruppe der Winkelmodulationen zählen hauptsächlich die Frequenz- \emph{(FM)}, sowie die Phasenmodulation \emph{(PM)}. Anwendung findet diese Technik im UKW Radio.
+
+\subsection{Vektormodulation}
+Dabei wird die Amplitude, sowie der Phasenwinkel des Trägers verwendet.
+So kann die Datenrate verdoppelt werden, oder zwei Nutzsignale gleichzeitig übertragen werden. Die Farbinformationen im analogen Farbfernsehen \emph{(PAL sowie NTSC)} werden auf diese Weise übertragen, die Farbsättigung wird mittels der Amplitude und der Farbton mittels des Phasenwinkels übertragen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\textwidth]{AM-FM.jpg}
+\caption{Beispiel für Amplitudenmodulation \emph{(AM)} sowie Frequenzmodulation \emph{(FM)}.
+\emph{a)} Nutzsignal \emph{b)} Trägersignal \emph{c)} Amplitudenmodulation \emph{d)} Frequenzmodulation}
+\label{fig:AnalogModulation}
+\end{figure}
+
+\section{Digitale Modulationsverfahren}
+Durch die rapide Entwicklung der Digitaltechnik, werden analoge Modulationen zunehmend durch digitale Modulationsverfahren ersetzt. Maßgeblich dafür ist die Entwicklung von FPGAs bzw. DSPs, da diese mit Leichtigkeit, große Signalfilter auf kleinsten Raum abbilden können. So kann ein FPGA mit einer Größe von 10 x 10 mm ohne Probleme einige Filter hoher Ordnung abbilden und zusätzlich noch das Signal mit der gewünschten Technik modulieren. Das zu sendende Signal, wird mittels unterschiedlicher Symbole abgebildet. Jedes Symbol entspricht einem gewissen Wert \emph{(mapping)}. Digitale Signale liefern nur zu bestimmten Zeitpunkten gültige Werte, den so genannten Abtastzeitpunkten. Die Signale sind also zeitdiskret. Der zeitliche Abstand zwischen gültigen Werten wird als Symbolrate bezeichnet. Da zwischen den Abtastpunkten der Wert undefiniert ist, ist es wichtig, dass der Empfänger erkennt, ob die Werte gültig sind. Im Gegensatz zu analogen Übertragungen, können digital nur eine endliche Anzahl unterschiedlicher Symbole übertragen werden, was als wertdiskret bezeichnet wird. Das übertragene Informationssignal ist also wert- und zeitdiskret. Das modulierte Signal ist hingegen wert- und zeitkontinuierlich.
+
+Werden die Symbole intelligent gewählt, können kleine Änderungen eines Symboles, welche durch Störungen entstehen können, kompensiert und das richtige Symbol wieder rekonstruiert werden. Dadurch steigt die Störfestigkeit. Digitale Übertragungen weisen meistens eine höhere Störunempfindlichkeit, gegenüber analoger Übertragungen auf.
+
+\subsection{ASK - Amplitude Shift Keying}
+ASK ist die digitale Version von AM\footnote{Amplitudenmodulation}. Einer endlichen Anzahl an Amplituden wird jeweils eine Bitfolge zugewiesen. Je mehr unterschiedliche Amplituden verwendet werden, umso höher ist die Datenrate, jedoch steigt auch die Störempfindlichkeit. Deshalb werden meistens zwei Amplituden verwendet, welche die Symbole \emph{NULL} und \emph{EINS} repräsentieren. In diesem Fall kann man sich ASK als Schalter vorstellen. Soll eine \emph{EINS} übertragen werden, so wird einfach der Träger gesendet, bei einer \emph{NULL}, wird nichts übertragen. Es können natürlich auch andere Amplituden gewählt werden. Wie AM, ist ASK sehr empfindlich gegenüber atmosphärischer Störung, da die Amplitude durch Wettererscheinungen abgesenkt wird. Die Modulation sowie Demodulation ist jedoch sehr einfach.
+
+\subsection{FSK - Frequency Shift Keying}
+FSK repräsentiert FM\footnote{Frequenzmodulation} in der digitalen Welt. Digitale Informationen werden mittels diskreter Frequenzänderungen des Trägers übertragen. Die einfachste Form ist auch hier die binäre Form. Es werden dabei nur zwei Frequenzen verwendet, welche die Symbole \emph{NULL} und \emph{EINS} repräsentieren. So wird zum Beispiel \emph{NULL} mit der Trägerfrequenz übertragen und \emph{EINS} mit der doppelten Frequenz. Dabei muss die Bandbreite des Übertragungskanales beachtet werden. 
+
+\subsection{PSK - Phase Shift Keying}
+Dabei wird zu den Abtastzeiten, die Phase des Trägers verändert. Es entstehen Phasensprünge, welche auch Frequenzsprünge mit sich ziehen können. Man unterscheidet verschiedene Abwandlungen von PSK, diese definieren meistens die Größe der Phasensprünge und dadurch die Anzahl der Bits pro Symbol. BPSK (Binary Phase Shift Keying) verwendet Sprünge von 180 Grad, wodurch ein Bit pro Symbol übertragen werden kann. QPSK\footnote{Quadraturphasenumtastung oder Vierphasen-Modulation} arbeitet hingegen mit vier Phasen und kann dadurch pro Symbol zwei Bit übertragen. Je geringer die Phasensprünge, desto komplexer wird die Demodulaton, da die Änderungen viel kleiner werden, die Datenrate jedoch steigt. Im Gegensatz zur analogen Phasenmodulation wird PSK sehr viel verwendet.
+
+Zur Demodulation wird eine Referenz Phase benötigt, dies ist analog sehr komplex zu realisieren, kann digital jedoch verhältnismäßig einfach gelöst werden. Moderne Mobilfunksysteme verwenden großteils PSK Modulationen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{ASK-FSK-PSK.jpg}
+\caption{ Beispiel für digitale Modulation.
+Nicht zu sehen ist das Trägersignal, welches ein einfacher Sinus ist.
+Alle gezeigten Modulationsverfahren arbeiten binär also mit zwei Symbolen.}
+\label{fig:DigitalModulation}
+\end{figure}

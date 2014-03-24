@@ -1,0 +1,54 @@
+\chapter{Erzeugung und Empfang von Ultraschallwellen}
+\label{cha:UltraschallSendRecive}
+\section{Allgemeines}
+Um eine Schallwelle zu erzeugen, muss ein Material, welches als Membran dient, in Schwingung versetzt werden. Für die Erzeugung von Schallwellen in Luft, eignen sich dynamische und elektrostatische Lautsprecher, sowie Piezolautsprecher. Piezolautsprecher sind in diesem Bereich am verbreitetsten und lösen deren Alternativen zunehmend ab. Die ersten Echolote verwendeten sogar noch magnetostriktive Wandler. Ein Stab mit hoher Magnetostriktion (z.B. Nickel) wurde dazu in einer Spule mit Wechselstrom um-magnetisiert.
+Heutzutage werden auch für Echolote piezoelektrische Schwinger verwendet. Zum Empfangen von Ultraschallwellen, können grundsätzlich normale Mikrophone verwendet werden, sofern diese, die gewünschte Frequenz empfangen können. Viel häufiger ist jedoch die Verwendung von piezoelektrischen Empfängern.
+
+\section{Piezoelektrische Sender sowie Empfänger}
+Piezolautsprecher sind die am meisten verwendeten Schwinger zur Erzeugung bzw. zum Empfang von Ultraschall. Ein piezoelektrischer Kristall ist mechanisch mit einer Membran verbunden. Wird an dem Kristall eine Wechselspannung angelegt, so beginnt dieser mit der angelegten Frequenz zu schwingen. Dabei wird die Membran bewegt, diese erzeugt dabei die Schallwelle. Diese Bewegung ist in Abbildung \ref{fig:PiezoBewegung} zu sehen.
+Der Empfang funktioniert nach dem umgekehrten Prinzip. Die Membran wird durch eine auftreffende Welle in Schwingung versetzt, wodurch auch der Kristall zu schwingen beginnt und eine Wechselspannung erzeugt.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.75\textwidth]{transducer-movement.jpg}
+\caption{Piezoschwinger in Bewegung \cite{ImgPiezoAnimation}}
+\textbf{links:} negativ ausgesteuert, \textbf{mitte:} entspannt, \textbf{rechts:} positiv ausgesteuert.
+\label{fig:PiezoBewegung}
+\end{figure}
+
+Im Zuge dieser Arbeit werden der Sender \emph{400ST160}, sowie der Empfänger \emph{400SR160} von Prowave\footnote{\url{http://www.prowave.com.tw/}} verwendet. Diese sind in Abbildung \ref{fig:Piezo} zu sehen. In der Tabelle \ref{tab:PiezoProperties} sind Eigenschaften der verwendeten Schwinger aufgelistet. Abbildung \ref{fig:PiezoSensitivity} zeigt die Sensitivität des Empfängers, sowie die Sendeleistung des Senders gegenüber der Betriebsfrequenz.
+Zusätzlich ist in Abbildung \ref{fig:PiezoBeamAnge} der Ausbreitungs- bzw. Empfangs- Winkel bei 40 kHz zu sehen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.5\textwidth]{transducer.jpg}
+\caption{Piezoschwinger\cite{ImgPiezo}}
+\label{fig:Piezo}
+\end{figure}
+
+\begin{table}[H]
+\caption{Eigenschaften der verwendeten Piezoschwinger}
+\label{tab:PiezoProperties}
+\centering
+\setlength{\tabcolsep}{5mm}	% separator between columns
+\def\arraystretch{1.25}			% vertical stretch factor (Standard = 1.0)
+\begin{tabular}{lc} 
+Nominale Frequenz & 40 kHz\\ 
+Bandbreite & 2 kHz\\
+Maximale Spannung & 20 Vrms\\
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{transducer-sensitivity.jpg}
+\caption{Sensitivität / Schalldruck gemessen bei 10 Vrms, sowie 30 cm Abstand. \cite{ImgPiezoData}}
+\label{fig:PiezoSensitivity}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.75\textwidth]{transducer-beam-angle.jpg}
+\caption{Ausbreitungs- bzw. Empfangswinkel bei 40,0 kHz \cite{ImgPiezoData}.}
+\label{fig:PiezoBeamAnge}
+\end{figure}

@@ -1,0 +1,67 @@
+\chapter{Alternativen zur Positionierung mittels Ultraschall}
+\label{cha:Alternativen}
+\section{Radar}
+Radar, steht für \emph{\textbf{Ra}dio \textbf{De}tection and \textbf{Ra}nging} und bezeichnet die Erkennung und Ortung, auf Basis von elektromagnetischen Wellen, im Funkbereich.
+Mittels eines Radars ist es möglich, Abstand, Höhe, Geschwindigkeit, sowie Richtung eines Objektes zu bestimmen. So ist es möglich Fahrzeuge, Flugzeuge bis hin zu Wetteranomalien zu orten und diese zu verfolgen.
+Zur Erkennung werden kurze Pulse ausgesendet, welche von Objekten auf ihrem Weg reflektiert werden. Ein Bruchteil der ausgesendeten Energie gelangt zurück an den Sender und wird weiterverarbeitet. Anhand der Laufzeit, Richtung, Winkel, Stärke, Polarisation, sowie dem Doppler Effekt, können die zuvor genannten Eigenschaften eines Objektes rekonstruiert werden. Die verwendeten Frequenzen reichen von 20 MHz bis zu vielen Gigahertz. Zum Beispiel verwenden weitreichende Anlagen meistens Frequenzen unterhalb, bis einschließlich dem D-Band, also bis 15 GHz.
+Flugsicherungsanlagen arbeiten knapp unter drei Gigahertz \emph{ASR}\footnote{Airport Surveillance Radar, Luftraumüberwachung} bzw. unter 10 GHz \emph{PAR}\footnote{Precision Approach Radar, Präzisionsanflugradar}. Die Genauigkeit der Positionsbestimmung ist proportional zur Wellenlänge, sowie der Antennengröße. Deshalb sind Radaranlagen generell eher groß.
+
+%\subsection*{Verwendete Frequenzen und Bänder}
+Die ersten Radaranalgen, welche im 2. Weltkrieg entwickelt wurden, verwendeten Frequenzen im A und B-Band, bis zu 300 MHz. Diese Frequenzen entsprachen den damals beherrschten Hochfrequenztechnologien. Heutzutage werden diese Frequenzen für Frühwarnsysteme, den so genannten \emph{OTH}\footnote{Over The Horizont} verwendet, da diese eine enorm hohe Reichweite aufweisen. Trotz der geringen Genauigkeit sind die Antennen solcher Anlagen enorm groß, oft sogar mehrere Kilometer lang.
+Ein großer Vorteil, welcher heutzutage militärische Bedeutung erlangt hat ist, dass Tarnkappentechnik gegenüber Anlagen in diesem Bereich nur eine sehr geringe Wirkung aufweist, dadurch werden getarnte Objekte wieder sichtbar.
+
+Auch im C-Band, 300 MHz bis ein Gigahertz, finden sich Langstrecken Radaranlagen. Diese sind moderne Weiterentwicklungen der alten Anlagen, aus dem A bzw. B-Band.
+
+Im D-Band sind moderne Luftraumaufklärungsanlagen angesiedelt. Dieser Bereich wird nur sehr gering, durch zivile Funkdienste gestört. Es können Reichweiten weit über 400 km erzielt werden.
+
+Das E- bzw. F-Band eignet sich weniger für Radaranlagen, da die atmosphärische Dämpfung im Frequenzbereich von zwei bis vier Gigahertz höher als im D-Band ist, jedoch finden sich in diesem Bereich einige militärische Anlagen, da dieser Bereich zivil kaum verwendet wird. Des weiteren beginnen in diesem Bereich schon Störungen durch Wettereinflüsse, weshalb sich hier auch die ersten Niederschlagsradaranlagen ansiedeln.
+
+Umso höher die Sendefrequenz wird, desto höher wird auch die atmosphärische Dämpfung, was die Reichweite stark reduziert. Höhere Frequenzen, ermöglichen jedoch auch höhere Auflösungen und die Anlagen lassen sich kleiner bauen. Deshalb befinden sich im G-, I- bzw. J-Band die meisten militärischen Gefechtsfeldradaranlagen. Im G- Band befinden sich zusätzlich auch die meisten Niederschlagsradargeräte. 
+
+Hoch genaue Flugfeldüberwachungsanlagen befinden sich im K- Band. Die Genauigkeit dieser Anlagen ist enorm. So können Umrisse von Flugzeugen auf dem Rollfeld erkannt werden. Diese Anlagen verwenden Frequenzen von bis zu 40 GHz. 
+
+Ein weitreichend ungeeignetes Band ist das V-Band. In diesem Bereich ist die Dämpfung durch die Luftfeuchtigkeit so enorm, dass die Reichweite auf wenige Meter beschränkt ist.
+
+Immer mehr verwendet wird das W-Band, mit Frequenzen von über 75 GHz. Diese werden im Automobilbereich, für Systeme wie Einparkhilfen oder Bremsassistenten zur Unfallvermeidung, verwendet. Dabei wird ausgenützt, da die atmosphärische Dämpfung bei ca. 75 GHz bis 76 GHz ein Maximum aufweist und somit unterbunden das sich die Systeme gegenseitig stören. Ein Minimum der Dämpfung ist bei ca. 96 GHz. Dieser Bereich lässt neue Radaranalgen mit noch höherer Auflösung vermuten.
+
+Abbildung \ref{fig:RadarSystem} zeigt ein Beispiel für eine militärische Radaranlage. Diese verfügt über eine Reichweite von ca. 300 km und arbeitet im Frequenzbereich von zwei bis vier Gigahertz.
+
+Für weitere Informationen bezüglich GPS siehe \cite{RadarInfo}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{radaranlage.jpg}
+\caption{3D-Radargerät MRCS-403 der Österreichischen Luftstreitkräfte. \cite{ImgRadar}.}
+\label{fig:RadarSystem}
+\end{figure}
+
+\section{Satellitengestützte Positionierung GPS}
+GPS \emph{(\textbf{G}lobal \textbf{P}osition \textbf{S}ystem)} ist das wohl bekannteste Positionierungssystem. Dabei handelt es sich um ein satelitengestützes Navigationssystem. Ursprünglich rein militärisch gedacht, wird es heutzutage in jedem modernen Auto verwendet. Ein Großteil der aktuellen Smartphones können GPS Signale empfangen und auswerten. 
+
+GPS ist weltweit flächendeckend und mit einer reduzierten Genauigkeit frei nutzbar. Das System liefert Position und eine hoch genaue Zeit. Für den Empfang wird ein GPS Empfänger benötigt. Zur Bestimmung einer 2D Position müssen mindestens drei Satelliten für den Empfänger sichtbar sein, sowie für eine 3D Position werden mindestens vier Satelliten benötigt. Grundsätzlich sind drei Satelliten ausreichend, solange man sich auf der Erdoberfläche befindet. Für die Berechnung kann der Abstand zwischen Erdmittelpunkt und Erdoberfläche von 6360 km, als virtueller Satellit, verwendet werden. Da für die Berechnung das Erdgeoid, also die Meereshöhe verwendet wird entsteht ein Berechnungsfehler, wenn man sich nicht auf Meereshöhe befindet.
+
+GPS wurde in Jahr 1973 von den USA entwickelt und ist derzeit das meist benutzte, freie Navigationssystem. Einige Nationen haben eigene Systeme, diese sind jedoch im Vergleich zu GPS wenig verbreitet. Zu diesen zählen GLONASS (Russland), COMPAS (China), sowie ein relativ neues vielversprechendes System, Galileo (EU). Galileo befindet sich noch in der Entwicklungsphase. 
+
+Das Raumsegment von GPS umfasst derzeit 32 aktive Satelliten. Diese werden von mehreren Bodenstationen aus überwacht. Zur Kommunikation mit den Satelliten gibt es fünf Frequenzbänder, L1 bis L5, diese umfassen Frequenzen von 1,1 GHz bis 1,5 GHz. Es werden verschiedene offene sowie verschlüsselte Codes übertragen. Der C/A (\emph{coarse-acquisition}) Code ist unverschlüsselt und für die zivile Nutzung bestimmt. Dieser wird mit 1,5 GHz übertragen (\emph{L1}). Zusätzlich wird der P/Y (\emph{precision / encrypted}) Code auf der gleichen Frequenz übertragen. Dieser Code ist verschlüsselt und für militärische Zwecke bestimmt. Der P/Y Code wird zusätzlich um ionosphärische Effekte zu kompensieren, auf einer zweiten Frequenz, mit 1,2 GHz (L2) übertragen. Die restlichen Bänder, L3 bis L5, werden für Forschungszwecke verwendet, sowie zur Erkennung von nuklearen Detonationen. Dazu wird das L3 Band verwendet. 
+
+Beide ausgesendeten Codes, haben eine Länge von 1500 Bit und beinhalten Informationen zum  Satelliten, wie Datum, Identifikationsnummer, Korrekturen sowie Bahnen. Die Übertragung dieser Daten dauert gesamt 30 Sekunden. Zur Initialisierung eines GPS Empfängers, werden auch die Almanach-Daten benötigt, welche grobe Bahninformationen aller Satelliten beinhalten. Diese Daten benötigen 12 Minuten zur Übertragung. GPS Empfänger speichern meist all diese Daten zwischen, um einen schnellen Start zu ermöglichen. Das Erlangen einer Position wird als \emph{GPS-FIX} bezeichnet.
+
+Alle Daten werden im Spread Spectrum Verfahren übertragen. Seit 2000 wird der C/A Code nicht mehr gestört und es kann dadurch eine Genauigkeit von 7,8 Metern erreicht werden. Davor betrug dessen Genauigkeit gerade mal in etwa 100 Meter. Für militärische Zwecke gibt es zusätzlich verschlüsselte Daten, welche eine Genauigkeit von bis zu 5,9 Meter erreichen. Grundsätzlich handelt es sich beim freien sowie verschlüsselten Code um die gleichen Daten, jedoch beinhalten die verschlüsselten Daten Korrekturen, wie atmosphärische Abweichungen, welche die Genauigkeit erhöhen.
+
+Werden noch genauere Positionen benötigt so kann DGPS (\emph{Differential GPS}) eingesetzt werden, dadurch erreicht man eine theoretische Genauigkeit von bis zu 0,01 Meter. Zusätzlich besteht die Möglichkeit, geostationäre Satelliten über gewisse Gebiete zu bewegen, um die Genauigkeit in diesem Bereich zu erhöhen.
+
+Für weitere Informationen bezüglich GPS siehe \cite{GPSInfo}.
+
+\section{Positionierung mittels W-LAN Access Points}
+Die Positionsbestimmung mittels W-LAN Access Points ist relativ jung und die Funktionsweise einfach. So werden die SSIDs, sowie die MAC Adressen aller Access Points, in einer Datenbank mit dessen Koordinaten gespeichert. In großen Städten ist es mittlerweile üblich, flächendeckend W-LAN anzubieten. Soll nun eine Position bestimmt werden, kann ein Empfänger, die sich in der Umgebung befindenden Access Points scannen und von deren MAC Adressen, über die Datenbank, auf eine Position schließen. So erlangt dieser sehr schnell eine grobe Position. Google ist der größte Betreiber eines solchen Dienstes. Im Zuge von Street View wurden auch die SSID's, sowie MAC Adressen aller in Reichweite befindlichen Access Points gespeichert. Mittlerweile besitzt Google eine enorme Datenbank, die über die weit verbreiteten mobilen Geräte ständig aktuell gehalten wird. So ist es möglich, im Innenstadt Bereich ohne GPS zu navigieren. Diese Technik wird auch zur Beschleunigung eines GPS-FIX verwendet. So wird dem GPS Empfänger schon vorweg eine ungefähre Position mitgeteilt, dieser kann dann, um einiges schneller, eine satellitengestützte genaue Position berechnen (A-GPS)\footnote{Assisted GPS}. Diese Technik wird auch immer häufiger in großen Einkaufszentren verwendet, um den gewünschten Shop schnell zu finden.
+
+\section{Positionierung mittels dem Mobilfunknetz}
+Das Mobilnetz ist in den letzten Jahren sehr stark gewachsen und dadurch ist eine Verfügbarkeit von weit über 95 Prozent in den entwickelten Länder keine Seltenheit. Grundsätzlich sind Mobilnetze in Zellen eingeteilt. Eine Zelle ist dabei der Bereich, den ein Sendemasten abdeckt. Damit sich die Zellen gegenseitig nicht stören, arbeiten benachbarte Zellen mit verschiedenen Frequenzen. Diese Zellen kann man sich wie Waben vorstellen. Die einzelnen Zellen grenzen direkt aneinander. Physikalisch überlappen die ausgestrahlten Bereiche natürlich.
+Ist ein Mobiltelefon mit der Zelle A verbunden so können einige umliegende Zellen, auch wenn nur schwach, ein Signal des Mobiltelefons empfangen. Dadurch ist es möglich, die Position des Telefons zu triangulieren, da die Positionen der einzelnen Sendemasten bekannt sind und die Signalstärke zu den Masten gemessen werden kann. Diese Technik wird im Katastrophenfall, sowie zur Ortung von vermissten Personen verwendet. Rechtlich wird für die Triangulierung in Österreich ein Gerichtsbeschluss benötigt.
+
+\section{Positionierung mittels RF}
+Es gibt natürlich auch speziell für die Positionierung entwickelte Triangulierungssysteme. Diese basieren meistens auf RF, also elektromagnetische Wellen. Dazu werden oft die sogenannten ISM\footnote{Industrial, Scientific and Medical Band} Bänder verwendet, da diese lizenzfrei genutzt werden können. Eine Verwendung eines solchen Systems, ist die Berechnung der Bewegung von Sportlern am Spielfeld. Dazu bekommt jeder Sportler einen Empfänger, am Spielfeldrand werden mehrere Sender aufgestellt. Die Genauigkeit der Systeme ist je nach Komplexität unterschiedlich. So erreichen manche Systeme eine Genauigkeit von wenigen Zentimetern, andere hingegen nur von mehreren Metern. Grundsätzlich funktioniert diese Technik ähnlich, wie das in dieser Arbeit vorgestellte System, jedoch werden elektromagnetische Wellen statt Schallwellen verwendet.
+
+
+\section{Vergleich zur Positionierung mittels Ultraschall}
+Einige der vorgestellten Alternativen scheiden sofort aus, so ist es nicht sinnvoll ein Radar System für den Innenraum aufzubauen. GPS scheidet ebenfalls aus, da es im Innenraum nicht funktioniert und die Genauigkeit von ein paar Metern nicht ausreichend ist. Die Ortung mittels Wifi kann im Innenraum verwendet werden, bietet jedoch nicht die erforderliche Genauigkeit. Die einzige Alternative ist die Positionierung mittels RF, welche sogar einige Vorteile bietet. So ist die mögliche Abtastzeit, sprich die Anzahl der Positionserfassungen in einer bestimmten Zeit, um einiges höher, da die Ausbreitungsgeschwindigkeit der Wellen viel höher ist. Dadurch kann auch die Genauigkeit der bestimmten Position erhöht werden.  Diese Systeme sind wegen der schnellen Auswerteelektronik, jedoch wesentlich komplexer und teurer als die für Schall. Grundsätzlich ist die Technik jedoch dieselbe.

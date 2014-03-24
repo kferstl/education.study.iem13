@@ -1,0 +1,39 @@
+\chapter{Einleitung}
+\label{cha:Einleitung}
+
+Im Zuge einer Projektarbeit wurde ein kleiner autonomer Quadcopter\footnote{Hubschrauber mit vier tragenden Rotoren} für den Innenraum entwickelt. Der Quadcopter verfügt über ein AHRS\footnote{Attitude Heading Reference System}, dieses liefert die Lage im Raum , die Ausrichtung sowie die Beschleunigung. Anhand dieser Daten kann der Quadcopter stabil in der Luft gehalten werden. 
+
+Soll der Roboter einen Punkt im Raum anfliegen, wird die genaue absolute Position des Roboters benötigt. Grundsätzlich könnten die Daten des AHRS dazu verwendet werden. Diese müssten dazu ab Flugbeginn kontinuierlich integriert werden. Dabei werden auch Ungenauigkeiten und Messfehler integriert und der Fehler der neu errechneten Positionen immer größer. Diese Werte können daher nur eine kurze Zeit verwendet werden.
+
+Es wird ein zusätzliches System zum Bestimmen der Position benötigt. Dieses System muss in der Lage sein, eine absolute Position im Innenraum bestimmen zu können und dabei eine ausreichend hohe Auflösung bieten. Solche Systeme werden als LPS\footnote{Local Positioning System} bezeichnet.
+
+Ein LPS liefert, mit einer gewissen Frequenz, eine neue Position. Soll diese erhöht werden, kann die Position mit den Daten des AHRS interpoliert werden. Der dabei auftretende Fehler wird gering gehalten, da nur eine kurze Zeit überbrückt werden muss. 
+
+Das in dieser Arbeit vorgestellte LPS arbeitet mit mehreren Ultraschall-Sendern, welche an möglichst unterschiedlichen Positionen im Raum aufgestellt werden. Anhand von Laufzeitmessungen können Empfänger ihre Position im Raum bestimmen. 
+
+Das verwendete Modulationsverfahren erfordert die zeitgleiche Aussendung der Ultraschallsignale, die Sender müssen daher entsprechend synchronisiert werden. Dazu wird ein sehr schnelles Synchronisationssignal benötigt, welches möglichst zeitgleich bei allen Teilnehmern eintreffen muss.
+
+Um die Signalverarbeitung möglichst einfach zu halten, wurde Ultraschall gewählt. Dieser breitet sich relativ langsam aus und die geringe Frequenz von nur 40 kHz ermöglicht es Empfänger und Sender ohne aufwendige Hochfrequenzbauteile zu implementieren.
+
+Um die Signale aller Sender möglichst zeitgleich aussenden zu können, wird ein Multiplexverfahren benötigt. Da nur eine geringe Bandbreite verfügbar ist, wird dafür CDMA verwendet. Mittels dieser Technik, können die Signale zeitgleich ausgesendet werden und die benötigte Bandbreite wird nur unwesentlich erhöht. \cite{PositionA}, \cite{PositionB}, \cite{BPSK}
+
+Mehr dazu in Kapitel \ref{cha:Multiplex}, \emph{Multiplexverfahren}.
+
+
+
+%\section{Gliederung}
+%Zu beginn wird im Kapitel "Was ist Ultraschall"\ref{cha:Ultraschall} ein grundlegendes wissen über Ultraschall vermittelt sowie dessen Eigenheiten erläutert.
+%Sowie im Kapitel "Ultraschall Erzeugung"\ref{cha:UltraschallErzeugung} Methoden zur Erzeugung von Ultraschall betrachtet. Alternativen zu Ultraschall sind im Kapitel "Alternativen"\ref{cha:Alternativen} zu finden.
+%In den Kapiteln "Modulationsverfahren"\ref{cha:Modulationsverfahren} sowie "Multiplexverfahren"  (Kap.~\ref{cha:Multiplexverfahren}) wird näher auf die Möglichkeiten der Datenübertragung sowie dessen Verwendbarkeit im Bezug auf Ultraschallträger eingegangen.
+%Für einige Multiplexverfahren werden "Spreitzcodes" benötigt diese werden im gleichnamigen Kapitel(Kap.~\ref{cha:Spreitzcodes}) erläutert, das selbe gilt für das Kapitel "Korrelation"(Kap.~\ref{cha:Korrelation}).
+%Im zweiten Teil der Arbeit dreht dich alles um die Positionsberechnung diese wird in den Kapiteln "Abstandsberechnung"(Kap.~\ref{cha:Abstandsberechnung}), 
+%"Positionsberechnung 2D"(Kap.~\ref{cha:Positionsberechnung2D}) sowie 
+%"Positionsberechnung 3D"(Kap.~\ref{cha:Positionsberechnung3D}) besprochen.
+%Im letzten Teil wird die Implementierung beschrieben dies erfolgt in zwei Teile 
+%erstens die Hardware Implementation
+%"Hardware Sender"(Kap.~\ref{cha:HardwareSender}) sowie
+%"Hardware Empfänger	"(Kap.~\ref{cha:HardwareEmpfaenger}),
+%zweitens die teilweise Implementierung des VHDL Codes
+%"Implementierung BPSK Transmitter"(Kap.~\ref{cha:BPSKTransmitter}) sowie
+%"Implementierung BPSK Reciver"(Kap.~\ref{cha:BPSKReciver}).
+%Da das Potential der Thematik mit dieser Arbeit noch lange nicht voll ausgeschöpft ist wird im letzten Kapitel "Weitere Arbeit"(Kap.~\ref{cha:WeitereArbeit}) die zukünftige Weiterentwicklung diskutiert.

@@ -1,0 +1,94 @@
+\chapter{Grundsätzliches zu Ultraschall}
+\label{cha:Ultraschall}
+
+Als Ultraschallwellen bezeichnet man jene Schallwellen, welche eine Frequenz höher dem oberen Limit, der vom Menschen hörbaren Frequenzen, aufweist. Diese Wellen unterscheiden sich lediglich in der Frequenz von normalem hörbarem Schall, nicht jedoch in dessen physikalischen Eigenschaften. Es sind also \emph{normale} Schallwellen, mit höherer Frequenz.
+
+Der vom Menschen wahrnehmbare Frequenzbereich, beträgt in etwa 16 Hertz bis 20.000 Hertz, variiert jedoch von Mensch zu Mensch und ist stark altersabhängig. 
+Mit zunehmendem Alter nimmt die Wahrnehmung hoher Frequenzen ab. Das ist unter anderem darauf zurückzuführen, dass das Trommelfell an Spannung verliert und dadurch unempfindlicher gegenüber hohen Frequenzen wird. Das beste Gehör haben Kinder, mit einem Alter von in etwa 5 Jahre.
+ 
+
+Im Ultraschallbereich arbeitende Geräte weisen in der Regel eine Arbeitsfrequenz von 20 kHz, bis mehreren Gigahertz auf. Schallwellen mit einer Frequenz ab 1 GHz, werden auch als Hyperschall bezeichnet, Frequenzen unter 16 Hertz, also unterhalb des hörbaren Bereiches, als Infraschall.
+
+\section{Ausbreitung und Laufzeit von Ultraschallwellen}
+Ultraschall breitet sich in Gasen und Flüssigkeiten, vorwiegend als Longitudinalwelle\footnote{Eine Welle, welche in die Ausbreitungsrichtung schwingt.} aus. Breitet sich Ultraschall in einem Festkörper aus, so kommt es, durch die entstehenden Schubspannungen, zusätzlich zur Ausbreitung als Transversalwelle\footnote{Eine Welle, welche senkrecht zur Ausbreitungsrichtung schwingt.}.
+
+Ultraschall breitet sich mit Schallgeschwindigkeit aus. Diese Geschwindigkeit ist abhängig vom Medium in dem es sich ausbreitet, insbesondere dessen \emph{Dichte}, \emph{Elastizität} und \emph{Temperatur}.
+
+Tabelle \ref{tab:UltraschallSpeed} zeigt die Ausbreitungsgeschwindigkeit in verschiedenen Medien. 
+Alle angegeben Geschwindigkeiten sind longitudinal in m/s und gemessen bei 20°C.
+
+Aus dieser Tabelle wird schnell ersichtlich, dass sich Schall in Medien mit höherer Dichte schneller ausbreitet. So ist Schall in Diamant schneller als in Wasser oder gar in Luft.
+
+In Tabelle \ref{tab:UltraschallTemp} ist die Temperaturabhängigkeit der Schallgeschwindigkeit im Medium Luft zu sehen.
+
+\begin{table}[h]
+\caption{Liste von Schallgeschwindigkeiten in unterschiedlichen Medien}
+\label{tab:UltraschallSpeed}
+\centering
+\setlength{\tabcolsep}{5mm}	% separator between columns
+\def\arraystretch{1.25}			% vertical stretch factor (Standard = 1.0)
+\begin{tabular}{lc} 
+Medium & Geschwindigkeit in m/s\\ 
+\hline
+Luft & 343\\ 
+Kohlendioxid & 266\\
+Wasser & 1484\\
+Ethylalkohol & 1168\\
+Beton (C30/37) & 3845\\
+Buchenholz & 3300\\
+Titan & 6100\\
+Diamant & 18000\\
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Temperaturabhängigkeit der Schallgeschwindigkeit in Luft}
+\label{tab:UltraschallTemp}
+\centering
+\setlength{\tabcolsep}{5mm}	% separator between columns
+\def\arraystretch{1.25}			% vertical stretch factor (Standard = 1.0)
+\begin{tabular}{cc} 
+Temperatur in °C & Geschwindigkeit in m/s\\ 
+\hline
++30 & 349,29\\
++20 & 343,46\\
++10 & 337,54\\
+0 & 331,50\\
+-10 & 325,35\\
+-20 & 319,09\\
+-25 & 315,91\\
+\end{tabular}
+\end{table}
+
+Breitet sich Schall in einem dispersiven Medium aus, so ist die Ausbreitungsgeschwindigkeit zusätzlich von der Frequenz abhängig. 
+
+Dadurch pflanzt sich jede einzelne Frequenzkomponente mit einer eigenen Phasengeschwindigkeit fort. Die Energie der Störung, breitet sich jedoch mit der Gruppengeschwindigkeit aus. Ein Beispiel für ein dispersives Medium ist Gummi, in diesem breiten sich höhere Frequenzen schneller aus.
+
+Luft, sowie Wasser, sind über einen sehr großen Frequenzbereich nicht dispersive Medien und dadurch ist die Geschwindigkeit für alle Frequenzen annähernd gleich.
+
+\section{Reflexion von Ultraschallwellen}
+Für die Ausbreitung von Ultraschall sind Materialeigenschaften von Bedeutung.
+Man spricht dabei von der Impedanz, dem Widerstand, mit dem das Medium der Ausbreitung entgegenwirkt.
+Tritt ein Sprung der Impedanz auf, so wird der Schall teilweise oder gänzlich reflektiert.
+Vor allem an Grenzflächen zweier Materialien, kann dieser Sprung sehr groß sein, was eine nahezu 100 prozentige Reflexion zur Folge hat.
+
+Ein Beispiel dafür ist das \emph{Echo} im Gebirge, welches durch die Änderung der Impedanz zwischen Luft und Stein entsteht. Durch die Reflexion können auch Probleme entstehen, will man die Laufzeit messen, so kann eine Reflexion einer älteren Messung die Neue stören.
+
+\section{Dopplereffekt}
+Der Dopplereffekt besagt, ändert sich der Abstand zwischen Sender und Empfänger, so wird das ausgesendete Signal zeitlich gestaucht, bzw. gedehnt, was eine Änderung der Frequenz bewirkt. Bei Autorennen ist dies gut zu beobachten. Nähert sich ein Auto, klingt dieses höher (gestaucht), entfernt es sich, tiefer (gedehnt). Durch diesen Effekt ist es möglich, die Geschwindigkeit des Senders anhand der Frequenzverschiebung zu berechnen. Nähert sich der Sender, wird die empfangene Frequenz relativ zu dessen Geschwindigkeit höher, entfernt sich der Sender wird die Frequenz niedriger.
+
+Dieser Effekt tritt auch bei Reflexionen auf. Trifft eine Ultraschallwelle auf ein Objekt, so wird auch diese gestaucht, oder gedehnt reflektiert.
+In der Medizintechnik kann man dadurch unter anderem die Flussgeschwindigkeit von Blut berechnen.
+
+\section{Verwendung von Ultraschall}
+Ultraschall findet in vielen Bereichen Verwendung. Der wohl bekannteste Bereich ist die Medizin. In der Medizin wird Ultraschall vor allem bei der sogenannten Sonografie verwendet, die es ermöglicht, einen Blick ins Innere des Körpers zu werfen, ohne einen chirurgischen Eingriff vorzunehmen.
+
+Auch in anderen Bereichen findet Ultraschall Verwendung. So funktionieren die meisten in Autos verbauten Einparkassistenten mit Ultraschall.
+
+In der Robotik, sowie Sensorik, werden sehr oft auf Ultraschall basierende Näherungssensoren eingesetzt. Diese messen die Zeit, zwischen Aussenden eines Impulses und der eintreffenden Reflexion und errechnen somit Abstände. Nach dem selben Prinzip funktionieren  Füllstandmessungen, sowie das in Wasser verwendete Echolot.
+
+In der Tierwelt ist Ultraschall ebenfalls weit verbreitet. Es dient einigen Tieren zur Orientierung oder der Kommunikation. Das Frequenzspektrum der bekannten \emph{klick} Geräusche von Delfine, bzw. Wale beinhaltet vorwiegend Frequenzen im Ultraschallbereich.
+Einige Fledermausarten können Frequenzen von bis zu 200 kHz produzieren.
+
+\section{Auswirkung von Ultraschall auf die Umwelt}
+Auch wenn Ultraschall für den Menschen nicht hörbar ist, wirkt die Schallenergie auf den Körper. Wird Ultraschall mit hoher Leistung eingesetzt, kann es zu unangenehmen Empfindungen kommen. Nachweislich können viele Tiere Teile des Ultraschallbereiches hören, was deren Verhalten stören kann. So können Tiere in unmittelbarer Nähe einer Ultraschallquelle, die Orientierung verlieren oder verscheucht werden. Es ist generell nicht empfehlenswert, sich lange in der Nähe starker Ultraschallquellen aufzuhalten, da diese, vor allem das Gehör, schädigen können. Meist wird Ultraschall jedoch mit sehr geringer Leistung verwendet und ist somit unbedenklich. Aus diesem Grund wird Ultraschall auch zur Untersuchung von Ungeborenen im Mutterleib verwendet. Da im Gegensatz zur Röntgenstrahlung, Ultraschall auch für sehr sensibles Gewebe unbedenklich verwendet werden kann.

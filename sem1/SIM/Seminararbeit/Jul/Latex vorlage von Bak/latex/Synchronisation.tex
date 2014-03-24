@@ -1,0 +1,9 @@
+\chapter{Zeitsynchronisation}
+\label{cha:Synchronisation}
+\section{Allgemeines \& Problematik}
+Wie schon in vorherigen Kapiteln besprochen, stellt die zeitliche Synchronisation immer wieder ein Problem dar. Speziell für die Positionsbestimmung, die auf Laufzeitmessung von Signalen basiert, ist es sehr wichtig, eine möglichst genaue Synchronisation zu schaffen. Der Empfänger geht zum Beispiel davon aus, dass alle Sender exakt zeitgleich senden. Entsteht jedoch eine zeitliche Differenz zwischen den einzelnen Sendern, so entsteht auch ein Fehler in der errechneten Position. Um dem entgegen zu wirken, müssen alle Teilnehmer möglichst genau synchronisiert werden.
+
+\section{Methoden zur Synchronisation}
+Es wird ein globaler Taktgeber benötigt. Die im Zuge dieser Arbeit verwendeten Schallwellen zur Positionsberechnung breiten sich \emph{nur} mit Schallgeschwindigkeit aus, was die Synchronisation um einiges erleichtert. Es reicht ein einfaches Kabel mit einem Synchronisationsimpuls, da dieser elektrische Impuls sich mit nahezu Lichtgeschwindigkeit ausbreitet und der dabei entstehende Fehler vernachlässigt werden kann. 
+
+Eine weitere Möglichkeit ist Funk. Mittels eines einfachen Funkimpulses, welcher sich als elektromagnetische Welle, ebenfalls mit annähernd Lichtgeschwindigkeit ausbreitet, kann die Synchronisation, auch ohne vorhandener Kabelverbindung durchgeführt werden.

@@ -1,0 +1,34 @@
+\chapter{Technische Informationen}
+\label{ch:TechnischeInfos}
+
+\newcommand*{\checkbox}{{\fboxsep 1pt%
+\framebox[1.30\height]{\vphantom{M}\checkmark}}}
+
+
+\section{Voraussetzungen zum erstellen des VHDL Codes}
+
+Um den VHDL Code synthetisieren zu können wird ein Compiler benötigt.
+Wird ein FPGA verwendet so bietet es sich an den Compiler des jeweiligen Herstellers zu verwenden.
+Im Fall dieser Arbeit wurde ein Altera FPGA verwendet und dadurch die Entwicklungsumgebung Quartus II von Altera verwendet.
+\\\\Altera bietet eine gratis Version von Quartus II an die so genannte Web Version.\footnote{\url{http://www.altera.com/products/software/quartus-ii/web-edition/qts-we-index.html}}
+\\\\Um den LogicAnalyser SignalTapII in der Web Version verwenden zu können muss die Talkback Funktion in den Einstellungen aktiviert werden.
+\\\\Als Ergänzung zur jeweiligen Entwicklungsumgebung bietet sich Sigasi an ein sehr guter und stabiler VHDL-Editor mit unter Anderem automatischer Vervollständigung und Echtzeit Fehleranzeige.
+\\\\Es ist ein kostenlose Universitätsversion von Sigasi verfügbar.\footnote{\url{http://www.sigasi.com/university}}
+\\\\Um den VHDL Code zu simulieren wird die Software Questasim oder Modelsim benötigt.
+Auch für diese Software ist eine kostenlose Studentenversion verfügbar, nur für Modelsim.\footnote{\url{http://www.mentor.com/company/higher_ed/modelsim-student-edition}}
+
+%\section{Voraussetzungen zum erstellen des Arm-C Codes}
+%Dazu werden grundsätzlich 2 Tools benötigt. Einerseits eine Toolchain diese beinhaltet Compiler Linker Debugger usw. sowie eine IDE sprich eine Entwicklungsumgebung.
+%\\\\Es gibt eine sehr große Anzahl verschiedener Toolchains am einfachsten zu verwenden sind die YAGARTO Tools. Diese können kostenlos verwendet werden.\footnote{\url{http://www.yagarto.org/}}
+%Eine einfache Installation ist ausreichend, es muss nichts weiter beachtet werden.
+%\\\\Bezüglich der Entwicklungsumgebung ist es sehr ähnlich es gibt eine Vielzahl meist sehr teurer Tools.
+%Eine sehr gute und auch noch kostenlose IDE ist die CoIDE von CooCox.\footnote{\url{http://www.coocox.org/CooCox_CoIDE.htm}}.
+%Diese muss lediglich heruntergeladen und installiert werden.
+
+\section{Weitere benötigte Tools}
+\begin{itemize}
+		\item Matlab\footnote{\url{http://www.mathworks.de/products/matlab/}} mit Simulink sowie dem fdatool zum berechnen der Filter und der Goldsequenzen,
+		\item Für die \latex-Version eine funktionierende UTF-8 \latex-Umgebung.
+\end{itemize}
+
+

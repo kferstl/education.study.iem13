@@ -1,0 +1,135 @@
+\chapter{Implementierung des Empfängers}
+\label{cha:implementierungReciver}
+
+\section{Grundsätzlicher Aufbau}
+Abbildung \ref{fig:BlockReciver} zeigt den schematischen Aufbau des Empfängers. Das vom Piezoempfänger erzeugte Signal, wird differentiell vorverstärkt, normalisiert und danach mittels einem Analogdigitalwandler digitalisiert. Der gesamte Analogteil ist differentiell, um Störungen zu minimieren. Mittels SPI werden die ADC Werte, mit einer Abtastrate von 1,6 MHz, vom FPGA eingelesen. Nachdem die eingelesenen Daten demoduliert wurden, werden diese in mehreren parallelen Korrelatoren, jeweils mit der Gold Sequenz eines Senders verglichen. Liefert ein Korrelator eine Spitze, wurde ein Signal vom Sender mit dieser Gold-Sequenz empfangen. Die Spitzen werden an den TDOA\footnote{time differences of arrival} Algorithmus geleitet, welcher die Position berechnet. Siehe Kapitel \ref{cha:positionsberechnung} Positionsbestimmung. Werden zusätzlich Nutzdaten übertragen, so können diese einfach extrahiert werden. Dazu müssen, nachdem ein Korrelator eine Spitze liefert, die Daten im Korrelator mit dessen Gold-Sequenz XOR verknüpft werden.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{Block-Reciver.png}
+\caption{Blockschaltbild des Empfängers.}
+\label{fig:BlockReciver}
+\end{figure}
+
+\section{Funktionsbeschreibung der Hardware}
+Die Amplitude der vom Piezo gelieferten Wechselspannung schwankt sehr stark mit dem Abstand zum Empfänger. Würde ein einfacher Verstärker verwendet um die Signale für den ADC aufzubereiten, würde dieser bei geringem Abstand übersteuern, sowie bei großem Abstand viel zu schwach verstärken. 
+
+Abbildung \ref{fig:reciverSignalBad} zeigt das empfangene Signal bei unterschiedlichem Abstand. Gemessen wurde das Signal bei 2 cm sowie 40 cm Abstand, wobei der Sender mit 5 Volt Spitze-Spitze versorgt wurde. 
+
+Um der stark schwankenden Amplitude entgegenzuwirken, wurden unterschiedliche Versuche durchgeführt. Die einfachste Lösung ist, die Signale soweit abzuschwächen, das bei geringen Abständen noch keine Stufe der Signalaufbereitung übersteuert. Das Signal wird dann im FPGA wieder verstärkt. Grundsätzlich funktioniert diese Lösung und lässt sich einfach implementieren. Bei größeren Abständen verliert diese Methode jedoch an Genauigkeit, da die Signale am ADC\footnote{Analog-Digital-Umsetzer (engl. Analog-to-Digital-Converter)} sehr klein werden und dadurch nur wenige messbare Bits übrig bleiben. Eine bessere Lösung ist die Verwendung von mehreren unterschiedlichen Vorstufen, mit unterschiedlicher Verstärkung. Der FPGA kann dann auf die Verstärkerstufe mit dem am besten ausgenützten Messbereich umschalten. Im Randbereich der einzelnen Stufen entstehen wieder die selben Probleme. Als Beste Lösung stellte sich die Verwendung eines speziellen Verstärkers, dessen Verstärkung mittels einem Analogwert einstellbar ist, heraus. Ein solcher Verstärker wird \emph{Variable Gain Amplifier} kurz VGA genannt. Für die Implementierung der Handware, wurde ein spezieller VGA verwendet, der AD8338 von Analog Devices. Dieser verstärkt das Signal so, dass der RMS Wert des Ausgangs konstant bleibt. Dies wird \emph{Automatic Gain Controll}, kurz AGC genannt. Dazu kann der IC das Signal, mit einer Verstärkung von 0 dB bis 80 dB verändern. Abbildung \ref{fig:reciverSignalGood} zeigt den Ausgang des VGA. Es ist nun kein Unterschied der Amplitude, bei Abständen von wenigen Zentimetern bis zu einigen Metern, mehr zu erkennen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{reciver-signal-bad.jpg}
+\caption{Empfangenes Signal. Abstand 2cm (obere Kurve) zu 40cm (untere Kurve). Eine starke Änderung der Amplitude ist zu sehen.}
+\label{fig:reciverSignalBad}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{reciver-signal-good.jpg}
+\caption{FPGA-Eingangssignal nach dem VGA. Abstand 2 cm (obere Kurve) zu 1 Meter (untere Kurve). Keine starke Änderung der Amplitude ist zu sehen.}
+\label{fig:reciverSignalGood}
+\end{figure}
+
+Am Anfang des Signales ist zu sehen, dass der VGA kurz übersteuert. Dies entsteht, da die Verstärkung des VGA, durch die AGC, vor Eintreffen der Schallwellen extrem hoch ist und dieser etwas Zeit braucht um nachzuregeln. Das Ausgangssignal des Verstärkers kann nun direkt digitalisiert werden. Um die Gesamtstruktur differentiell zu halten, wird ein differentieller ADC benötigt. Dazu wird der AD7266, ebenfalls von Analog Devices verwendet. Der ADC liefert bei einer Abtastrate von 1,6 Mhz 12 Bit Werte des gemessenen Signales. Diese werden via SPI an den FPGA übertragen.
+ 
+\section{Funktionsbeschreibung der FPGA Blöcke}
+Die gesamte Signalverarbeitung findet im FPGA statt. Als Datentyp wird ausschließlich \emph{fixed} verwendet. Um negative, sowie positive Zahlen abbilden zu können, wird das Zweierkompliment verwendet. Die Systemfrequenz beträgt 50 MHz, die Abtastrate aller Werte und Filter 1,6 MHz. Diese Frequenz ist auch durch den ADC begrenzt, reicht aber völlig aus.
+
+\subsection{BPSK Demodulator}
+Abbildung \ref{fig:BlockDemod} zeigt den schematischen Aufbau des Demodulators. Mittels dieses Blockes wird aus dem analogen, zeitkontinuierlichen Signal, ein digitales zeitdiskretes Signal. Dazu muss zuerst der Träger rekonstruiert werden, das BPSK modulierte Signal ist immer entweder in Phase mit dem Träger oder um 180 Grad verschoben. Wird das BPSK Signal nun mit dem wiederhergestellten Träger multipliziert, gelangt man zu den Daten. Die Trägerwiederherstellung ist relativ komplex und dadurch in einige Blöcke unterteilt. Diese Blöcke sind in Abbildung \ref{fig:BlockCarrierRecovery} zu sehen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{BLOCK-BPSK-Demod.png}
+\caption{Blockschaltbild des BPSK Demodulators.}
+\label{fig:BlockDemod}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{Block-Traeger-Wiederherstellung.png}
+\caption{Detail Blockschaltbild der Träger Wiederherstellung des BPSK Demodulators, besteht aus Quadrierer / Bandpassfilter / Nulldurchgangserkennung / Frequenzteiler und Tiefpassfilter.}
+\label{fig:BlockCarrierRecovery}
+\end{figure}
+
+\subsubsection*{Trägerwiederherstellung - Quadrierer}
+Im ersten Schritt, wird das Eingangssignal quadriert, indem es mit sich selbst multipliziert wird. 
+
+Da es sich bei der BPSK Modulation um Phasenverschiebungen um 0° sowie 180° handelt, also um ein Invertieren des Signales, werden durch eine Quadrierung alle Phasenänderungen und die Nutzdaten entfernt.  
+
+Zusätzlich wird die Frequenz dabei verdoppelt. Dies geschieht, da durch die Quadrierung der Betrag des Signales gebildet wird und dabei die negativen Teile ins positive geklappt werden. Es repräsentiert nun den Träger mit doppelter Frequenz.
+
+\subsubsection*{Trägerwiederherstellung - Bandpassfilter}
+Der nächste Block ist ein Bandpassfilter. Dieser soll möglichst alle Frequenzen größer, bzw. kleiner, der doppelten Trägerfrequenz entfernen. Der ursprüngliche Träger hat eine Frequenz von 40 kHz, der Bandpass sollte also eine Mittelfrequenz von 80 kHz aufweisen. Dazu wurde mit Hilfe von Matlab ein entsprechender Filter dimensioniert. Zur Implementierung wird ein FIR Equiripple Filter 41. Ordnung verwendet. Dieser wurde zusätzlich mittels Matlab auf 8 Bit Werte quantisiert.
+
+Abbildung \ref{fig:freq-bp} zeigt den Frequenzgang des Filters.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{freq-bp.jpg}
+\caption{Frequenzgang Bandpassfilter für Trägerwiederherstellung.}
+\label{fig:freq-bp}
+\end{figure}
+
+\subsubsection*{Trägerwiederherstellung - Nulldurchgangserkennung}
+Da es einfacher ist, die Frequenz eines Rechtecks zu halbieren, als die einer Sinusschwingung, wird der Ausgang des Filters mittels Nulldurchgangserkennung zu einem Rechteck konvertiert.
+Dazu wird vom Ausgangswert des Filters, lediglich das Vorzeichen Bit betrachtet. Dieses muss noch invertiert werden.
+
+\subsubsection*{Trägerwiederherstellung - Frequenzteiler}
+Dabei handelt es sich um einen einfachen binären Frequenzteiler, welcher die 80 kHz wieder auf 40 kHz reduziert. Dazu wird das Ausgangssignal immer mit der steigenden Flanke des Eingangs invertiert, dadurch bliebt der Ausgang bei jeder fallenden Flanke des Eingangs konstant.
+
+\subsubsection*{Trägerwiederherstellung - Tiefpass Rechteck zu Sinus}
+Nach dem Frequenzteiler, liegt der rekonstruierte Träger als binäres Rechtecksignal vor. Da der Träger mit dem empfangenen Signal multipliziert werden soll, muss aus dem Rechteck wieder ein Sinus gemacht werden. Da ein Rechtecksignal auch aus Überlagerungen von einzelnen Sinusschwingungen angesehen werden kann, ist es möglich diese mittels eines Filters zu trennen. 
+
+Mittels eines Tiefpassfilters, wird die Grundschwingung des Rechtecksignales extrahiert. Höhere Frequenzen, die die steilen Flanken bewirken, werden herausgefiltert.
+
+Dieser Filter wurde abermals mit Matlab erstellt. Es handelt es sich dabei um einen FIR-Bandpass vom Typ Kaiser Window  40. Ordnung. dessen Abschneidefrequenz  bei 45 KHz liegt, also etwas über der Trägerfrequenz. Abbildung \ref{fig:freq-lp} zeigt den Frequenzgang des Filters. Der Ausgang dieses Filters ist der wiederhergestellte Träger.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{freq-LP.jpg}
+\caption{Frequenzgang Tiefpassfilter, für Trägerwiederherstellung.}
+\label{fig:freq-lp}
+\end{figure}
+
+\subsubsection*{Verzögerung}
+Da die Wiederherstellung des Trägers einige Takte benötigt und der Träger und das Signal für die Multiplikation synchron eintreffen müssen, muss das Signal entsprechend verzögert werden. Dazu wird das Signal durch ein Schieberegister geschoben.
+
+\subsubsection*{Datenfilter}
+Nachdem das verzögerte Signal mit dem wiederhergestellten Träger multipliziert wurde, muss dieses noch gefiltert werden, da bei der Multiplikation höherfrequente Anteile entstehen können. Es wird ein Tiefpassfilter mit einer Abschneidefrequenz von 40 kHz verwendet. Der Frequenzgang ist mit dem weiter oben genannten Tiefpass vergleichbar, nur entsprechend nach links verschoben. Dazu wurde abermals ein FIR-Filter vom Typ Kaiser Window 40. Ordnung verwendet.
+
+\subsubsection*{Bit Entscheidung}
+Da die Nutzdaten mittels Phasenänderungen übertragen werden, ist der wiederhergestellte Träger, nur mit einem der Symbole \emph{(EINS oder NULL)} in Phase. Dadurch entstehen nach der Multiplikation zwei verschiedene Amplituden, anhand dieser eine Entscheidung getroffen werden kann, ob es sich um eine \emph{EINS} oder eine \emph{NULL} handelt.
+
+\subsection{Korrelator}
+Der Korrelator funktioniert wie ein großes Schieberegister, mit Referenzwert. Die Länge des Registers stimmt mit der Länge der Gold-Sequenz überein. Mit der Abtastrate, sprich Samplefrequenz, werden die eingehenden Daten fortlaufend an der Gold-Sequenz entlang geschoben und mit dieser verglichen. Der Ausgang repräsentiert die Ähnlichkeit. Ist der Ausgangswert hoch, ist die aktuelle Bitfolge der Gold-Sequenz sehr ähnlich. 
+
+Durch mehrfache parallele Korrelatoren mit den verschiedenen Gold-Sequenzen, kann eine Aussage getroffen werden, von welchem Sender die empfangenen Daten stammen. Es muss für jeden Sender, dessen Daten empfangen werden sollen, ein Korrelator vorhanden sein.
+
+\subsection{Spitzen Erkennung}
+Dieser Block überwacht den Ausgang des Korrelators. Überschreitet der Ausgang einen gewissen Wert, wird ein Puls erzeugt. Dieses sagt aus, das Daten mit dessen Gold-Sequenz empfangen wurden.
+
+\subsection{TDOA 3D Positionsberechnung}
+Dieser Block erhält die Pulse der zuvor beschiebenen Auswertung. Er berechnet anhand dieser Pulse die Zeitdifferenzen und daraus mittels TDOA Algorithmus die Position im 3D-Raum.
+
+Siehe Kapitel \ref{cha:positionsberechnung} \emph{Positionsbestimmung}.
+
+\section{Implementierung der Filter mittels Matlab}
+Alle verwendeten Filter wurden mit Matlab dimensioniert. Da diese von relativ hoher Ordnung sind, benötigen diese in Hardware sehr viele Multiplizierer sowie Addierer. 
+
+Die Direktform eines FIR-Filters ist die Einfachste, jedoch wird für jeden Koeffizienten ein Addierer, sowie Multiplizierer benötigt. Diese Form weist jedoch einen sehr langen kritischen Pfad auf, um diesen zu verkürzen, können zwischen den einzelnen Addierer sowie Multiplizierer Register eingefügt werden.
+Dadurch weist jeder einzelne Teilpfad eine viel kürzere Durchlaufzeit auf und die maximale Taktrate steigt. Da als Systemtakt 50 MHz verwendet werden, sind die genannten Register unabdinglich. Diese Form bietet die beste Verarbeitungsgeschwindigkeit, benötigt jedoch eine enorme Fläche im FPGA.
+
+Alternativ kann ein Filter sequenziell implementiert werden. Mittels einer solchen Implementierung ist es möglich, die benötigten Addierer sowie Multiplizierer auf jeweils einen zu reduzieren. Solche Filter benötigen viel weniger Platz, jedoch ist dessen Verarbeitungsgeschwindigkeit beträchtlich langsamer.
+Des weiteren sind solche Implementierungen komplexer und benötigen ein Steuerwerk.
+
+Der im Zuge dieser Arbeit verwendete FPGA bietet genügend Platz, um alle Filter in Direktform implementieren zu können.
+
+Zusätzlich zur Dimensionierung, wurden die Filter auch mittels Matlab quantisiert. Die Frequenzgänge zeigen die bereits quantisierten Filter, diese entsprechen daher bereits der VHDL Implementierung. Da bereits bei der Dimensionierung die Quantisierung der Koeffizienten, sowie Signale berücksichtigt wurden, können spätere Fehler durch dessen Quantisierung vermieden werden.
+
+Zusätzlich kann es jedoch noch zu Fehler durch Überlauf nach einer Addition, sowie durch Wortlängenverkürzung nach einer Multiplikation kommen. 
+
+Um möglichst alle Fehler ausschließen zu können, wurden die in VHDL implementierten Filter zusätzlich mittels einer Testbench simuliert. Dazu wurde ein Nutzsignal mit unterschiedlichen Störsignalen vermischt, unter anderem wurde dazu Gaußsches-Rauschen verwendet.
+Die Filter wurden mit diesem Signal gespeist und deren Ausgangssignal analysiert.

@@ -1,0 +1,77 @@
+\documentclass[bachelor,german]{hgbthesis}
+% Zulässige Class Options: 
+%   Typ der Arbeit: diplom, master (default), bachelor, praktikum 
+%   Hauptsprache: german (default), english
+%%------------------------------------------------------------
+
+\graphicspath{{images/}}    % wo liegen die Bilder? 
+\bibliography{literatur}  	% Angabe der BibTeX-Datei, % utf8-change
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+% Einträge für ALLE Arbeiten: --------------------------------
+\title{Positionierung mittels Ultraschall unter Verwendung von CDMA}
+\author{Julian Nischler}
+\studiengang{Hardware-Software-Design}
+\studienort{Hagenberg}
+\abgabedatum{2013}{10}{07}	% {YYYY}{MM}{DD}
+
+%%% zusätzlich für eine Bachelorarbeit: ---------------------
+%\nummer{Nr.~1010306023-A}   % XX...X = Stud-ID, z.B. 0310238045-A  
+                        % (A = 1. Bachelorarbeit)
+\semester{Sommersemester 2013} 
+\gegenstand{Seminar zu Bachelorarbeit} 
+\betreuer{Prof.(FH) Dr.-Ing. habil. Hans-Georg Brachtendorf} % oder \betreuerin{..}
+
+
+%\strictlicense  % erzeugt restriktive Lizenzformel
+
+%%%----------------------------------------------------------
+\frontmatter
+\maketitle
+\tableofcontents
+%%%----------------------------------------------------------
+
+%\include{vorwort}		% ggfs. weglassen
+\include{kurzfassung}		
+\include{abstract}			
+
+%%%----------------------------------------------------------
+\mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
+%%%----------------------------------------------------------
+
+%\include{einleitung}
+%\include{ultraschall}
+%\include{ultraschallErzeugung}
+%\include{alternativen}
+%\include{modulation}
+%\include{multiplex}
+%\include{Synchronisation}
+%\include{positionsberechnung}
+%\include{implementierungSender}
+%\include{implementierungReciver}
+
+%\include{hardware}
+%\include{fpga}
+
+%\include{weitereArbeit}
+
+
+%%%----------------------------------------------------------
+%%%Anhang
+\appendix
+%\include{anhang_a}	% Technische Ergänzungen
+%\include{anhang_b}	% Inhalt der CD-ROM/DVD
+%\include{anhang_c}	% Chronologische Liste der Änderungen
+%\include{anhang_d}	% Quelltext dieses Dokuments
+
+%%%----------------------------------------------------------
+\MakeBibliography
+%%%----------------------------------------------------------
+
+%%%Messbox zur Druckkontrolle
+%\include{messbox}
+
+\end{document}
