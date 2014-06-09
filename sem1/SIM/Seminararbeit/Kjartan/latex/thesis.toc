@@ -1,0 +1,8 @@
+\select@language {ngerman}
+\contentsline {chapter}{Erkl\IeC {\"a}rung}{i}
+\contentsline {chapter}{Vorwort}{iii}
+\contentsline {chapter}{Kurzfassung}{iv}
+\contentsline {chapter}{Abstract}{v}
+\select@language {english}
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}
