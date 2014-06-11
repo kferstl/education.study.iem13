@@ -33,16 +33,16 @@ Backpropagation ist ein überwachter Algorithmus zum Trainieren von vereinfachte
 
 Diese Schritte werden wiederholt, bis die Gewichte so angepasst wurden, das Eingabedaten möglichst gut klassifiziert werden können. Die Anpassung der Gewichte errechnet sich im wesentlichen anhand der Gradienten der Fehler und Gewichte. Zudem nimmt Schicht, vor der sich das jeweilige Gewicht befindet, Einfluss.
 
-Wie der Name des Alogorithmus bereits verrät, wird der Fehler dabei im wesentlichen über eine mathematische Funktion in die Gewichte zurückgeführt. Diese Rückführung bringt zwei wesentliche Probleme mit sich:
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/lokales-minimum.png}
+	\caption{Lokales Minimum}
+	\label{fig:local-min}
+\end{figure}
 
-\begin{itemize}
-\item Lokale Minima
-\item Überanpassung
-\end{itemize}
+Wie der Name des Alogorithmus bereits verrät, wird der Fehler dabei im wesentlichen über eine mathematische Funktion in die Gewichte zurückgeführt. Diese Rückführung bringt das Problem von lokalen Minima mit sich. Wird die Änderung des Fehlers geringer, so wird auch die Anpassung geringer. Befindet man sich auf dem Weg in ein lokales Optimum, wie in Abbildung \ref{fig:local-min} zu sehen, so kann dieses sehr weit weg von dem globalen Optimum sein. Ist das Optimum entsprechend groß, so ist die Wahrscheinlichkeit, dass der Algorithmus in diesem Optimum hängen bleibt groß. Abhilfe können hier Verfahren wie der Bergsteigeralgorithmus oder zusätzliche Zufallswerte bei der Berechnung der Gewichte schaffen.
 
-Wird der Fehler geringer, so wird auch die Anpassung geringer. Befindet man sich auf dem Weg in ein lokales Optimum, so kann dieses sehr weit weg von dem globalen Optimum sein. Ist das Optimum entsprechend groß, so ist die Wahrscheinlichkeit, dass der Algorithmus in diesem Optimum hängen bleibt groß. Abhilfe können hier Verfahren wie der Bergsteigeralgorithmus oder Zufallsstreuungen in den Werten schaffen.
-
-Die Überanpassung (eng. overfitting) 
+Der Algorithmus trainiert vordefinierte Ein- und Ausgabedaten mit dem Ziel für ähnliche Daten ähnliche Ergebnisse zu liefern. Trainiert man das Netz zu intensiv mit diesen Daten, so lernt es genau nur diese Trainingsdaten. Dies hat zur Folge, dass das Netz im späteren Betrieb schlechtere Ergebnisse liefert als hätte man es weniger lange trainiert.
 
 \section{Resctricted Boltzmann Maschines}
 
@@ -77,9 +77,9 @@ Zum trainieren von RMBs existieren verschiedene Algorithmen, die meist auf dem P
 Sind die Werte einer Schicht fixiert, so kann einfach auf die nächste versteckte Schicht weiter gerechnet. Zu beginn werden wird ein Trainingsdatenset an die Eingänge angelegt und die folgenden Operationen, wie auch in Abbildung \ref{fig:rbm-steps} zu sehen, wiederholt ausgeführt:
 
 \begin{enumerate}
-\item Wahrscheinlichkeit für die versteckten Neuronen berechnen $$p(h_j=1) = \frac{1}{1+e^{-(b_j+\sum_{i}(v_i*w_{ij}))}}$$
+\item Wahrscheinlichkeit $p$ für die versteckten Neuronen $h_j$ anhand der sichtbaren Neuronen $v_i$ und der Gewichte $w_{ij}$ berechnen $$p(h_j=1) = \frac{1}{1+e^{-(b_j+\sum_{i}(v_i*w_{ij}))}}$$
 \item Werte für die versteckte Schicht aus dem Mittelwert der Wahrscheinlichkeiten berechnen
-\item Gradientenmatrix über das dyadische Produkt errechnen $$<v_ih_j> = v*y^T$$
+\item Gradientenmatrix $<v_ih_j>$ über das dyadische Produkt errechnen $$<v_ih_j> = v*y^T$$
 \item Ausgehend von den errechneten versteckten Neuronen, zurück auf die sichtbare Schicht rechnen
 \end{enumerate}
 
@@ -99,40 +99,51 @@ $$\Delta\omega_{ij} = \varepsilon (<v_ih_j>^0 -  <v_ih_j>^1)$$
 
 Der Grundgedanke von \emph{Contrastive Divergence} ist, dass das Modell mit Zufallsgewichten weg von den Eingabedaten, hin zu Daten die ihm besser gefallen, wandert. Wenn man erkennt wo hin das Modell die Daten ändert, kann man die Gewichte so adaptieren, dass dem Modell die Eingabedaten am besten gefallen.
 
-\section{Eignung}
+\subsection{Eignung}
 
 Das Modell besitzt nicht genügend Neuronen um alle Eingabedaten zu speichert und muss daher, um die Eingabedaten tatsächlich reproduzieren zu können, etwas aus den Eingabedaten lernen. Es eignet sich daher, um aussagekräftige Merkmale aus unkategorisierten Daten zu extrahieren.
 
-\section{Autoencoders}
+\section{Deep Autoencoders}
 
-Autoencoders: Neuronales netz, mit backpropagation trainiert, das zumindest in einer Schicht weniger Neuronen als Eingangsparameter besitzt (bottelneck). Es wir so trainiert, dass der Ausgang dem Eingang entspricht. Steckt man vorne ein Bild hinein und das Netzwerk profezeit am Ausgang das gleiche Bild (mit allen Pixeln), so hat es offensichtlich etwas aus dem Bild gelernt und nicht nur alle Pixel durchgetunnelt (da Anzahl der neuronen kleiner als Anzahl der Pixel).
-Es etsteht ein "Hash" für die Bilder - der wieder zurückgewandelt werden kann. Würde man es schaffen, beliebige Eingangsdaten sicher wiederherzustellen, so könnte man davon sprechen, dass das Netz das dahinter liegende System (die Natur) erlernt hat. Im weiteren könnte man so zum Beispiel von Bildern, Videos oder Audiospuren lediglich die Ergebnisse des Netztes speichern und die Eingangsdaten jederzeit widerherstellen. So ließen sich diverse Daten unter umständen erheblich komprimieren.
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/autoencoder.png}
+	\caption{Deep Autoencoder}
+	\label{fig:autoencoder}
+\end{figure}
 
-Füttert man solche Algorithmen mit Bildern und visualisiert die entstandenen Gewichte, so erkennt man, dass solche Algorithmen in erster Instanz meist Kanten und Farbintensitäten in Bildern finden. In der zweiten Schicht findet man einfache Kombinationen dieser Elemente und ab der dritten Schicht werden meist schon sehr brauchbare Neuronen zur vollständigen Objekterkennung ausgebildet.
+Deep Autoencoder sind neuronale Netze aus mehreren Schichten, die sich in zwei wesentliche Teile trennen lassen. Im ersten Teil, dem Encoder, sinkt die Anzahl der Neuronen mit jeder Schicht, während sie im zweiten Teil, dem Decoder wieder Steigt, bis am Ende wieder die Anzahl der Eingangsparameter erreicht ist. Abbildung \ref{fig:autoencoder} zeigt ein solches Netz. Im inneren hat das Netz weniger Neuronen und somit Speichermöglichkeit als Eingangsparameter. Es wird versucht das Netz so zu trainieren, dass es am Ausgang die gleichen Daten berechnet wie am Eingang angelegt entstehen. Gelingt das Training, so muss das Netz Merkmale etwas aus den Daten gelernt haben.
 
-Blockdiagramm mit mehreren Stufen (siehe Bilderkennung), zum Beispiel Matchen+Normalisieren, Matchen+Normalisieren, . . .
+Richtig trainiert, komprimiert das Netz die Daten also. So wäre es zum Beispiel möglich Bilder durch das Netz zu schicken, die kleinste Schicht zu speichern und jederzeit über den Decoder wiederherzustellen. Für Bilder, Ton und Videos gibt es einige Kompressionsalgorithmen die sehr fein abgestimmt die Charakteristik menschlicher Organe berücksichtigt und daher in der Regel wesentlich bessere Ergebnisse liefern. Dennoch demonstriert das Beispiel, dass damit unter Umständen erheblich Speicher und Verarbeitungsleistung gespaart werden kann.
 
+Deep Autoencoder liefern sehr vergleichbare Ergebnisse und werden daher gerne als Benchmark für Deep Learning-Algorithmen verwendet. Deep Autoencoders tendieren zu Unteranpassung (eng. underfitting), da nicht genügend Neuronen verfügbar sind um alle Möglichkeiten abzubilden. Eine einfache und effektive Variante ein solches Netz zu trainieren ist es, jeweils zwei Layer separat als restricted Boltzmann Maschine anzusehen.
 
-\section{Convolutional Neural Networks}
+Lernt man solche Algorithmen mit mit Bildern und visualisiert die entstandenen Gewichte, so erkennt man, dass solche Algorithmen in erster Instanz meist Kanten und Farbintensitäten in Bildern finden. In der zweiten Schicht findet man einfache Kombinationen dieser Elemente und ab der dritten Schicht werden meist schon sehr brauchbare Neuronen zur vollständigen Objekterkennung ausgebildet.
+
+\section{Faltungscodierte neurale Netze}
 % als grundlage
 
-\todo{super video, 10 minuten, erkärt das ganze thema: https://www.youtube.com/watch?v=n6hpQwq7Inw}
-\todo{bild}
-\todo[inline]{bild quelle: http://www.image-net.org/challenges/LSVRC/2012/supervision.pdf}
-\todo[inline]{inhalt quelle: wiki, http://googlesystem.blogspot.co.at/2013/06/how-googles-image-recognition-works.html}
+Faltungskodierte neuronale Netze (eng. Convolutional Neural Networks) sind neuronale Netze die zur Reduktion der Gewichte in einzelne Teile zerteilt sind. Bei den bisher angeführten Netzen wurden jeweils alle Neuronen einer Schicht mit jedem Neuron der nächsten Schicht verbunden. Der Gedanke bei faltungskodierten Netzten geht man davon aus, dass weit voneinander entfernte Neuronen kaum etwas miteinander zu tun haben, während nahe aneinander liegende Neuronen Zusammenhänge besitzen. Es werden daher Gruppen über aneinander liegende Neuronen gebildet, die untereinander in die nächste Schicht verknüpft sind. Wie am Beispiel eines Bildes gut erkennbar, ist es gut möglich, dass ein Merkmal nicht genau in eine dieser Gruppen passt. Es werden daher viele überlappende Gruppen gebildet.
 
-erlärung für bilder:
-ein neuronales netzwerk, bestehend aus lauter kleineren gruppen an neuronen und vielen schichten. die kleinen Gruppen betrachten Ausschnitte des Bildes und überlappen in ihrer Anordnung. Durch den Blick auf den Ausschnitt eines Bildes wird das dahinter liegende Netzwerk in Teile geteilt und somit die Anzahl der Parameter und somit die Größe und benötigte Trainings und Rechenzeit stark verringert. Durch das Überlappen der einzelnen Bereiche wird berücksichtigt, dass ein späteres High-Level Feature nicht genau in einen Bereich trifft.
-Das Überlappen gibt es auch zwischen den einzelnen Layern.
-Convolutional networks können auch Layer enthalten, die mehrere Ausgänge von neuronen kombinieren, so genannte polling layer.
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/convolution.png}
+	\caption{Faltungscodiertes neuronales Netz}
+	\label{fig:convolution}
+\end{figure}
 
-Dieser Typ von Netzwerk ist bereits 1980 \todo{paper Kunihiko fukushima}, wurde in den folgenden Jahrzehnten optimiert und erlebte einen Aufschwung durch eine Implementierung auf einer GPU \todo{Dan Ciresan}. Nach weiteren Optimierungen in den vergangen Jahren wurde der Algorithmus unter anderem für ein Projekt von Google \todo{google paper finden} eingesetzt, das nicht zuletzt das so genannte face-neuron ausprägte.
+Im nächsten Schritt gibt es eine zusammenfassende Funktion, die die Ergebnisse aneinander liegender Werte für die nächste Schicht mit einer mathematischen Funktion zusammenfasst. Diese Funktion könnte in einer Schicht zum Beispiel die Rotation eines Bildes ignorieren in dem es Kanten in mehrere Richtungen zusammenfasst. Ein faltungskodiertes neuronales Netz wiederholt genau diesen zwei Komponenten, die überlappende Gruppierung von Neuronen so wie das zusammenfassen von Neuronen auf jeder Schicht. Abbildung \ref{fig:convolution} zeigt ein solches Netz.
 
-convolution: operation that expresses the amount of overlap with another function
-image preprozessing mit gabor filters, erkennt kanten in alle richtungen
+Dieser Typ von Netzwerk ist bereits 1980 \todo{paper Kunihiko fukushima} bekannt, wurde in den folgenden Jahrzehnten optimiert und erlebte einen Aufschwung durch parallelisierte Berechnung auf einer GPU \todo{Dan Ciresan}. Nach weiteren Optimierungen in den vergangen Jahren wurde ein solches Netzwerk unter anderem für ein Projekt von Google \todo{google paper finden} eingesetzt, das nicht zuletzt das so genannte face-neuron ausprägte.
 
+\section{Sparse coding}
 
-
-\section{betrachtung als restricted bolzman maschine}
-
-
+Sparse coding ist ein Algorithmus zum trainieren eines neuronalen Netzes mit dem Ansatz möglichst aussagekräftige Merkmale zu finden. Anders als beim Deep Autoencoder wird hier nicht nur berücksichtigt wie gut das Ergebnis wiederhergestellt werden konnte, sondern auch wie eindeutig das Ergebnis war. Ziel ist es an möglichst vielen stellen im Ausgangsvektor 0er zu haben und dennoch sehr gute Ergebnisse zu finden. Der Fehler setzt sich aus diesen beiden Faktoren zusammen und wie folgt berechnet:
+$$min\frac{1}{T}\sum_{t=1}^{T}min\frac{1}{2}|x^{(t)}-D*h^{(t)}|+\lambda|h^{(t)}_1|$$
+\begin{center}\begin{tabular}{rclcrcl}
+	$x^{(t)}$ & \dots & Eingangswert\\
+	$h^{(t)}$ & \dots & Ausgangswert\\
+	$D$ & \dots & Anzahl der Ausgänge\\
+	$\lambda$ & \dots & Steuert wie stark sich die 0er im Ausgangsvektor auswirken\\ 
+\end{tabular}\end{center}
+Die zwei Bedingungen widersprechen sich teilweise und können über $\lambda$ balanciert werden.
