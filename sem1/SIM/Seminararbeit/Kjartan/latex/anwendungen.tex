@@ -2,8 +2,48 @@
 \label{cha:anwendungen}
 % 6 Seiten
 
+
+
 \section{Bilderkennung}
 
+\subsection{Google Projekt}
+\todo[inline]{google autoencoder, https://www.youtube.com/watch?v=g4ZmJJWR34Q  23:54}
+\todo[inline]{36:00 L2 polling, ignoriert dass ein neuron invertiert ausgelößt wird, zählt alles + auch wenn negativ, da die welt/bilder auch immer verdreht und manipuliert daher kommt, sprache muss akzente ignorieren, gesichtserkennung die haarfarbet etc. auf der richtigen ebene an Features ist das daher ein sehr nützlicher faktor}
+\todo[inline]{local constrast normalization, hilft auch bilder invariationen zu ignorieren}
+\todo[inline]{google hat mit obrigen in den letzten jahren viel in der Bildersuche und youtube erreicht - was genau?, unsupervised learning mit einer unmänge an daten aus youtube videos}
+\todo[inline]{44:46+ bild: stages, drei stages mit jeweils in reihe: filtering, l2 polling, lcn (normalization step) - am ende haben einige neuronen muster erkannt, eines feuert bei gesichtern, eines bei katzen}
+\todo[inline]{49:02 number of parameters: 1 billion ... 200x200px bilder, 18x18 filters, 8 filters per location, l2 polling and lcn over 5x5 neighborhoods - wie viele neuronen gesamt?}
+\todo[inline]{wegen rechenpower nur mit sehr wenig pixel (200x200) gerechnet, unsere augen sehen n x n pixel, noch einiges möglich}
+\todo[inline]{the input image that maximises the neuron to fire: 53:00, das neuron war auf der 3. ebene} 
+\todo[inline]{neuron auf 1. ebene sind edges, 2. ebene kombinationen von edges, 3. ebene muster wie das gesicht}
+\todo[inline]{IMAGENET, Datenbank mit gelabelten bildern an der sich viele Benchmarken}
+
+erkennt kanten da farben von der beleuchtung abhängen und somit varriieren
+
+lernen mittels back propagation
 \section{Spracherkennung}
 
-\section{tech oder elektronik gebiet}
+Deep Learning wird auf dem Gebiet immer stärker und hat die Methode des Gaussian Mixture Models (GMM-Methoden) abgelößt
+
+
+
+\todo[inline]{google now, apply siri, microsoft cortana}
+\todo[inline]{mit deep-nets große fortschritte}
+
+\section{Fazit aus Anwendungen}
+
+Daten Daten Daten
+
+Rechenpower Rechenpower Rechenpower
+
+ergibt: Die großen gewinnen immer
+
+\todo[inline]{Bessere Algorithmen schaffen dann am meisten wenn sie die Hardware besser nutzen können (parallelisierung, datencenter) damit gewinnen wieder die großen}
+
+Kagel .. has data for machine learning algorithms, man löst erkennungsprobleme für Firmen, deren ziel nicht immer ganz ein guter ist.
+
+\todo[inline]{Was in anderen Bereichen passiert und passieren könnte}
+
+Dimensionen in der Zukunft, wo könnte es hin gehen
+
+Traffic sign recognition (99,46prozenz, besser als menschen! gewinner http://www.kurzweilai.net/how-bio-inspired-deep-learning-keeps-winning-competitions)

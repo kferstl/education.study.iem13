@@ -1,0 +1,2245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="354.33069"
+   height="354.33069"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="neurons.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3859"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3853"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mstart"
+       style="overflow:visible">
+      <path
+         id="path3856"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lstart"
+       style="overflow:visible">
+      <path
+         id="path3850"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path3838"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3832"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3859-1"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3859-8"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6079"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path6081"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3859-2"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-6"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3859-9"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lstart-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3850-5"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(1.1,0,0,1.1,1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3853-4"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lstart-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3850-4"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(1.1,0,0,1.1,1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3853-2"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="36.422803"
+     inkscape:cy="118.31365"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-grids="false"
+     units="cm"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-bbox="false"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-center="false"
+     inkscape:snap-global="true"
+     inkscape:window-width="2048"
+     inkscape:window-height="1099"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:object-paths="true"
+     inkscape:snap-to-guides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="mm"
+       spacingx="3mm"
+       spacingy="3mm" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-698.03018)">
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="20.076782"
+       y="44.356209"
+       id="text2987"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="20.076782"
+         y="44.356209" /></text>
+    <g
+       id="g10455">
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3826"
+         d="m 101.5,734.61087 34,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)" />
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron.png"
+         transform="translate(-4.0104076,-38.679695)"
+         id="g5269">
+        <path
+           sodipodi:type="arc"
+           id="path2991-7"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,71.819566,687.60953)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+           x="226.71368"
+           y="776.66364"
+           id="text3771"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3773"
+             x="226.71368"
+             y="776.66364">out</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron.png"
+         transform="translate(-4.3202667,-51.885276)"
+         id="g5264">
+        <path
+           sodipodi:type="arc"
+           id="path2991"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="157.21622"
+           y="789.56793"
+           id="text3763"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3765"
+             x="157.21622"
+             y="789.56793"
+             style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron.png"
+         transform="translate(2,-51.531717)"
+         id="g5274">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           id="rect3761"
+           width="35.433071"
+           height="21.259842"
+           x="63.363789"
+           y="775.98291" />
+        <text
+           xml:space="preserve"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+           x="80.955811"
+           y="790.08453"
+           id="text3767"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3769"
+             x="80.955811"
+             y="790.08453">in</tspan></text>
+      </g>
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3826-6"
+         d="m 170.5569,735.20544 34,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)" />
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         x="113.72287"
+         y="732.19061"
+         id="text6258"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6260"
+           x="113.72287"
+           y="732.19061">ω</tspan></text>
+    </g>
+    <g
+       id="g10422"
+       inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-multiple-inputs.png"
+       inkscape:export-xdpi="1000"
+       inkscape:export-ydpi="1000">
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-multiple-inputs.png"
+         transform="translate(-1.6996864,76.94068)"
+         id="g5269-7">
+        <path
+           sodipodi:type="arc"
+           id="path2991-7-7"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,71.819566,687.60953)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+           x="226.71368"
+           y="776.66364"
+           id="text3771-1"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3773-2"
+             x="226.71368"
+             y="776.66364">out</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-multiple-inputs.png"
+         transform="translate(-2.0095454,63.73509)"
+         id="g5264-6">
+        <path
+           sodipodi:type="arc"
+           id="path2991-0"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="157.21622"
+           y="789.56793"
+           id="text3763-4"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3765-9"
+             x="157.21622"
+             y="789.56793"
+             style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+      </g>
+      <g
+         id="g6172"
+         transform="translate(-20.79157,20.884641)">
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path3826-2"
+           d="m 101.81072,902.23123 34,0"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)"
+           transform="translate(21.73091,-72.248033)" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           id="rect3761-6"
+           width="35.433071"
+           height="21.259842"
+           x="87.405418"
+           y="819.82355" />
+        <text
+           xml:space="preserve"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+           x="104.99744"
+           y="833.92517"
+           id="text3767-0"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3769-3"
+             x="104.99744"
+             y="833.92517">in2</tspan></text>
+      </g>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)"
+         d="m 102.75006,818.69448 c 17.77357,-1.62915 29.42729,7.23288 37.88909,21.56676"
+         id="path3826-2-9"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <rect
+         y="808.53485"
+         x="66.613846"
+         height="21.259842"
+         width="35.433071"
+         id="rect3761-6-8"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3767-0-3"
+         y="822.63647"
+         x="84.205872"
+         style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         xml:space="preserve"><tspan
+           y="822.63647"
+           x="84.205872"
+           id="tspan3769-3-8"
+           sodipodi:role="line">in1</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)"
+         d="m 102.75006,883.0412 c 13.08004,0.12387 26.11472,-0.50064 37.88909,-21.92031"
+         id="path3826-2-6"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <rect
+         y="872.88159"
+         x="66.613846"
+         height="21.259842"
+         width="35.433071"
+         id="rect3761-6-6"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3767-0-2"
+         y="886.98322"
+         x="84.205872"
+         style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         xml:space="preserve"><tspan
+           y="886.98322"
+           x="84.205872"
+           id="tspan3769-3-3"
+           sodipodi:role="line">in3</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         x="112.22253"
+         y="817.51569"
+         id="text6258-8"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6260-2"
+           x="112.22253"
+           y="817.51569">ω1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         x="111.8197"
+         y="849.24359"
+         id="text6258-6"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6260-27"
+           x="111.8197"
+           y="849.24359">ω2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         x="112.02722"
+         y="878.93536"
+         id="text6258-5"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6260-7"
+           x="112.02722"
+           y="878.93536">ω3</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend-6)"
+         d="m 155.75,804.36087 0,28.5"
+         id="path6301"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         x="152.23959"
+         y="801.49176"
+         id="text6505"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6507"
+           x="152.23959"
+           y="801.49176">Θ</tspan></text>
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-multiple-inputs.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path3826-6-6"
+         d="m 172.86762,850.82581 34,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#Arrow2Mend)" />
+    </g>
+    <g
+       id="g10473">
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-layer.png"
+         transform="translate(-0.8011721,171.89449)"
+         id="g5264-6-8">
+        <path
+           sodipodi:type="arc"
+           id="path2991-0-2"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="157.21622"
+           y="789.56793"
+           id="text3763-4-7"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3765-9-8"
+             x="157.21622"
+             y="789.56793"
+             style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-layer.png"
+         transform="translate(-0.8011721,215.22782)"
+         id="g5264-6-0">
+        <path
+           sodipodi:type="arc"
+           id="path2991-0-20"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="157.21622"
+           y="789.56793"
+           id="text3763-4-8"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3765-9-9"
+             x="157.21622"
+             y="789.56793"
+             style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-layer.png"
+         transform="translate(-0.8011721,258.56115)"
+         id="g5264-6-2">
+        <path
+           sodipodi:type="arc"
+           id="path2991-0-8"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="157.21622"
+           y="789.56793"
+           id="text3763-4-2"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3765-9-0"
+             x="157.21622"
+             y="789.56793"
+             style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-layer.png"
+         transform="translate(-0.8011721,301.89448)"
+         id="g5264-6-5">
+        <path
+           sodipodi:type="arc"
+           id="path2991-0-5"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="157.21622"
+           y="789.56793"
+           id="text3763-4-27"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3765-9-6"
+             x="157.21622"
+             y="789.56793"
+             style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g10491">
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(-3.1839142,0.25230839)"
+         id="g6701">
+        <g
+           id="g5264-6-8-7"
+           transform="translate(-3.301172,389.39448)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-2-8"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-7-7"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-8-8"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-0-1"
+           transform="translate(-3.301172,437.44185)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-20-6"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-8-0"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-9-9"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-2-5"
+           transform="translate(-3.301172,485.48923)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-8-8"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-2-9"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-0-0"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-5-0"
+           transform="translate(-3.301172,533.53661)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-5-0"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-27-7"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-6-2"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(4.6473153,0.45479839)"
+         id="g6719">
+        <g
+           id="g5264-6-8-7-5"
+           transform="translate(60.487717,389.19199)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-2-8-5"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-7-7-2"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-8-8-1"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-0-1-4"
+           transform="translate(60.487717,437.23936)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-20-6-8"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-8-0-6"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-9-9-4"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-2-5-6"
+           transform="translate(60.487717,485.28674)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-8-8-8"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-2-9-9"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-0-0-8"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-5-0-3"
+           transform="translate(60.487717,533.33412)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-5-0-5"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-27-7-5"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-6-2-1"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(67.164447,474.92343)"
+         id="g5269-7-5">
+        <path
+           sodipodi:type="arc"
+           id="path2991-7-7-5"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,71.819566,687.60953)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+           x="226.71368"
+           y="776.66364"
+           id="text3771-1-8"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3773-2-4"
+             x="226.71368"
+             y="776.66364">out</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,-0.95941777)"
+         id="g6817">
+        <g
+           id="g5274-0"
+           transform="translate(-1.8843646,417.06889)">
+          <rect
+             y="775.98291"
+             x="63.363789"
+             height="21.259842"
+             width="35.433071"
+             id="rect3761-5"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3767-4"
+             y="790.08453"
+             x="80.955811"
+             style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+             xml:space="preserve"><tspan
+               y="790.08453"
+               x="80.955811"
+               id="tspan3769-7"
+               sodipodi:role="line">in1</tspan></text>
+        </g>
+        <g
+           id="g5274-2"
+           transform="translate(-1.8843646,463.03082)">
+          <rect
+             y="775.98291"
+             x="63.363789"
+             height="21.259842"
+             width="35.433071"
+             id="rect3761-1"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3767-49"
+             y="790.08453"
+             x="80.955811"
+             style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+             xml:space="preserve"><tspan
+               y="790.08453"
+               x="80.955811"
+               id="tspan3769-9"
+               sodipodi:role="line">in2</tspan></text>
+        </g>
+        <g
+           id="g5274-03"
+           transform="translate(-1.8843646,508.99277)">
+          <rect
+             y="775.98291"
+             x="63.363789"
+             height="21.259842"
+             width="35.433071"
+             id="rect3761-0"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3767-3"
+             y="790.08453"
+             x="80.955811"
+             style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+             xml:space="preserve"><tspan
+               y="790.08453"
+               x="80.955811"
+               id="tspan3769-5"
+               sodipodi:role="line">in3</tspan></text>
+        </g>
+      </g>
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6831"
+         d="M 96.912495,497.58069 133.62965,479.82148"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6833"
+         d="M 96.912495,545.58069 134.80419,484.95945"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6835"
+         d="M 96.912495,591.33069 137.97756,490.07472"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6837"
+         d="m 96.912495,500.58069 38.591845,18.14044"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6839"
+         d="m 96.912495,549.58069 36.698065,-22.0192"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6841"
+         d="M 96.912495,596.33069 135.18089,533.88054"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6843"
+         d="M 96.912495,600.83069 135.917,583.33779"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6845"
+         d="m 96.912495,553.58069 37.230765,16.73315"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6847"
+         d="M 137.14353,564.19094 96.912495,505.58069"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6849"
+         d="m 96.912495,511.33069 41.509645,99.42479"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6851"
+         d="m 96.912495,558.08069 38.895545,56.17422"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6853"
+         d="m 96.912495,604.58069 37.564535,12.66005"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6855"
+         d="m 167.02259,472.71845 39.20711,0"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6857"
+         d="m 168.01539,479.62448 40.15913,37.33403"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6859"
+         d="m 166.19751,486.35612 45.71601,74.67671"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6861"
+         d="m 162.652,491.10476 48.899,118.26325"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6863"
+         d="m 164.83246,516.60697 40.49385,-40.07124"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6865"
+         d="m 168.00638,525.44755 37.25827,-0.24969"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6867"
+         d="m 167.11157,532.24291 41.14127,32.64871"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6869"
+         d="m 163.77853,537.98224 43.57793,76.4007"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6871"
+         d="m 164.50937,564.21798 41.06495,-82.07417"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6873"
+         d="m 167.04963,568.88847 39.35186,-35.93921"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6877"
+         d="m 168.03418,575.33117 37.18428,0.009"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6879"
+         d="m 166.2582,582.32984 39.23229,37.26011"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6881"
+         d="m 167.96202,624.44062 37.29837,-0.33571"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6883"
+         d="M 160.97467,608.80659 207.92988,487.88467"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6885"
+         d="m 163.90169,611.51532 46.9444,-72.13524"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6887"
+         d="M 166.68222,615.99454 208.42631,584.7102"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6889"
+         d="m 238.84317,483.86063 44.601,53.2181"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         sodipodi:nodetypes="cc"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6891"
+         d="m 239.66533,526.82973 38.08182,18.25175"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6893"
+         d="m 239.66287,574.32233 38.01708,-18.2965"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\neuron-network.png"
+         transform="translate(0,698.03018)"
+         inkscape:connector-curvature="0"
+         id="path6895"
+         d="M 235.96597,612.05499 281.81084,562.7755"
+         style="fill:none;stroke:#000000;stroke-width:0.53149606;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <g
+       id="g10576">
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         transform="translate(-8.6458544,229.31371)"
+         id="g6701-0">
+        <g
+           id="g5264-6-8-7-7"
+           transform="translate(-3.301172,389.39448)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-2-8-6"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-7-7-7"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-8-8-8"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-0-1-3"
+           transform="translate(-3.301172,437.44185)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-20-6-6"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-8-0-4"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-9-9-41"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-2-5-9"
+           transform="translate(-3.301172,485.48923)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-8-8-5"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-2-9-5"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-0-0-7"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-5-0-4"
+           transform="translate(-3.301172,533.53661)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-5-0-7"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-27-7-3"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-6-2-4"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         transform="translate(-0.81462544,229.51621)"
+         id="g6719-0">
+        <g
+           id="g5264-6-8-7-5-8"
+           transform="translate(60.487717,389.19199)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-2-8-5-8"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-7-7-2-1"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-8-8-1-5"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-0-1-4-2"
+           transform="translate(60.487717,437.23936)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-20-6-8-3"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-8-0-6-2"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-9-9-4-4"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-2-5-6-6"
+           transform="translate(60.487717,485.28674)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-8-8-8-6"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-2-9-9-6"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-0-0-8-2"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+        <g
+           id="g5264-6-5-0-3-9"
+           transform="translate(60.487717,533.33412)">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             sodipodi:ry="17.716536"
+             sodipodi:rx="17.716536"
+             sodipodi:cy="88.582657"
+             sodipodi:cx="159.44882"
+             id="path2991-0-5-0-5-0"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3763-4-27-7-5-4"
+             y="789.56793"
+             x="157.21622"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+               y="789.56793"
+               x="157.21622"
+               id="tspan3765-9-6-2-1-9"
+               sodipodi:role="line">σ</tspan></text>
+        </g>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         transform="translate(133.0837,703.9848)"
+         id="g5269-7-5-3">
+        <path
+           sodipodi:type="arc"
+           id="path2991-7-7-5-1"
+           sodipodi:cx="159.44882"
+           sodipodi:cy="88.582657"
+           sodipodi:rx="17.716536"
+           sodipodi:ry="17.716536"
+           d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+           transform="matrix(0.97255241,0,0,0.97255245,71.819566,687.60953)"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+           x="226.71368"
+           y="776.66364"
+           id="text3771-1-8-1"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3773-2-4-9"
+             x="226.71368"
+             y="776.66364">out</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         transform="translate(-5.4619404,228.10191)"
+         id="g6817-9">
+        <g
+           id="g5274-0-5"
+           transform="translate(-1.8843646,417.06889)">
+          <rect
+             y="775.98291"
+             x="63.363789"
+             height="21.259842"
+             width="35.433071"
+             id="rect3761-5-5"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3767-4-5"
+             y="790.08453"
+             x="80.955811"
+             style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+             xml:space="preserve"><tspan
+               y="790.08453"
+               x="80.955811"
+               id="tspan3769-7-6"
+               sodipodi:role="line">in1</tspan></text>
+        </g>
+        <g
+           id="g5274-2-0"
+           transform="translate(-1.8843646,463.03082)">
+          <rect
+             y="775.98291"
+             x="63.363789"
+             height="21.259842"
+             width="35.433071"
+             id="rect3761-1-5"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3767-49-9"
+             y="790.08453"
+             x="80.955811"
+             style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+             xml:space="preserve"><tspan
+               y="790.08453"
+               x="80.955811"
+               id="tspan3769-9-4"
+               sodipodi:role="line">in2</tspan></text>
+        </g>
+        <g
+           id="g5274-03-6"
+           transform="translate(-1.8843646,508.99277)">
+          <rect
+             y="775.98291"
+             x="63.363789"
+             height="21.259842"
+             width="35.433071"
+             id="rect3761-0-3"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3767-3-4"
+             y="790.08453"
+             x="80.955811"
+             style="font-size:10px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+             xml:space="preserve"><tspan
+               y="790.08453"
+               x="80.955811"
+               id="tspan3769-5-9"
+               sodipodi:role="line">in3</tspan></text>
+        </g>
+      </g>
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6831-0"
+         d="M 91.450554,1424.6723 128.16771,1406.913"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6833-5"
+         d="M 91.450554,1472.6723 129.34225,1412.051"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6835-3"
+         d="m 91.450554,1518.4223 41.065066,-101.256"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6837-9"
+         d="m 91.450554,1427.6723 38.591846,18.1404"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6839-1"
+         d="m 91.450554,1476.6723 36.698066,-22.0192"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6841-2"
+         d="m 91.450554,1523.4223 38.268396,-62.4502"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6843-8"
+         d="m 91.450554,1527.9223 39.004506,-17.4929"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6845-8"
+         d="m 91.450554,1480.6723 37.230766,16.7331"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6847-1"
+         d="M 131.68159,1491.2825 91.450554,1432.6723"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6849-8"
+         d="M 91.450554,1438.4223 132.9602,1537.847"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6851-6"
+         d="m 91.450554,1485.1723 38.895546,56.1742"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6853-0"
+         d="m 91.450554,1531.6723 37.564536,12.66"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6855-2"
+         d="m 161.56065,1399.81 39.20711,0"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6857-4"
+         d="m 162.55345,1406.716 40.15913,37.3341"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6859-9"
+         d="m 160.73557,1413.4477 45.71601,74.6767"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6861-0"
+         d="m 157.19006,1418.1963 48.899,118.2633"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6863-2"
+         d="m 159.37052,1443.6985 40.49385,-40.0712"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6865-2"
+         d="m 162.54444,1452.5391 37.25827,-0.2497"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6867-1"
+         d="m 161.64963,1459.3345 41.14127,32.6487"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6869-5"
+         d="m 158.31659,1465.0738 43.57793,76.4007"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6871-4"
+         d="m 159.04743,1491.3095 41.06495,-82.0741"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6873-4"
+         d="m 161.58769,1495.98 39.35186,-35.9392"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6877-4"
+         d="m 162.57224,1502.4227 37.18428,0.01"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6879-2"
+         d="m 160.79626,1509.4214 39.23229,37.2601"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6881-5"
+         d="m 162.50008,1551.5322 37.29837,-0.3357"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6883-0"
+         d="m 155.51273,1535.8982 46.95521,-120.922"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6885-4"
+         d="m 158.43975,1538.6069 46.9444,-72.1353"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6887-2"
+         d="m 161.22028,1543.0861 41.74409,-31.2843"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6889-1"
+         d="m 304.76243,1410.9522 44.601,53.2181"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6891-2"
+         d="m 305.58459,1453.9213 38.08182,18.2517"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6893-7"
+         d="m 305.58213,1501.4139 38.01708,-18.2965"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         inkscape:connector-curvature="0"
+         id="path6895-7"
+         d="m 301.88523,1539.1466 45.84487,-49.2795"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)" />
+      <g
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         id="g7161"
+         transform="translate(70.60316,229.51621)">
+        <g
+           transform="translate(60.487717,389.19199)"
+           id="g7163">
+          <path
+             sodipodi:type="arc"
+             id="path7165"
+             sodipodi:cx="159.44882"
+             sodipodi:cy="88.582657"
+             sodipodi:rx="17.716536"
+             sodipodi:ry="17.716536"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             xml:space="preserve"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             x="157.21622"
+             y="789.56793"
+             id="text7167"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan7169"
+               x="157.21622"
+               y="789.56793"
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+        </g>
+        <g
+           transform="translate(60.487717,437.23936)"
+           id="g7171">
+          <path
+             sodipodi:type="arc"
+             id="path7173"
+             sodipodi:cx="159.44882"
+             sodipodi:cy="88.582657"
+             sodipodi:rx="17.716536"
+             sodipodi:ry="17.716536"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             xml:space="preserve"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             x="157.21622"
+             y="789.56793"
+             id="text7175"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan7177"
+               x="157.21622"
+               y="789.56793"
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+        </g>
+        <g
+           transform="translate(60.487717,485.28674)"
+           id="g7179">
+          <path
+             sodipodi:type="arc"
+             id="path7181"
+             sodipodi:cx="159.44882"
+             sodipodi:cy="88.582657"
+             sodipodi:rx="17.716536"
+             sodipodi:ry="17.716536"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             xml:space="preserve"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             x="157.21622"
+             y="789.56793"
+             id="text7183"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan7185"
+               x="157.21622"
+               y="789.56793"
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+        </g>
+        <g
+           transform="translate(60.487717,533.33412)"
+           id="g7187">
+          <path
+             sodipodi:type="arc"
+             id="path7189"
+             sodipodi:cx="159.44882"
+             sodipodi:cy="88.582657"
+             sodipodi:rx="17.716536"
+             sodipodi:ry="17.716536"
+             d="m 177.16536,88.582657 c 0,9.784572 -7.93197,17.716533 -17.71654,17.716533 -9.78457,0 -17.71653,-7.931961 -17.71653,-17.716533 0,-9.784573 7.93196,-17.716536 17.71653,-17.716536 9.78457,0 17.71654,7.931963 17.71654,17.716536 z"
+             transform="matrix(0.97255241,0,0,0.97255245,2.2288361,700.81511)"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+          <text
+             xml:space="preserve"
+             style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             x="157.21622"
+             y="789.56793"
+             id="text7191"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan7193"
+               x="157.21622"
+               y="789.56793"
+               style="font-size:12px;text-align:center;text-anchor:middle;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">σ</tspan></text>
+        </g>
+      </g>
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 232.97843,1399.81 39.20711,0"
+         id="path7195"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 233.97123,1406.716 40.15913,37.3341"
+         id="path7197"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 232.15335,1413.4477 45.71601,74.6767"
+         id="path7199"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 228.60784,1418.1963 48.899,118.2633"
+         id="path7201"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 230.7883,1443.6985 40.49385,-40.0712"
+         id="path7203"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 233.96222,1452.5391 37.25827,-0.2497"
+         id="path7205"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 233.06741,1459.3345 41.14127,32.6487"
+         id="path7207"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 229.73437,1465.0738 43.57793,76.4007"
+         id="path7209"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 230.46521,1491.3095 41.06495,-82.0741"
+         id="path7211"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 233.00547,1495.98 39.35186,-35.9392"
+         id="path7213"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 233.99002,1502.4227 37.18428,0.01"
+         id="path7215"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 232.21404,1509.4214 39.23229,37.2601"
+         id="path7217"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 233.91786,1551.5322 37.29837,-0.3357"
+         id="path7219"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 226.93051,1535.8982 46.95521,-120.922"
+         id="path7221"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 229.85753,1538.6069 46.9444,-72.1353"
+         id="path7223"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         style="fill:none;stroke:#000000;stroke-width:0.53149605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
+         d="m 232.63806,1543.0861 41.74409,-31.2843"
+         id="path7225"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6855-2-0"
+         d="m 155.85501,1392.0129 c 26.51225,-12.9324 89.31584,-17.0011 121.81453,0.1735"
+         style="fill:none;stroke:#ff0000;stroke-width:0.88582677;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.77165354, 0.88582677;stroke-dashoffset:0;marker-start:url(#Arrow2Mstart);marker-end:url(#Arrow2Mend-6)" />
+      <text
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:linespacing="125%"
+         id="text8873"
+         y="1384.2456"
+         x="214.53922"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+           y="1384.2456"
+           x="214.53922"
+           id="tspan8875"
+           sodipodi:role="line">X</tspan></text>
+      <path
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path6855-2-0-2"
+         d="m 212.97901,1470.4867 c -3.17078,13.4744 -7.58791,47.5675 0.91628,62.3741"
+         style="fill:none;stroke:#ff0000;stroke-width:0.88582677;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.77165354, 0.88582677;stroke-dashoffset:0;marker-start:url(#Arrow2Mstart);marker-end:url(#Arrow2Mend-6)" />
+      <text
+         inkscape:export-ydpi="1000.6392"
+         inkscape:export-xdpi="1000.6392"
+         inkscape:export-filename="C:\nifdex\tfs\Education.Study.IEM13\sem1\SIM\Seminararbeit\Kjartan\latex\images\rbm.png"
+         sodipodi:linespacing="125%"
+         id="text8873-9"
+         y="1513.8247"
+         x="205.58902"
+         style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+           y="1513.8247"
+           x="205.58902"
+           id="tspan8875-8"
+           sodipodi:role="line">X</tspan></text>
+    </g>
+  </g>
+</svg>
