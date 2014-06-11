@@ -14,15 +14,17 @@
 \contentsline {section}{\numberline {2.2}Entstehung}{3}
 \contentsline {section}{\numberline {2.3}H\IeC {\"u}rden}{4}
 \contentsline {section}{\numberline {2.4}Neuronale netze}{4}
-\contentsline {chapter}{\numberline {3}Algorithmen}{7}
+\contentsline {section}{\numberline {2.5}\IeC {\"U}berwacht / Un\IeC {\"u}berwacht}{5}
+\contentsline {chapter}{\numberline {3}Algorthmen}{7}
 \contentsline {section}{\numberline {3.1}Backpropagation}{7}
-\contentsline {section}{\numberline {3.2}Resctricted Boltzmann Maschines}{7}
-\contentsline {subsection}{\numberline {3.2.1}Grundgedanke}{8}
-\contentsline {subsection}{\numberline {3.2.2}Abk\IeC {\"u}rzung}{9}
-\contentsline {subsection}{\numberline {3.2.3}}{9}
-\contentsline {section}{\numberline {3.3}Autoencoders}{11}
-\contentsline {section}{\numberline {3.4}Convolutional Neural Networks}{11}
-\contentsline {section}{\numberline {3.5}betrachtung als restricted bolzman maschine}{12}
+\contentsline {section}{\numberline {3.2}Resctricted Boltzmann Maschines}{8}
+\contentsline {subsection}{\numberline {3.2.1}Grundgedanke}{9}
+\contentsline {subsection}{\numberline {3.2.2}Abk\IeC {\"u}rzung}{10}
+\contentsline {subsection}{\numberline {3.2.3}Begr\IeC {\"u}ndung}{11}
+\contentsline {section}{\numberline {3.3}Eignung}{11}
+\contentsline {section}{\numberline {3.4}Autoencoders}{11}
+\contentsline {section}{\numberline {3.5}Convolutional Neural Networks}{12}
+\contentsline {section}{\numberline {3.6}betrachtung als restricted bolzman maschine}{12}
 \contentsline {chapter}{\numberline {4}Anwendungen}{13}
 \contentsline {section}{\numberline {4.1}Bilderkennung}{13}
 \contentsline {subsection}{\numberline {4.1.1}Google Projekt}{13}

@@ -1,26 +1,48 @@
-\chapter{Algorithmen}
+\chapter{Algorthmen}
 \label{cha:algorithmen}
 % 7 Seiten
 
 %supervised methoden: backpropagation
 %unsupervised methoden: restricted boltzmann maschines, autoencoders, sparse coding model
 
-
 Fokus: viele Daten, parallele Verarbeitung, viel Rechenpower
 
 \section{Backpropagation}
 
-Backpropagation ist ein überwachter Algorithmus zum Trainieren von neuronalen Netzwerken. Bei diesem Algorithmus wird das Netz zunächst mit zufälligen Gewichten belegt. 
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{images/net-for-bp.png}
+	\caption{Ein Feedfowrward-Perzeptron}
+	\label{fig:net-for-bp}
+\end{figure}
 
+Backpropagation ist ein überwachter Algorithmus zum Trainieren von vereinfachten neuronalen Netzen bei denen sich der Ausgang auf einfachem Weg berechnen werde kann, so genannten Feedforward-Perzeptrons, zu sehen in Abbildung \ref{fig:net-for-bp}. Überwacht bedeutet, dass das Netzwerk beim lernen anhand von kategorisierten Eingabedaten bestimmte Ausgabedaten zu errechnen. Der Fehler der Berechnung des Ausgangs wird beim Backpropagation-Algorithmus in die Adaptierung der Gewichte rückgeführt. Der Trainingsprozess beginnt mit zufälligen Gewichten und arbeitet in den folgenden Schritten:
 
-training algorithmus für neuronale netzwerke
+\begin{enumerate}
+\item Ausgang des Netzes für bestimmte Eingabedaten berechnen
+\item Ausgang mit dem Sollwert vergleichen und daraus den Fehler errechnen
+	$$error = \frac{1}{2}\sum_{k \in K}(out_k-target_k)^2$$
+	\begin{center}\begin{tabular}{rclcrcl}
+		$target$ & \dots & Fehler, der später Einfluss in die Gewichte nimmt\\
+		$out$ & \dots & Wert den der Ausgang erreicht hat\\
+		$target$ & \dots & Wert den der Ausgang erreichen sollte\\ 
+		$K$ & \dots & Anzahl der Neuronen in der Ausgangsschicht\\
+	\end{tabular}\end{center}
+\item Gewichte je nach Größe des Fehlers anpassen
+\end{enumerate}
 
-(sigmoid training function als übertragungsfunktion zwischen neuronenverwendet, e function, einfach zu differenzieren)
--> output = sigmoid(gewicht*input+theta)
-theta .. bias
+Diese Schritte werden wiederholt, bis die Gewichte so angepasst wurden, das Eingabedaten möglichst gut klassifiziert werden können. Die Anpassung der Gewichte errechnet sich im wesentlichen anhand der Gradienten der Fehler und Gewichte. Zudem nimmt Schicht, vor der sich das jeweilige Gewicht befindet, Einfluss.
 
-viele inputs in ein neuron
+Wie der Name des Alogorithmus bereits verrät, wird der Fehler dabei im wesentlichen über eine mathematische Funktion in die Gewichte zurückgeführt. Diese Rückführung bringt zwei wesentliche Probleme mit sich:
 
+\begin{itemize}
+\item Lokale Minima
+\item Überanpassung
+\end{itemize}
+
+Wird der Fehler geringer, so wird auch die Anpassung geringer. Befindet man sich auf dem Weg in ein lokales Optimum, so kann dieses sehr weit weg von dem globalen Optimum sein. Ist das Optimum entsprechend groß, so ist die Wahrscheinlichkeit, dass der Algorithmus in diesem Optimum hängen bleibt groß. Abhilfe können hier Verfahren wie der Bergsteigeralgorithmus oder Zufallsstreuungen in den Werten schaffen.
+
+Die Überanpassung (eng. overfitting) 
 
 \section{Resctricted Boltzmann Maschines}
 
@@ -31,18 +53,6 @@ viele inputs in ein neuron
 	\label{fig:rbm}
 \end{figure}
 
-\begin{figure}%
-\centering
-\subfloat[Versteckte Schicht berechen]{\begin{minipage}{0.33\textwidth}\centering%
-	\includegraphics[scale=1]{images/rbm-step1.png}\end{minipage}}
-\subfloat[Von der versteckten Schicht zurück rechnen]{\begin{minipage}{0.33\textwidth}\centering%
-	\includegraphics[scale=1]{images/rbm-step2.png}\end{minipage}}
-\subfloat[Erneut die versteckte Schicht berechnen]{\begin{minipage}{0.33\textwidth}\centering%
-	\includegraphics[scale=1]{images/rbm-step3.png}\end{minipage}}
-\caption{Die ersten drei Schritte bei der Berechnung von RBMs.}
-\label{fig:rbm-steps}
-\end{figure}
-
 Uneingeschränkte Neuronale-Netze sind schwierig und aufwendig zu trainieren. Restricted-Boltzmann-Maschines, im weiteren auch als RBMs bezeichnet, sind eingeschränkte neuronale Netzwerke. Wie in Abbildung \ref{fig:rbm} dargestellt, existieren hierbei nur Verbindungen zwischen aneinander liegenden Schichten. Das Modell erlaubt keine Verbindungen von Neuronen zu sich selbst und alle Verbindungen müssen gleichermaßen in beide Richtungen gehen. So lassen sich unter Festlegung der Werte einer Schicht direkt auf die nächste versteckte Schicht weiter gerechnet werden. RBMs arbeiten in der Regel mit bool'schen Werten, lassen sich durch Erweiterung aber auch mit anderen Zahlenräumen verwenden.
 
 RMBs wurden bereits 1986 von Paul Smolensky \todo{ref} unter dem Namen Harmonium erfunden, fanden jedoch erst 1998, rund 10 Jahre später, durch die Entwicklung von effizienten Lernalgorithmen durch Geoffrey Hinton Anwendung.
@@ -51,7 +61,20 @@ Zum trainieren von RMBs existieren verschiedene Algorithmen, die meist auf dem P
 
 \subsection{Grundgedanke}
 
-Sind die Werte einer Schicht fixiert, so kann einfach auf die nächste versteckte Schicht weiter gerechnet. Zu beginn werden wird ein Trainingsdatenset an die Eingänge angelegt und die folgenden Operationen wiederholt ausgeführt:
+\begin{figure}%
+\centering
+\subfloat[Versteckte Schicht berechen]{\begin{minipage}{0.33\textwidth}\centering%
+	\includegraphics[scale=1]{images/rbm-step1.png}\end{minipage}}
+\subfloat[Von der versteckten Schicht zurück rechnen]{\begin{minipage}{0.33\textwidth}\centering%
+	\includegraphics[scale=1]{images/rbm-step2.png}\end{minipage}}
+\subfloat[Erneut die versteckte Schicht berechnen]{\begin{minipage}{0.33\textwidth}\centering%
+	\includegraphics[scale=1]{images/rbm-step3.png}\end{minipage}}
+\label{fig:rbm-steps}
+\caption{Drei Berechnungsschritte zum Lernen von RBMs.}
+\label{fig:rbm-steps}
+\end{figure}
+
+Sind die Werte einer Schicht fixiert, so kann einfach auf die nächste versteckte Schicht weiter gerechnet. Zu beginn werden wird ein Trainingsdatenset an die Eingänge angelegt und die folgenden Operationen, wie auch in Abbildung \ref{fig:rbm-steps} zu sehen, wiederholt ausgeführt:
 
 \begin{enumerate}
 \item Wahrscheinlichkeit für die versteckten Neuronen berechnen $$p(h_j=1) = \frac{1}{1+e^{-(b_j+\sum_{i}(v_i*w_{ij}))}}$$
@@ -76,29 +99,9 @@ $$\Delta\omega_{ij} = \varepsilon (<v_ih_j>^0 -  <v_ih_j>^1)$$
 
 Der Grundgedanke von \emph{Contrastive Divergence} ist, dass das Modell mit Zufallsgewichten weg von den Eingabedaten, hin zu Daten die ihm besser gefallen, wandert. Wenn man erkennt wo hin das Modell die Daten ändert, kann man die Gewichte so adaptieren, dass dem Modell die Eingabedaten am besten gefallen.
 
-Da das Modell nicht genügend Neuronen besitzt um alle Eingabedaten zu speichert, muss es etwas aus den Daten lernen um die Eingänge tatsächlich reproduzieren zu können.
+\section{Eignung}
 
-
-
-Die Einschränkung vereinfacht das berechnen einer versteckten Schicht und damit das Training des Netzes. Es kann immer eine Schicht als fix angesehen und so zur jeweils zur nächsten weiter gerechnet werden. Initialisiert man das Modell mit Eingangsdaten und zufälligen Gewichten, rechnet immer wieder wiederholt eine Schicht hinein und wieder heraus, während sich die Gewichte nicht ändern, so würde sich das Modell nach sehr langer Zeit auf bestimmte Werte einpendeln bzw. zwischen Werten pendeln. Diese Werte passen gut zu dem Netz, sagen jedoch nicht viel über die Eingangsdaten.
-
-Um das Modell auf die Eingangsdaten zu trainieren, werden diese zunächst als Eingang angelegt und die Gewichte wiederum mit zufälligen Werten initialisiert. Nun wird die zweite und daraus wieder die erste Schicht berechnet. Die Auswirkung auf dein Eingang 
- , und errechnet sich eine wird zu beginn mit zufälligen Gewichten initialisiert, 
- Für das Modell wir eine Energiefunktion aufgestellt, die die Auswirkung Durch die Einschränkung des Netzes kann zur Berechnung der Werte für jeder Übergang von einem Layer auf den nächsten separat betrachtet werden. 
-RBMs eignen sich für überwachtes und unüberwachtes Lernen. Beim unüberwachten Lernen, lernt das Netz 
-RMBs eignen sich 
-
-type of neural network for unsupervised learning
-uses only inputs to train data, no supervised result required
-target: extract meaningful features for your data
-verfügbarkeit von unlabeled data ausnützen
-restriction: allow only connections between the visible and the hidden layers
-
-visible layer, hidden layer
-energy function
-propability: high energy ergibt low propability
-1
-
+Das Modell besitzt nicht genügend Neuronen um alle Eingabedaten zu speichert und muss daher, um die Eingabedaten tatsächlich reproduzieren zu können, etwas aus den Eingabedaten lernen. Es eignet sich daher, um aussagekräftige Merkmale aus unkategorisierten Daten zu extrahieren.
 
 \section{Autoencoders}
 
