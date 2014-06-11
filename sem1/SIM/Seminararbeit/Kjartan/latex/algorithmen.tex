@@ -139,6 +139,7 @@ Dieser Typ von Netzwerk ist bereits 1980 \todo{paper Kunihiko fukushima} bekannt
 \section{Sparse coding}
 
 Sparse coding ist ein Algorithmus zum trainieren eines neuronalen Netzes mit dem Ansatz möglichst aussagekräftige Merkmale zu finden. Anders als beim Deep Autoencoder wird hier nicht nur berücksichtigt wie gut das Ergebnis wiederhergestellt werden konnte, sondern auch wie eindeutig das Ergebnis war. Ziel ist es an möglichst vielen stellen im Ausgangsvektor 0er zu haben und dennoch sehr gute Ergebnisse zu finden. Der Fehler setzt sich aus diesen beiden Faktoren zusammen und wie folgt berechnet:
+
 $$min\frac{1}{T}\sum_{t=1}^{T}min\frac{1}{2}|x^{(t)}-D*h^{(t)}|+\lambda|h^{(t)}_1|$$
 \begin{center}\begin{tabular}{rclcrcl}
 	$x^{(t)}$ & \dots & Eingangswert\\
@@ -146,4 +147,5 @@ $$min\frac{1}{T}\sum_{t=1}^{T}min\frac{1}{2}|x^{(t)}-D*h^{(t)}|+\lambda|h^{(t)}_
 	$D$ & \dots & Anzahl der Ausgänge\\
 	$\lambda$ & \dots & Steuert wie stark sich die 0er im Ausgangsvektor auswirken\\ 
 \end{tabular}\end{center}
-Die zwei Bedingungen widersprechen sich teilweise und können über $\lambda$ balanciert werden.
+
+Die zwei Bedingungen widersprechen sich teilweise und können über $\lambda$ balanciert werden. Die Berechnung der Gewichte für die versteckten Schichten ist beim Sparse Coding wesentlich aufwendiger als bei Deep Autoencodern, da es sich hier um ein Optimierungsproblem und nicht nur um eine lineare Funktion handelt.
