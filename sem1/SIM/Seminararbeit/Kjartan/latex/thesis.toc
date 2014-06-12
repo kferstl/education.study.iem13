@@ -27,9 +27,8 @@
 \contentsline {section}{\numberline {3.5}Sparse coding}{13}
 \contentsline {chapter}{\numberline {4}Anwendungen}{15}
 \contentsline {subsection}{\numberline {4.0.1}Google Projekt}{15}
-\contentsline {section}{\numberline {4.1}Spracherkennung}{16}
-\contentsline {section}{\numberline {4.2}Fazit aus Anwendungen}{16}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{17}
-\contentsline {section}{\numberline {5.1}Ergebnisse}{17}
-\contentsline {section}{\numberline {5.2}Allgemeines Res\IeC {\"u}mee}{17}
-\contentsline {section}{\numberline {5.3}Pers\IeC {\"o}nliches Res\IeC {\"u}mee}{17}
+\contentsline {section}{\numberline {4.1}Google Street View}{16}
+\contentsline {section}{\numberline {4.2}Spracherkennung}{17}
+\contentsline {section}{\numberline {4.3}Hardware}{17}
+\contentsline {section}{\numberline {4.4}Weitere Anwendungen}{18}
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{19}
