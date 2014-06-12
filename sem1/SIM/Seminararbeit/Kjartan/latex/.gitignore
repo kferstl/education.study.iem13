@@ -1,3 +1,7 @@
 *.aux
 *.synctex.gz
 *.dvi
+*.bib.bak
+*.bbl
+*.blg
+*.toc
