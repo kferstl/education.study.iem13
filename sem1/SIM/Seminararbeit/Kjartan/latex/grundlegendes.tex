@@ -4,27 +4,28 @@
 
 \section{Definition}
 
-Deep Learning ist ein Gebiet aus dem maschinellen Lernen, das sich mit dem Trainieren von nicht linearen Modellen befasst, und hier meist mit vielschichtigen neuronalen Netzen befasst.\todo{mega geile referenz}
+Deep Learning ist ein Gebiet aus dem maschinellen Lernen, das sich mit dem Trainieren von nicht linearen Modellen und hier meist mit vielschichtigen neuronalen Netzen befasst. 
 
 Deep Learning wird zum Beispiel zur Klassifizierung von Daten oder zur Extraktion von Merkmalen aus Daten eingesetzt.
 
 \section{Entstehung}
 
-Die Wurzeln des Deep Learnings gehen zurück in die 1950er Jahre, als Frank Rosenblatt eine Maschine namens Perceptron baute. Diese Maschine war in der Lage einige einfache Figuren wie Quadrate und Dreiecke zu erkennen. Für die damalige Zeit war das eine herausragende Maschine und regte den Gedanken, Maschinen zu bauen die Menschen imitieren können weiter an.
+Die Wurzeln des Deep Learnings gehen zurück in die 1950er Jahre, als Frank Rosenblatt eine Maschine namens Perceptron \citep{Perceptron} baute. Diese Maschine war in der Lage einige einfache Figuren wie Quadrate und Dreiecke zu erkennen. Für die damalige Zeit war das eine herausragende Maschine und regte den Gedanken, Maschinen zu bauen die Menschen imitieren können weiter an.
 
-Knapp 20 Jahre später schrieb Marvin Minsky ein Buch das die Limitierungen der Maschine aufzeigte und einige scheinbar fundamentale Probleme aufwarf. Diese Erscheinung ließ die neuronalen Netze wieder in den Hintergrund rücken.
-In den 1980er Jahren hat, der heute renomierte Wissenschaftler in diesem Bereich, eine Maschine gebaut die bereits eine versteckte Schicht besaß und somit in der Lage war komplexere Aufgaben zu lösen. In dieser Zeit entstand auch der erste Backpropagation Algorithmus\todo{ref Werbos, Amari?, Parker, LeCun, Rumelhart, ..)}. Das trainieren dieser Maschine war sehr aufwendig und so verschwand auch sie bald wieder von der Bildfläche. 
+Knapp 20 Jahre später schrieb Marvin Minsky \citep{PerceptronsMinsky} ein Buch das die Limitierungen der Maschine aufzeigte und einige scheinbar fundamentale Probleme aufwarf. Diese Erscheinung ließ die neuronalen Netze wieder in den Hintergrund rücken.
+In den 1980er Jahren, hat der heute renomierte Wissenschaftler Geoff Hinton, eine Maschine gebaut \citep{BackpropagationEarly}, die bereits eine versteckte Schicht besaß und somit in der Lage war, komplexere Aufgaben zu lösen. In dieser Zeit entstand auch der erste Backpropagation Algorithmus. %\todo{ref Werbos, Amari?, Parker, LeCun, Rumelhart, ..)}
+Das trainieren dieser Maschine war sehr aufwendig und so verschwand auch sie bald wieder von der Bildfläche. 
 
-Erst mit einer Entdeckung 2006, erneut durch Geoff Hinton\todo{ref}, die den Backpropagation Algorithmus erheblich vereinfachte, haben neuronale Netze mit mehreren versteckten Schichten wieder an Bedeutung gewonnen. 
+Erst mit einer Entdeckung 2006 \citep{BackpropagationFast}, erneut durch Geoff Hinton\todo{ref}, die den Backpropagation Algorithmus erheblich vereinfachte, haben neuronale Netze mit mehreren versteckten Schichten wieder an Bedeutung gewonnen. 
 
-Heute stellen führende Unternehmen immer häufiger Teams rund um neuronale Netze und das Trainieren dieser zusammen um sich wirtschaftliche Vorteile zu sichern\todo{ref google, apple}. Erste Erfolge sieht man an Microsofts Spracherkennung Cortana\todo{ref}, Siri von Apple, Google Now oder der Bildersuche von Google, die mit Bildern ähnlichen Bildern sucht.
+Heute stellen führende Unternehmen immer häufiger Teams rund um neuronale Netze und das Trainieren dieser zusammen um sich wirtschaftliche Vorteile zu sichern \footnote{2013/3 Google stellt Geoffrey Hinton}\footnote{2013/12 Facebook stellt NYU Professor Yann LeCun ein}\todo{ref google, apple}. Erste Erfolge sieht man an Microsofts Spracherkennung Cortana, Siri von Apple, Google Now oder der Bildersuche von Google, die anhand von Bildern ähnlichen Bildern findet.
 
 
 \section{Hürden}
 
-Die aus der Vergangenheit bekannten Probleme beim Fortschritt neuronaler Netze mit vielen versteckten Schichten strecken sind zum größten Teil bis heute durch. Aktuelle Algorithmen aus dem Deep Learning tendieren zu Überanpassung, Unteranpassung, lokalen Minima oder kämpfen einfach mit der nicht vorhandenen Rechenleistung.
+Die aus der Vergangenheit bekannten Probleme des Lernens neuronaler Netze mit vielen versteckten Schichten strecken sich zum größten Teil bis heute durch. Aktuelle Algorithmen aus dem Deep Learning tendieren zu Überanpassung, Unteranpassung, lokalen Minima oder kämpfen einfach mit der nicht vorhandenen Rechenleistung.
 
-Grundsätzlich kann man für heute verwendete Algorithmen sagen, dass die Performance von neuronalen Netzen sehr stark von der Menge der Trainingsdaten und weniger von der Auswahl der Algorithmen abhängt. Nicht zuletzt hat die Verfügbarkeit von immensen Datenmengen von Unternehmen und aus dem Internet einen sehr positiven Einfluss auf das Interesse und die Entwicklungen im Bereich der Deep Learning Algorithmen.
+Grundsätzlich kann man für heute verwendete Algorithmen sagen, dass die Performance von neuronalen Netzen sehr stark von der Menge der Trainingsdaten und weniger von dem Algorithmus selbst abhängt. Nicht zuletzt hat die Verfügbarkeit von immensen Datenmengen von Unternehmen und aus dem Internet einen sehr positiven Einfluss auf die Entwicklungen und damit das Interesse von Deep Learning.
 
 %hidden layer nicht trainiert werden konnten (rechenpower außer bei time-delay und convolutional nets) + hat nicht für netzwerke mit feedback funktioniert
 
@@ -37,9 +38,9 @@ Grundsätzlich kann man für heute verwendete Algorithmen sagen, dass die Perfor
 	\label{fig:neuron}
 \end{figure}
 
-Neuronale Netze sind Strukturen aus der Technik, die dem Nervensystem von Lebewesen ähneln. Es sind Modelle, die Eingangsdaten über Neuronen gewichtet kombinieren und daraus einen Ausgang errechnen. Neuronale Netze sind in der Technik zur Vereinfachung meist in mehreren Schichten aufgebaut.
+Neuronale Netze sind Strukturen aus der Technik, die dem Nervensystem von Lebewesen ähneln. Es sind Modelle, die Eingangsdaten über Neuronen gewichtet kombinieren und daraus einen Ausgang errechnen. Es sind Netze die aus Eingangsdaten Ausgangsdaten über nicht lineare Zusammenhänge berechnen. Diese Netze müssen parametrisiert werden, hier kommt Deep Learning zum Einsatz.
 
-Abbildung \ref{fig:neuron} zeigt ein einfaches Neuron mit einem Eingang. Ein Eingang wird mit dem Gewicht multipliziert um dann anhand der Übertragungsfunktion den Ausgang zu berechnen. Als Übertragungsfunktion dient meist die Sigmoid-Funktion, welche sich einfach differenzieren lässt und sich daher besonders gut eignet. Der Ausgang $out$ dieses Neurons ergibt sich somit aus der dem Eingang $in$ multipliziert mit dem Gewicht $\omega$ in der Sigmoid-Funktion $\sigma$.
+Neuronale Netze sind in der Technik zur Vereinfachung meist in mehreren Schichten aufgebaut. Abbildung \ref{fig:neuron} zeigt ein einfaches Neuron mit nur einem Eingang. Der Ausgang wird aus der Multiplikation des Eingangswerts mit dem Gewicht Gewicht und der Übertragungsfunktion errechnet. Als Übertragungsfunktion wird meist Sigmoid-Funktion eingesetzt, sie lässt sich einfach differenzieren und eignet sich daher besonders gut. Der Ausgang $out$ dieses Neurons ergibt sich somit aus der dem Eingang $in$ multipliziert mit dem Gewicht $\omega$ in der Sigmoid-Funktion $\sigma$.
 $$out = \sigma(\omega * in)$$
 
 \begin{figure}
@@ -49,13 +50,13 @@ $$out = \sigma(\omega * in)$$
 	\label{fig:neuron-multiple-inputs}
 \end{figure}
 
-Ein Neuron hat in der Regel, wie in Abbildung \ref{fig:neuron-multiple-inputs} zu sehen, mehrere Eingänge. Außerdem wird noch ein Bias-Wert $\theta$ für die Sigmoid-Funktion hinzugefügt. Der Ausgang dieses Neurons kann somit wie folgt berechnet werden:
+Ein Neuron hat in der Regel, wie in Abbildung \ref{fig:neuron-multiple-inputs} zu sehen, mehrere Eingänge. Außerdem wird ein Bias-Wert $\theta$ für die Sigmoid-Funktion hinzugefügt. Der Ausgang dieses Neurons kann somit wie folgt berechnet werden:
 $$out = \sigma(\omega_1*in_1 + \omega_2*in_2 + \omega_3*in_3 + \theta)$$
 
 \begin{figure}
 	\centering
 	\includegraphics[scale=1]{images/neuron-layer.png}
-	\caption{Layer von Neuronen}
+	\caption{Schichten von Neuronen}
 	\label{fig:neuron-layer}
 \end{figure}
 
@@ -66,12 +67,12 @@ $$out = \sigma(\omega_1*in_1 + \omega_2*in_2 + \omega_3*in_3 + \theta)$$
 \label{fig:neuron-network}
 \end{figure}
 
-Um aus den einzelnen Neuronen ein Netzwerk zu machen, werden, wie in Abbildung \ref{fig:neuron-layer} Layer gebildet. Ein Layer ist eine Menge an Neuronen, die untereinander nicht direkt verknüpft sind. Layer werden sequenziell hintereinander gehängt, wobei jedes Neuron eines Layers als Eingang für jedes Neuron des jeweils nächsten Layers dient. Ein solches Netzwerk ist auch in Abbildung \ref{fig:neuron-network} zu sehen. Dieses Netzwerk hat einen Layer für die Eingabedaten, einen für die Ausgabedaten und zwei innere Layer. Die inneren Layer werden als von außen Unsichtbar betrachtet und daher auch als Hidden-Layer bezeichnet.
+Um aus den einzelnen Neuronen ein Netzwerk zu bauen, werden, wie in Abbildung \ref{fig:neuron-layer} dargestellt Schichten gebildet. Eine Schicht ist eine Menge an Neuronen, die, zur Vereinfachung, untereinander meist nicht direkt verknüpft sind. Schichten werden hintereinander gehängt, in dem jedes Neuron einer Schicht als Eingang für jedes Neuron der nächsten Schicht dient. Ein solches Netzwerk ist auch in Abbildung \ref{fig:neuron-network} zu sehen. Dieses Netzwerk hat eine Eingabeschicht, eine Ausgabeschicht und zwei Schichten dazwischen. Da die Ergebnisse dieser mittleren Schichten in der Regel nicht unmittelbar ein Ergebnis sind, werden sie als unsichtbar betrachtet und auch so bezeichnet. Es handelt sich hierbei also um die versteckten Schichten.
 
 \section{Überwacht / Unüberwacht}
 
-Die Algorithmen des Deep Learning werden im groben in zwei Kategorien geteilt, in die überwachten und die unüberwachten Methoden. Überwacht bedeutet, dass Eingangsdaten an das System angelegt werden, für die die gewünschten Ausgangsdaten bekannt sind. Das könnte zum Beispiel heißen, dass das Netz Bilder mit und ohne Gesichtern darauf bekommt und dann anhand der Richtigkeit des Ausgangs das Modell angepasst wird.
+Die Algorithmen des Deep Learnings werden im groben in zwei Kategorien geteilt, in die überwachten und die unüberwachten Methoden. Überwacht bedeutet, dass Eingangsdaten an das System angelegt werden für die die gewünschten Ausgangsdaten bekannt sind. Das könnte zum Beispiel heißen, dass das Netz Bilder mit trainiert wird, von denen einige Gesichter enthalten und einige nicht. Am Ausgang wird dann überprüft ob das Netz die Gesichter richtig erkannt hat und wenn nicht, werden die Parameter des Netzes entsprechend angepasst.
 
-Diese Art des Lernens scheint logisch, benötigt aber sehr viele Kategorisierte Datensätze, die nicht immer verfügbar sind und tendiert leicht zur Überanpassung. Überanpassung bedeutet, dass das Netz die Trainingsdaten besser als notwendig lernt und für weitere Eingabedaten schlechtere Ergebnisse liefert als wäre es weniger trainiert worden.
+Diese Art des Lernens scheint logisch, benötigt aber sehr viele deklarierte Datensätze. Deklarierte Datensätze sind selten in großen Mengen verfügbar und so tendiert diese Art der Algorithmen leicht zur Überanpassung. Überanpassung bedeutet, dass das Netz die Trainingsdaten besser als notwendig lernt und für weitere Eingabedaten schlechtere Ergebnisse liefert als wäre es weniger trainiert worden.
 
-Ein weitere Ansatz ist das unüberwachte Lernen, es handelt sich dabei um Algorithmen, die lediglich Eingangsdaten benötigen. Die Grundlegende Idee dabei ist es, das Netz Merkmale aus den Eingangsdaten erkennen zu lassen. Unüberwachtes Lernen ist besonders wegen der enormen Verfügbarkeit unkategorisierten Daten interessant und wird häufig als Grundlage vor dem überwachten Lernen eingesetzt. Es hilft einige Probleme des überwachten Lernens zu verbessern, so können die Gewichte aus dem unüberwachten Lernen als Startwert für ein überwachtes Lernen eingesetzt werden. Diese Gewichte haben mehr Aussagekraft über Merkmale der Eingangsdaten als zufällige Werte und können mit weniger kategorisierten Trainingsdaten oft bessere Ergebnisse erzielt werden.
+Ein weitere Ansatz ist das unüberwachte Lernen, es handelt sich dabei um Algorithmen, die Eingangsdaten aber keine Ausgabedaten zum Vergleich benötigen. Die Grundlegende Idee dabei ist es, das Netz Merkmale aus den Eingangsdaten lernen zu lassen. Unüberwachtes Lernen ist besonders wegen der großen Verfügbarkeit unkategorisierten Daten interessant und wird häufig als Grundlage vor dem überwachten Lernen eingesetzt. Es hilft einige Probleme des überwachten Lernens zu verbessern, so können die Gewichte aus dem unüberwachten Lernen als Startwert für ein überwachtes Lernen eingesetzt werden. Diese Gewichte haben mehr Aussagekraft über Merkmale der Eingangsdaten als zufällige Werte und können mit weniger kategorisierten Trainingsdaten oft wesentlich bessere Ergebnisse erzielt werden.

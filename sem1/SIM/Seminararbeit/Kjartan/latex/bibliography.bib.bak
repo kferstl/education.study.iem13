@@ -98,16 +98,6 @@
   Timestamp                = {2014.06.12}
 }
 
-@Article{BackpropagationFast,
-  Title                    = {A Fast Learning Algorithm for Deep Belief Nets},
-  Author                   = {Geoffrey E. Hinton; Simon Osindero; Yee-Whye Teh},
-  Journal                  = {MIT Press},
-  Year                     = {2006},
-
-  Owner                    = {kjartan},
-  Timestamp                = {2014.06.12}
-}
-
 @Book{Henze2006,
   Title                    = {{Regeln für die alphabetische Katalogisierung in wissenschaftlichen Bibliotheken} {(RAK-WB)}},
   Editor                   = {Gudrun Henze},
