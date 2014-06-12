@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -43,6 +43,14 @@
 \dinatlabel{Minsky 1969} \textsc{Minsky}, Papert:
 \newblock \emph{Perceptrons.}
 \newblock M.I.T. Press, 1969
+
+\bibitem[Ng(2013)]{nvidia}
+\dinatlabel{Ng 2013} \textsc{Ng}, Adam Coates; Brody Huval; Tao Wang; David J.
+  Wu: Andrew~Y.:
+\newblock Deep learning with COTS HPC systems.
+\newblock In: \emph{International Conference on Machine Learning, Atlanta,
+  Georgia, USA, 2013.}
+\newblock (2013)
 
 \bibitem[Ng(2012)]{googleimage}
 \dinatlabel{Ng 2012} \textsc{Ng}, Quoc V. Le; Marc’Aurelio Ranzato; Rajat
