@@ -20,11 +20,40 @@
   Timestamp                = {2014.06.12}
 }
 
+@Article{numbercharts,
+  Title                    = {Multi-digit Number Recognition from Street View Imagery using Deep Convolutional Neural Networks},
+  Author                   = {Ian J. Goodfellow, Yaroslav Bulatov, Julian Ibarz, Sacha Arnoud, Vinay Shet},
+  Year                     = {2013},
+
+  Owner                    = {kjartan},
+  Timestamp                = {2014.06.12}
+}
+
+@Article{distbelief,
+  Title                    = {Large Scale Distributed Deep Networks},
+  Author                   = {Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc’Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, and Andrew Y. Ng},
+  Journal                  = {NIPS 2012: Neural Information Processing Systems},
+  Year                     = {2012},
+
+  Owner                    = {kjartan},
+  Timestamp                = {2014.06.12}
+}
+
 @Book{PerceptronsMinsky,
   Title                    = {Perceptrons.},
   Author                   = {Minsky, Marvin; Seymour, Papert},
   Publisher                = {M.I.T. Press},
   Year                     = {1969},
+
+  Owner                    = {kjartan},
+  Timestamp                = {2014.06.12}
+}
+
+@Article{googleimage,
+  Title                    = {Building High-level Features Using Large Scale Unsupervised Learning},
+  Author                   = {Quoc V. Le; Marc’Aurelio Ranzato; Rajat Monga; Matthieu Devin; Kai Chen; Greg S. Corrado; Jeff Dean; Andrew Y. Ng},
+  Journal                  = {International Conference on Machine Learning, Edinburgh, Scotland},
+  Year                     = {2012},
 
   Owner                    = {kjartan},
   Timestamp                = {2014.06.12}
@@ -72,6 +101,16 @@
   Author                   = {Geoffrey E. Hinton; Simon Osindero; Yee-Whye Teh},
   Journal                  = {MIT Press},
   Year                     = {2006},
+
+  Owner                    = {kjartan},
+  Timestamp                = {2014.06.12}
+}
+
+@Article{streetview,
+  Title                    = {Reading Digits in Natural Images with Unsupervised Feature Learning},
+  Author                   = {Yuval Netzer, Tao Wang, Adam Coates, Alessandro Bissacco, Bo Wu, Andrew Y. Ng},
+  Journal                  = {NIPS Workshop on Deep Learning and Unsupervised Feature Learning 2011},
+  Year                     = {2011},
 
   Owner                    = {kjartan},
   Timestamp                = {2014.06.12}

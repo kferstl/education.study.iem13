@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {2.3}H\IeC {\"u}rden}{4}
 \contentsline {section}{\numberline {2.4}Neuronale netze}{4}
 \contentsline {section}{\numberline {2.5}\IeC {\"U}berwacht / Un\IeC {\"u}berwacht}{6}
-\contentsline {chapter}{\numberline {3}Algorthmen}{7}
+\contentsline {chapter}{\numberline {3}Algorthmen und Strukturen}{7}
 \contentsline {section}{\numberline {3.1}Backpropagation}{7}
 \contentsline {section}{\numberline {3.2}Resctricted Boltzmann Maschines}{9}
 \contentsline {subsection}{\numberline {3.2.1}Grundgedanke}{10}
@@ -24,10 +24,6 @@
 \contentsline {section}{\numberline {3.4}Faltungscodierte neurale Netze}{12}
 \contentsline {section}{\numberline {3.5}Sparse coding}{13}
 \contentsline {chapter}{\numberline {4}Anwendungen}{15}
-\contentsline {subsection}{\numberline {4.0.1}Google Projekt}{15}
-\contentsline {section}{\numberline {4.1}Google Street View}{16}
-\contentsline {section}{\numberline {4.2}Spracherkennung}{17}
-\contentsline {section}{\numberline {4.3}Hardware}{17}
-\contentsline {section}{\numberline {4.4}Weitere Anwendungen}{18}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{19}
-\contentsline {chapter}{Literaturverzeichnis}{21}
+\contentsline {subsection}{\numberline {4.0.1}Objekterkennung in Bildern}{15}
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{17}
+\contentsline {chapter}{Literaturverzeichnis}{19}
