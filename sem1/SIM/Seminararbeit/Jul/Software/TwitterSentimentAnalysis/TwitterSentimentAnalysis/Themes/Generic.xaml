@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart">
+
+	<Style x:Key="Chart" TargetType="chart:ChartBase">
+		<Setter Property="Margin" Value="4,4,4,4" />
+	</Style>
+
+</ResourceDictionary>
