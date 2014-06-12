@@ -1,1 +1,0 @@
-Add the PowerShell.Exe.Config to C:\Windows\System32\WindowsPowerShell\v1.0
