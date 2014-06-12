@@ -1,0 +1,79 @@
+\documentclass[diplom,german]{hgbthesis}
+% Zulässige Class Options:
+%   Typ der Arbeit: diplom, master, bachelor, praktikum
+%               Hauptsprache: german, english
+\usepackage{wasysym}
+\usepackage{subfig}
+\usepackage{todonotes}
+
+\graphicspath{{images/}} % wo liegen die EPS-Bilder?
+
+%\usepackage{natbib}
+%\usepackage{url}
+
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{1ex}
+
+% Zweifacher Zeilenabstand für Korrekturen
+%\renewcommand{\baselinestretch}{2.0}
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+\bibliographystyle{dinat}
+
+%%% Diplomarbeit, Bachelorarbeit, oder Praktikumsbericht?
+%%% Entsprechende Bl<F6>cke auskommentieren:
+
+%% Felder für ALLE Arbeiten: --------------------------------
+\title{Deep Learning - Lernen von vielschichtigen neuronalen Netzen}
+\author{Kjartan Ferstl}
+\studiengang{Information Engineering und -Management}
+\studienort{Hagenberg}
+\abgabemonat{Juni}
+\abgabejahr{2014}
+
+%%%----------------------------------------------------------
+\frontmatter
+\maketitle
+\tableofcontents
+%%%----------------------------------------------------------
+
+%\include{vorwort}                              %ggfs. weglassen
+\include{kurzfassung}
+\include{abstract}
+
+%%%----------------------------------------------------------
+\mainmatter           %Hauptteil (ab hier arab. Seitenzahlen)
+%%%----------------------------------------------------------
+\include{einleitung}
+\include{grundlegendes}
+\include{algorithmen}
+\include{anwendungen}
+\include{zusammenfassung}
+
+
+%%%----------------------------------------------------------
+%%%Anhang
+\appendix
+%\include{anhang_a}     % Technische Erg<E4>nzungen
+%\include{anhang_b}     % Quelltext dieses Dokuments
+%\include{anhang_c}     % Chronologische Liste der <C4>nderungen
+
+%%%----------------------------------------------------------
+\clearpage
+\addcontentsline{toc}{chapter}{\bibname}
+%\bibliographystyle{alphaurlde}
+%\bibliographystyle{gerabbrv}
+%options: babplain, babunsrt, bababbrv, babalpha, babamspl,
+%         babplain-fl etc: first/lastname
+%         babplain-lf etc: last/firstname
+\bibliography{bibliography}     %BibTeX-Datei literatur.bib
+
+
+%%%----------------------------------------------------------
+
+%%%Messbox zur Druckkontrolle
+\include{messbox}
+
+\end{document}
