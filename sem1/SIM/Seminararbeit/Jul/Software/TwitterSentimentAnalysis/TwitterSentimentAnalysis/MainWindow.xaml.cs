@@ -53,8 +53,8 @@ namespace TwitterSentimentAnalysis {
 
 			InitializeComponent();
 
-			//_clssifier = new FakeClassify();
-			_clssifier = new UclassifyAPI(UClassify_apiKey);
+			_clssifier = new FakeClassify();
+			//_clssifier = new UclassifyAPI(UClassify_apiKey);
 
 			_tweetStorage = new TweetStorage();
 
@@ -65,7 +65,7 @@ namespace TwitterSentimentAnalysis {
 										Twitter_consumerSecret);
 
 
-			_keywords.Add("youtube");
+			_keywords.Add("worldcup");
 
 			foreach (var keyword in _keywords) {
 				_twitterWrk.AddTrack(keyword);
@@ -283,7 +283,7 @@ namespace TwitterSentimentAnalysis {
 
 
 		#region simple bindings
-		bool darkLayout = true;
+		bool darkLayout = false;
 		public string ChartForeground {
 			get {
 				if (darkLayout) {

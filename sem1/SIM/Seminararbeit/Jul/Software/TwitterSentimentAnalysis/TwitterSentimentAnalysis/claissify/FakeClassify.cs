@@ -13,14 +13,14 @@ namespace TwitterSentimentAnalysis.claissify {
 
 		public async Task<data.AnalysisResult> SentimentAnalysisAsync(ITweet item) {
 			var rand = new Random(Thread.CurrentThread.ManagedThreadId * DateTime.Now.Millisecond);
-			await Task.Delay(rand.Next(15, 100));
+			await Task.Delay(rand.Next(160, 400));
 			AnalysisResult res = null;
 			if (rand.Next(0, 100) > 10) {
 
-				if (rand.Next(0, 100) < 10) {
+				if (rand.Next(0, 100) < 12) {
 					res = new AnalysisResult(AnalysisResultSentiment.Neutral);
 				} else {
-					if (rand.Next(0, 100) > 70) {
+					if (rand.Next(0, 100) > 75) {
 						res = new AnalysisResult(AnalysisResultSentiment.Negative);
 					} else {
 						res = new AnalysisResult(AnalysisResultSentiment.Positive);

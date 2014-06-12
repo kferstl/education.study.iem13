@@ -8,6 +8,7 @@ using TwitterSentimentAnalysis.classify;
 using System.Net.Http;
 using Tweetinvi.Core.Interfaces;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TwitterSentimentAnalysis.claissify {
 	public class UclassifyAPI : IClassifier {
@@ -29,26 +30,42 @@ namespace TwitterSentimentAnalysis.claissify {
 			var ds = JsonHelper.CreateSerializer();
 			var resultObject = ds.Deserialize<UclassifyData>(res);
 
-			if (resultObject.Cls1 != null) {
+			data.AnalysisResult analysisRes = null;
 
+			if (resultObject != null && resultObject.Cls1 != null) {
+				if (resultObject.Cls1.Negative > resultObject.Cls1.Positive) {
+					analysisRes = new data.AnalysisResult(data.AnalysisResultSentiment.Negative);
+				} else if (resultObject.Cls1.Negative == resultObject.Cls1.Positive) {
+					analysisRes = new data.AnalysisResult(data.AnalysisResultSentiment.Neutral);
+				} else {
+					analysisRes = new data.AnalysisResult(data.AnalysisResultSentiment.Positive);
+				}
 			}
 
-			return null;
+			return analysisRes;
 		}
 
+		[DataContract]
 		private class UclassifyData {
+			[DataMember]
 			public string Version { get; set; }
+			[DataMember]
 			public bool Success { get; set; }
+			[DataMember]
 			public int StatusCode { get; set; }
+			[DataMember]
 			public string ErrorMessage{get; set;}
+			[DataMember]
 			public double TextCoverage { get; set; }
-
+			[DataMember]
 			public UclassifyDataCls Cls1 { get; set; }
-
-			public class UclassifyDataCls {
-				double Negative { get; set; }
-				double Positive { get; set; }
-			}
+		}
+		[DataContract]
+		public class UclassifyDataCls {
+			[DataMember]
+			public double Negative { get; set; }
+			[DataMember]
+			public double Positive { get; set; }
 		}
 	}
 }
