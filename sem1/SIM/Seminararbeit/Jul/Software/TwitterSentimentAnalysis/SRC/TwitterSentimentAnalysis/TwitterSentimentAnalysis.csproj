@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="claissify\FakeClassify.cs" />
+    <Compile Include="claissify\StanfordCoreNLP.cs" />
     <Compile Include="claissify\UclassifyAPI.cs" />
     <Compile Include="data\TweetStorage.cs" />
     <Compile Include="claissify\DatumboxAPI.cs" />

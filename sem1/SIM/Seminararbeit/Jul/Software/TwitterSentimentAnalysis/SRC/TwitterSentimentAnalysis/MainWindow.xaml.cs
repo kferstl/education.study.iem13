@@ -48,7 +48,7 @@ namespace TwitterSentimentAnalysis {
 
 		private List<string> _keywords = new List<string>();
 
-		private IClassifier _clssifier;
+		private Timer _guiTimer;
 
 		public MainWindow() {
 
@@ -76,9 +76,6 @@ namespace TwitterSentimentAnalysis {
 				Thread.CurrentThread.Abort();
 			}
 
-			_clssifier = new FakeClassify();
-			//_clssifier = new UclassifyAPI(UClassify_apiKey);
-
 			_tweetStorage = new TweetStorage();
 
 			_twitterWrk = new TwitterWorker(_tweetStorage);
@@ -99,10 +96,10 @@ namespace TwitterSentimentAnalysis {
 
 			initViewModel();
 
-			_twitterWrk.StartStreamAsync();
+			_twitterWrk.StartStream();
 
 			for (var i = 0; i < 5; i++) {
-				var worker = new ClassifyWorker(_clssifier, _tweetStorage);
+				var worker = new ClassifyWorker(new StanfordCoreNLP(), _tweetStorage);
 				worker.StartWorkAsync(_appClosingToken.Token);
 				_datumBoxWrks.Add(worker);
 			}
@@ -111,6 +108,28 @@ namespace TwitterSentimentAnalysis {
 			DataContext = this;
 			WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 			WindowState = System.Windows.WindowState.Maximized;
+
+
+
+			_guiTimer = new Timer(UpdateGui,null,100,100);
+		}
+
+		private void UpdateGui(object d) {
+			this.Dispatcher.BeginInvoke(new Action(() => {
+				NotifyPropertyChanged("TopCountries");
+				NotifyPropertyChanged("TopCountriesPositv");
+				NotifyPropertyChanged("TopCountriesNegativ");
+
+				NotifyPropertyChanged("TopLanguages");
+				NotifyPropertyChanged("TopLanguagesPositv");
+				NotifyPropertyChanged("TopLanguagesNegativ");
+
+				NotifyPropertyChanged("Counts");
+				NotifyPropertyChanged("Sentiment");
+
+				PageTitle = _titleTmp;
+
+			}));
 		}
 
 		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
@@ -229,11 +248,11 @@ namespace TwitterSentimentAnalysis {
 				_tweetCount[1].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.ToAnalyse);
 				_tweetCount[2].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.Error);
 
-				NotifyPropertyChanged("Counts");
+			
 
 				_tweetCountSentiment[0].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.Positive);
 				_tweetCountSentiment[1].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.Involvement);
-				NotifyPropertyChanged("Sentiment");
+				
 
 				int x = 0;
 				foreach(var country in _tweetStorage.GetTopCountries()){
@@ -280,21 +299,14 @@ namespace TwitterSentimentAnalysis {
 					x++;
 				}
 
+				_titleTmp = PageTitle = String.Format("Twitter Sentiment Analysis | Keywords: {0} | Tweets recived: {1} | by Julian Nischler 2014", string.Join(" , ", _keywords.ToArray()), _tweetStorage.CountTweets(TweetStorageSelectBy.All));
+
 				//ChartTop10Counties.InvalidateVisual();
 
-
-				NotifyPropertyChanged("TopCountries");
-				NotifyPropertyChanged("TopCountriesPositv");
-				NotifyPropertyChanged("TopCountriesNegativ");
-
-				NotifyPropertyChanged("TopLanguages");
-				NotifyPropertyChanged("TopLanguagesPositv");
-				NotifyPropertyChanged("TopLanguagesNegativ");
-
-				PageTitle = String.Format("Twitter Sentiment Analysis | Keywords: {0} | Tweets recived: {1} | by Julian Nischler 2014", string.Join(" , ", _keywords.ToArray()), _tweetStorage.CountTweets(TweetStorageSelectBy.All));
 			}));
 		}
 
+		private string _titleTmp;
 
 		private string _title;
 		public string PageTitle {

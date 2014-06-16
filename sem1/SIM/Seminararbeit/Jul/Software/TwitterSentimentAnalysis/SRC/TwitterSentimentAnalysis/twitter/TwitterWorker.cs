@@ -62,8 +62,21 @@ namespace TwitterSentimentAnalysis.twitter {
 			}
 		}
 
+		public void StartStream() {
+			if (!StreamRunning) {
+				_workerTask = Task.Run(() => {
+					_stream.StartStreamMatchingAnyCondition();
+				});
+			}
+		}
+
+
+
 		public void StopWork() {
 			_stream.StopStream();
+			if (_workerTask != null) {
+				_workerTask.Wait();
+			}
 		}
 
 	}

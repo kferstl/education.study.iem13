@@ -25,21 +25,25 @@ namespace TwitterSentimentAnalysis.data {
 		}
 
 		public IEnumerable<DisplayItem> GetTopLanguages(TweetStorageSelectBy countType = TweetStorageSelectBy.All, int max = 10) {
-			var res = (from item in _items
-					   where SelectPredicate(countType)(item) && item.Language != TweetStorageItem.UnknownLanguage
-					   group item by item.Language into grp
-					   orderby grp.Count() descending
-					   select new DisplayItem { Name = grp.Key.ToString(), Value = grp.Count() }).Take(max);
-			return res;
+			lock (_items) {
+				var res = (from item in _items
+						   where SelectPredicate(countType)(item) && item.Language != TweetStorageItem.UnknownLanguage
+						   group item by item.Language into grp
+						   orderby grp.Count() descending
+						   select new DisplayItem { Name = grp.Key.ToString(), Value = grp.Count() }).Take(max);
+				return res.ToList();
+			}
 		}
 
 		public IEnumerable<DisplayItem> GetTopCountries(TweetStorageSelectBy countType = TweetStorageSelectBy.All, int max = 10){
-			var res = (from item in _items
-					  where SelectPredicate(countType)(item) && item.Country != TweetStorageItem.UnknownCountry
-					  group item by item.Country into grp
-					  orderby grp.Count() descending
-					   select new DisplayItem { Name = grp.Key, Value = grp.Count() }).Take(max);
-			return res;
+			lock (_items) {
+				var res = (from item in _items
+						   where SelectPredicate(countType)(item) && item.Country != TweetStorageItem.UnknownCountry
+						   group item by item.Country into grp
+						   orderby grp.Count() descending
+						   select new DisplayItem { Name = grp.Key, Value = grp.Count() }).Take(max);
+				return res.ToList();
+			}
 		}
 
 		private Func<TweetStorageItem,bool> SelectPredicate(TweetStorageSelectBy type = TweetStorageSelectBy.SkipErrors) {
@@ -125,13 +129,15 @@ namespace TwitterSentimentAnalysis.data {
 		}
 
 		public void AddAnalysis(ITweet tweet, AnalysisResult analysis) {
-			var item = _items.FirstOrDefault(p => p.Tweet == tweet);
-			if (item != null) {
-				item.Analysis = analysis;
-				item.Status = TweetStorageItemStatus.Analysed;
-			} else {
-				item.Analysis = null;
-				item.Status = TweetStorageItemStatus.Error;
+			lock (_items) {
+				var item = _items.FirstOrDefault(p => p.Tweet == tweet);
+				if (item != null) {
+					item.Analysis = analysis;
+					item.Status = TweetStorageItemStatus.Analysed;
+				} else {
+					item.Analysis = null;
+					item.Status = TweetStorageItemStatus.Error;
+				}
 			}
 			Update();
 		}
@@ -236,10 +242,22 @@ namespace TwitterSentimentAnalysis.data {
 	public class DisplayItem : INotifyPropertyChanged {
 
 		private string _name;
-		public string Name { get { return _name; } set { _name = value; NotifyPropertyChanged("Name"); } }
+		public string Name {
+			get { return _name; }
+			set {
+				_name = value;
+				NotifyPropertyChanged("Name");
+			}
+		}
 
 		private int _value;
-		public int Value { get { return _value; } set { _value = value; NotifyPropertyChanged("Value"); } }
+		public int Value {
+			get { return _value; }
+			set {
+				_value = value;
+				NotifyPropertyChanged("Value");
+			}
+		}
 
 		private void NotifyPropertyChanged(string property) {
 			if (PropertyChanged != null) {
