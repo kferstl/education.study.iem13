@@ -98,7 +98,7 @@ namespace TwitterSentimentAnalysis {
 
 			_twitterWrk.StartStream();
 
-			for (var i = 0; i < 5; i++) {
+			for (var i = 0; i < 1; i++) {
 				var worker = new ClassifyWorker(new StanfordCoreNLP(), _tweetStorage);
 				worker.StartWorkAsync(_appClosingToken.Token);
 				_datumBoxWrks.Add(worker);
@@ -111,10 +111,13 @@ namespace TwitterSentimentAnalysis {
 
 
 
-			_guiTimer = new Timer(UpdateGui,null,100,100);
+			_guiTimer = new Timer(UpdateGui,null,1000,1000);
 		}
 
 		private void UpdateGui(object d) {
+
+			Update();
+
 			this.Dispatcher.BeginInvoke(new Action(() => {
 				NotifyPropertyChanged("TopCountries");
 				NotifyPropertyChanged("TopCountriesPositv");
@@ -184,7 +187,7 @@ namespace TwitterSentimentAnalysis {
 			Sentiment = new ObservableCollection<DisplayItem>();
 			_tweetCountSentiment = new DisplayItem[2];
 			_tweetCountSentiment[0] = new DisplayItem() { Name = "Positive" };
-			_tweetCountSentiment[1] = new DisplayItem() { Name = "Beteiligung" };
+			_tweetCountSentiment[1] = new DisplayItem() { Name = "Neutral" };
 			Sentiment.Add(_tweetCountSentiment[0]);
 			Sentiment.Add(_tweetCountSentiment[1]);
 
@@ -238,7 +241,7 @@ namespace TwitterSentimentAnalysis {
 
 		
 		void _tweetStorage_DataUpdated(object sender, EventArgs e) {
-			Update();
+			//Update();
 		}
 
 		public void Update() {
@@ -251,7 +254,7 @@ namespace TwitterSentimentAnalysis {
 			
 
 				_tweetCountSentiment[0].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.Positive);
-				_tweetCountSentiment[1].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.Involvement);
+				_tweetCountSentiment[1].Value = _tweetStorage.GetPercentage(TweetStorageSelectBy.Neutral);
 				
 
 				int x = 0;
