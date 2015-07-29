@@ -1,0 +1,27 @@
+Module für funkbasierte Sensornetzwerke 
+CM-08 Modul oder Wlan
+http://www.channel-e.de/news/article/module-fuer-funkbasierte-sensornetzwerke.html
+http://www.elektroniknet.de/kommunikation/sonstiges/artikel/25966/1/
+http://airberry.com/downloads/airberry_Whitepaper_DE_02_Wireless_Mesh.pdf
+
+http://www.tomsnetworking.de/content/tipps_tricks/j2009a/workshop_wlan_mesh/page4.html
+
+
+Ortung in Reumen über WLan?
+
+
+Dezentrales VPN mit Tinc
+http://www.heise.de/netze/artikel/Dezentrales-VPN-mit-Tinc-785436.html
+http://www.tinc-vpn.org/
+http://www.admin-magazin.de/Das-Heft/2009/02/Virtual-Private-Networks-mit-Tinc
+
+
+Positionsbasierte Routingverfahren nutzen Informationen über die genauen Positionen der Knoten.
+Diese Informationen werden z. B. über GPS-Empfänger gewonnen. An Hand dieser Informationen lässt
+sich der beste Pfad zwischen Quell- und Zielknoten bestimmen. Ein Beispiel für ein positionsbasiertes Routingprotokoll ist LAR
+
+Proaktive Verfahren
+Proaktive Routingverfahren bestimmen die zu verwendenden Pfade zwischen zwei Knoten bereits bevor diese tatsächlich benötigt werden.
+Sollen dann tatsächlich Daten verschickt werden, so muss nicht auf die Bestimmung des Pfads zum Zielknoten gewartet werden. 
+Nachteilig ist dafür jedoch, dass diese Verfahren viele Kontrollpakete verschicken um Pfade zu bestimmen, die womöglich später nicht benötigt werden. 
+Ein Beispiel für ein Protokoll aus dieser Klasse ist das "Optimized Link State Routing" (OLSR). 
